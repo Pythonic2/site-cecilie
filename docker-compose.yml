@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  site-chopp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    pull_policy: build
+    restart: always
+    ports:
+      - "8003:8003"
+    env_file:
+      - stack.env
+    networks:
+      - pi_default
+    volumes:
+      - chopp_data:/var/lib/postgresql/data
+      - chopp_app:/app/media
+volumes:
+  chopp_data:
+  chopp_app:
+networks:
+  pi_default:
+    external: true
