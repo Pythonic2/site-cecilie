@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from .models import Produto, Categoria
+from django.views.decorators.cache import cache_page
+from django.utils.decorators import method_decorator
 
 # Create your views here.
 class CardapioView(TemplateView):
@@ -8,11 +10,12 @@ class CardapioView(TemplateView):
 
     template_name = 'shop.html'
 
+    method_decorator(cache_page(60 * 60 * 24))
     def get(self, request, **kwargs):
         context = super().get_context_data(**kwargs)
         
         context['produtos'] = Produto.objects.all().order_by('-id')
-        context['categorias'] = Categoria.objects.all()
+        context['categorias'] = Produto.objects.all()
         context['titulo'] = 'Produtos'
 
 

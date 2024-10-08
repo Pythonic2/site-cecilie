@@ -12,6 +12,10 @@ from django.utils.decorators import method_decorator
 from notifications import send_email
 import os
 from dotenv import load_dotenv
+from produto.models import Produto, Categoria
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
+
 load_dotenv() 
 logger = logging.getLogger(__name__)
 
@@ -21,10 +25,10 @@ class IndexView(TemplateView):
 
     method_decorator(cache_page(60 * 60 * 24))
     def get(self,request):
-        testemunhos = Testemunho.objects.all().order_by('-id')
-        eventos_realizados = Transacao.objects.all().count()
-        eventos_base = 50 + eventos_realizados
-        context = {'testemunhos':testemunhos,'title':'Chopp Itinerante','testemunhos':testemunhos, 'form':ContatoForm, 'conta_eventos':eventos_base}
+        produtos = Produto.objects.filter(destaque=True).order_by('-id')
+        mais_vendidos = Produto.objects.filter(mais_vendido=True).order_by('-id')
+        categorias = Categoria.objects.all().order_by('-id')
+        context = {'destaques':produtos,'categorias':categorias,'mais_vendidos':mais_vendidos}
         return render(request, self.template_name, context)
     
     def post(self, request):
@@ -45,4 +49,8 @@ class IndexView(TemplateView):
             )
 
             return redirect('home')
-    
+        
+@csrf_exempt
+def filtrar_destaques(request, categoria_id):
+    produtos_data = Produto.objects.filter(categoria=categoria_id, destaque=True)
+    return render(request, 'parciais/destaques.html', {'destaques': produtos_data})
