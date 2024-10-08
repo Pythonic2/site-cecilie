@@ -7,7 +7,6 @@ from django.http import HttpResponse
 from django.views.decorators.cache import cache_page
 from testemunho.models import Testemunho
 from pagamento.models import Transacao
-from contato.forms import ContatoForm
 from django.utils.decorators import method_decorator
 from notifications import send_email
 import os
@@ -28,27 +27,9 @@ class IndexView(TemplateView):
         produtos = Produto.objects.filter(destaque=True).order_by('-id')
         mais_vendidos = Produto.objects.filter(mais_vendido=True).order_by('-id')
         categorias = Categoria.objects.all().order_by('-id')
-        context = {'destaques':produtos,'categorias':categorias,'mais_vendidos':mais_vendidos}
+        context = {'destaques':produtos,'categorias':categorias,'mais_vendidos':mais_vendidos,'quantidade':10}
         return render(request, self.template_name, context)
     
-    def post(self, request):
-        form = ContatoForm(request.POST)
-        if form.is_valid():
-            form.save()
-            nome = form.cleaned_data['nome']
-            celular = form.cleaned_data['celular']
-            mensagem = form.cleaned_data['mensagem']
-
-         
-            send_email(
-                subject=f"Novo Contato de {nome}",
-                body=f"{mensagem}\nContato: {celular}",
-                sender_email="noticacoes@gmail.com",
-                sender_password=os.getenv('SENHA'),
-                recipient_emails=["choppitinerante@gmail.com","igormarinhosilva@gmail.com"]
-            )
-
-            return redirect('home')
         
 @csrf_exempt
 def filtrar_destaques(request, categoria_id):

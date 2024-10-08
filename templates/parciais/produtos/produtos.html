@@ -1,4 +1,5 @@
 {% for produto in produtos%}
+        
 <div class="col-md-6 col-lg-6 col-xl-4">
     <div class="rounded position-relative fruite-item">
         <div class="fruite-img">
@@ -10,7 +11,34 @@
             <p>{{produto.descricao}}</p>
             <div class="d-flex justify-content-between flex-lg-wrap">
                 <p class="text-dark fs-5 fw-bold mb-0">${{produto.valor}}</p>
-                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> +</a>
+                {% if request.user.is_authenticated %}
+                    <form hx-post="{% url 'adicionar_ao_carrinho' produto.id %}"
+                            hx-swap="innerHTML"
+                            hx-trigger="submit"
+                            class="d-flex flex-column flex-sm-row align-items-center">
+                        {% csrf_token %}
+                        <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> +</button>
+                    </form>
+
+
+                {% else %}
+                    <form method="POST" action="{% url 'login' %}" class="d-flex flex-column flex-sm-row align-items-center">
+                        {% csrf_token %}
+                        <input type="hidden" name="produto_id" value="{{ produto.id }}">
+                        <div class="input-group mb-2 mb-sm-0" style="width: 150px;">
+                            {% if not produto.servico %}
+                                <button type="button" class="btn btn-outline-secondary" onclick="decrementar('{{ produto.id }}')">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input type="number" id="quantidade_{{ produto.id }}" name="quantidade" value="1" min="1" class="form-control text-center" style="max-width: 80px;">
+                                <button type="button" class="btn btn-outline-secondary" onclick="incrementar('{{ produto.id }}')">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            {% endif %}
+                        </div>
+                        <button type="submit" class="btn btn-primary">Adicionar</button>
+                    </form>
+                {% endif %}
             </div>
         </div>
     </div>

@@ -47,14 +47,15 @@ def pagina_carrinho(request):
         evento.carrinho = carrinho.id
         evento.valor = valor_total
         evento.save()
-
+    
     context = {
         'carrinho': produtos_no_carrinho,
         'total': valor_total,
         'title': 'Carrinho',
         'evento': evento,
+        'titulo':'carrinho',
+        'quantidade':itens.count(),
     }
-
     try:
         carrinho = carrinho.id
         evento_id = evento.id if evento else None
@@ -91,6 +92,7 @@ def obter_quantidade_carrinho_htmx(request):
 
 @login_required
 def adicionar_ao_carrinho(request, produto_id):
+   
     # Verifica se o usuário está autenticado
     if request.user.is_authenticated:
         usuario = request.user.username
@@ -98,7 +100,6 @@ def adicionar_ao_carrinho(request, produto_id):
 
         # Obtém o usuário atual
         user = Usuario.objects.get(username=usuario)
-        print(user.id)
 
         # Tenta obter o carrinho do usuário, cria um novo se não existir
         carrinho, created = Carrinho.objects.get_or_create(usuario=user, status='Progress')
@@ -108,9 +109,11 @@ def adicionar_ao_carrinho(request, produto_id):
 
         # Obtém o produto
         produto = get_object_or_404(Produto, pk=produto_id)
+        print(produto.nome)
         quantidade = int(request.POST.get('quantidade', 0))
-
-        if quantidade >= 1:
+        print(quantidade)
+        if quantidade == 0:
+            quantidade =1
             # Verifica se o produto já está no carrinho
             item_carrinho, created = ItemCarrinho.objects.get_or_create(
                 carrinho=carrinho, 
@@ -118,12 +121,15 @@ def adicionar_ao_carrinho(request, produto_id):
                 defaults={'quantidade': quantidade}  # Define a quantidade na criação
             )
 
-            if not created:
-                # Se o produto já estiver no carrinho, atualiza a quantidade
-                item_carrinho.quantidade += quantidade
-                item_carrinho.save()
 
-            # Atualiza o valor total do carrinho
+            if not created:
+                if produto.quantidade > 1:
+                    item_carrinho.quantidade += quantidade
+                    item_carrinho.save()
+                else:
+                    item_carrinho.quantidade + 1
+                    item_carrinho.save()
+
             carrinho.valor += produto.valor * quantidade
             carrinho.save()
 
@@ -133,6 +139,12 @@ def adicionar_ao_carrinho(request, produto_id):
                 <script>removerMensagem('mensagem-produto-{produto.id}');</script>
             '''
             return HttpResponse(mensagem)
+        else:
+            item_carrinho, created = ItemCarrinho.objects.get_or_create(
+                    carrinho=carrinho, 
+                    produto=produto,
+                    defaults={'quantidade': quantidade}  # Define a quantidade na criação
+                )
 
         return HttpResponse(status=400)
     
