@@ -36,7 +36,6 @@ def pagina_carrinho(request):
 
     # Obtém os itens do carrinho
     itens = ItemCarrinho.objects.filter(carrinho=carrinho)
-
     produtos_no_carrinho = [(item.produto, item.quantidade) for item in itens]
 
     # Calcula o valor total
@@ -54,7 +53,7 @@ def pagina_carrinho(request):
         'title': 'Carrinho',
         'evento': evento,
         'titulo':'carrinho',
-        'quantidade':itens.count(),
+        'quantidade':sum(item.quantidade for item in itens),
     }
     try:
         carrinho = carrinho.id
@@ -121,7 +120,6 @@ def adicionar_ao_carrinho(request, produto_id):
                 defaults={'quantidade': quantidade}  # Define a quantidade na criação
             )
 
-
             if not created:
                 if produto.quantidade > 1:
                     item_carrinho.quantidade += quantidade
@@ -145,7 +143,6 @@ def adicionar_ao_carrinho(request, produto_id):
                     produto=produto,
                     defaults={'quantidade': quantidade}  # Define a quantidade na criação
                 )
-
         return HttpResponse(status=400)
     
     else:

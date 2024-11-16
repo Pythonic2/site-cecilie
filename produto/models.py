@@ -13,6 +13,7 @@ class Produto(models.Model):
     disponivel = models.BooleanField(default=True)
     destaque = models.BooleanField(default=False)
     promo = models.BooleanField(default=False)
+    premium = models.BooleanField(default=False)
     mais_vendido = models.BooleanField(default=False)
     valor = models.DecimalField(max_digits=10, decimal_places=2)  # Usar DecimalField é melhor para preços
     quantidade = models.PositiveIntegerField(blank=True, null=True, default=1)  # Litros devem ser um valor positivo
