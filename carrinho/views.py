@@ -110,40 +110,29 @@ def adicionar_ao_carrinho(request, produto_id):
         produto = get_object_or_404(Produto, pk=produto_id)
         print(produto.nome)
         quantidade = int(request.POST.get('quantidade', 0))
-        print(quantidade)
-        if quantidade == 0:
-            quantidade =1
-            # Verifica se o produto já está no carrinho
-            item_carrinho, created = ItemCarrinho.objects.get_or_create(
-                carrinho=carrinho, 
-                produto=produto,
-                defaults={'quantidade': quantidade}  # Define a quantidade na criação
-            )
+        if quantidade ==0:
+            quantidade = 1
+        
+        # Verifica se o produto já está no carrinho
+        item_carrinho, created = ItemCarrinho.objects.get_or_create(carrinho=carrinho,produto=produto,defaults={'quantidade': quantidade})
 
-            if not created:
-                if produto.quantidade > 1:
-                    item_carrinho.quantidade += quantidade
-                    item_carrinho.save()
-                else:
-                    item_carrinho.quantidade + 1
-                    item_carrinho.save()
+        if not created:
+            if produto.quantidade > 1:
+                item_carrinho.quantidade += quantidade
+                item_carrinho.save()
+            else:
+                item_carrinho.quantidade + 1
+                item_carrinho.save()
 
-            carrinho.valor += produto.valor * quantidade
-            carrinho.save()
+        carrinho.valor += produto.valor * quantidade
+        carrinho.save()
+        
+        itens = ItemCarrinho.objects.filter(carrinho=carrinho)
 
-            # Mensagem de sucesso para o HTMX
-            mensagem = f'''
-                <span class="text-success">{quantidade} Unidade(s) do Produto "{produto.nome}" adicionado ao carrinho!</span>
-                <script>removerMensagem('mensagem-produto-{produto.id}');</script>
-            '''
-            return HttpResponse(mensagem)
-        else:
-            item_carrinho, created = ItemCarrinho.objects.get_or_create(
-                    carrinho=carrinho, 
-                    produto=produto,
-                    defaults={'quantidade': quantidade}  # Define a quantidade na criação
-                )
-        return HttpResponse(status=400)
+        # Calcula a quantidade total de todos os itens no carrinho
+        quantidade = sum(item.quantidade for item in itens)
+        return render(request, 'parciais/qtd_carrinho.html',{'quantidade_carrinho':quantidade})
+       
     
     else:
         return HttpResponse("Usuário não autenticado", status=403)

@@ -1,46 +1,75 @@
-{% for produto in produtos%}
-        
-<div class="col-md-6 col-lg-6 col-xl-4" >
+{% for produto in produtos %}
+<div class="col-md-6 col-lg-6 col-xl-4">
     <div class="rounded position-relative fruite-item">
         <div class="fruite-img">
             <img src="{{produto.imagem.url}}" class="img-fluid w-100 rounded-top" alt="">
         </div>
-        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">{{produto.categoria}}</div>
+        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">
+            {{produto.categoria}}
+        </div>
         <div class="p-4 border border-secondary border-top-0 rounded-bottom">
             <h4>{{produto.nome}} - {{produto.tamanho}}</h4>
             <p>{{produto.descricao}}</p>
-            <div class="d-flex justify-content-between flex-lg-wrap">
-                <p class="text-dark fs-5 fw-bold mb-0">${{produto.valor}}</p>
+            <div class="d-flex flex-column">
+                <p class="text-dark fs-5 fw-bold mb-2">Valor: ${{produto.valor}}</p>
                 {% if request.user.is_authenticated %}
                     <form hx-post="{% url 'adicionar_ao_carrinho' produto.id %}"
-                            hx-swap="innerHTML"
-                            hx-trigger="submit"
-                            class="d-flex flex-column flex-sm-row align-items-center">
+                          hx-trigger="submit"
+                          hx-target="#carrinho">
                         {% csrf_token %}
-                        <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> +</button>
-                    </form>
-
-
-                {% else %}
-                    <form method="POST" action="{% url 'login' %}" class="d-flex flex-column flex-sm-row align-items-center">
-                        {% csrf_token %}
-                        <input type="hidden" name="produto_id" value="{{ produto.id }}">
-                        <div class="input-group mb-2 mb-sm-0" style="width: 150px;">
-                            {% if not produto.servico %}
-                                <button type="button" class="btn btn-outline-secondary" onclick="decrementar('{{ produto.id }}')">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                                <input type="number" id="quantidade_{{ produto.id }}" name="quantidade" value="1" min="1" class="form-control text-center" style="max-width: 80px;">
-                                <button type="button" class="btn btn-outline-secondary" onclick="incrementar('{{ produto.id }}')">
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            {% endif %}
+                        <div class="mb-2">
+                            <label for="quantidade_{{ produto.id }}">Quantidade:</label>
+                            <select class="form-select" name="quantidade" id="quantidade_{{ produto.id }}" style="width: 150px;">
+                                {% for qtd in produto.opcoes_quantidade %}
+                                    <option value="{{ qtd }}">{{ qtd }}</option>
+                                {% endfor %}
+                            </select>
                         </div>
-                        <button type="submit" class="btn btn-primary">Adicionar</button>
+                        <button type="submit" class="btn btn-primary" onclick="exibirMensagem('{{ produto.id }}')">Adicionar</button>
                     </form>
+                    <div id="mensagem-produto-{{ produto.id }}" class="mt-3"></div>
+                {% else %}
+                    <p class="text-danger">Faça login para adicionar produtos ao carrinho.</p>
                 {% endif %}
             </div>
         </div>
     </div>
 </div>
-{%endfor%}
+{% endfor %}
+    
+
+
+
+<script>
+function incrementar(produtoId) {
+    const input = document.getElementById(`quantidade_${produtoId}`);
+    let quantidade = parseInt(input.value, 10);
+    input.value = quantidade + 1;
+}
+
+function decrementar(produtoId) {
+    const input = document.getElementById(`quantidade_${produtoId}`);
+    let quantidade = parseInt(input.value, 10);
+    if (quantidade > 1) {
+        input.value = quantidade - 1;
+    }
+}
+
+function exibirMensagem(produtoId) {
+    // Encontra o contêiner da mensagem para o produto específico
+    const mensagemContainer = document.getElementById(`mensagem-produto-${produtoId}`);
+
+    // Define a mensagem de sucesso
+    const mensagem = '<span class="text-success">Produto adicionado com sucesso!</span>';
+
+    // Insere a mensagem no contêiner
+    mensagemContainer.innerHTML = mensagem;
+
+    // Remove a mensagem após 3 segundos
+    setTimeout(() => {
+        mensagemContainer.innerHTML = '';
+    }, 3000);
+}
+
+</script>
+

@@ -30,6 +30,8 @@ class CardapioView(TemplateView):
         else:
             produtos = Produto.objects.all().order_by('-id')
 
+        for produto in produtos:
+            produto.opcoes_quantidade = range(1, produto.quantidade + 1)
         # Configuração da paginação
         paginator = Paginator(produtos, 2)  # 2 produtos por página
         page_number = request.GET.get("page")
@@ -42,6 +44,7 @@ class CardapioView(TemplateView):
         # Carrinho e itens
         carrinho = Carrinho.objects.filter(usuario=user).exclude(status='pago').last()
         itens = ItemCarrinho.objects.filter(carrinho=carrinho)
+
         context['quantidade'] = sum(item.quantidade for item in itens)
 
         return render(request, self.template_name, context)

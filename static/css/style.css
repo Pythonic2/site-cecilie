@@ -1,5 +1,8 @@
 
 /*** Spinner Start ***/
+body{
+    background-color: white;
+}
 #spinner {
     opacity: 0;
     visibility: hidden;
@@ -495,3 +498,25 @@
 }
 /*** Footer End ***/
 
+/*** Meus Adicionados ***/
+
+.mt-2 {
+    color: green;
+    font-size: 14px;
+}
+
+/*card de produto*/
+
+.fruite-item h4 {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.fruite-item .form-select {
+    width: 100%;
+    max-width: 150px;
+}
+
+.fruite-item .btn {
+    width: 100%;
+}
