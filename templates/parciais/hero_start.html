@@ -3,10 +3,28 @@
         <div class="row g-5 align-items-center">
             <div class="col-md-12 col-lg-7">
                 <h4 class="mb-3 text-secondary"></h4>
-                <h1 class="mb-5 display-3 text-primary">Ache parceiros próximos</h1>
+                <h1 class="mb-5 display-3 text-primary">Encontre um Parceiro Próximo</h1>
                 <div class="position-relative mx-auto">
-                    <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="number" placeholder="CEP">
-                    <button type="submit" class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" style="top: 0; right: 25%;">Procurar</button>
+                    <form method="post" 
+                          hx-post="{% url 'home' %}" 
+                          hx-trigger="submit" 
+                          hx-target="#test" 
+                          hx-swap="innerHTML">
+                        
+                        {% csrf_token %}
+                        
+                        <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" 
+                               type="number" 
+                               placeholder="CEP" 
+                               name="cep" 
+                               required>
+                        
+                        <button type="submit" 
+                                class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" 
+                                style="top: 0; right: 25%;">
+                            Procurar
+                        </button>
+                    </form>
                 </div>
             </div>
             <div class="col-md-12 col-lg-5">
@@ -33,4 +51,7 @@
             </div>
         </div>
     </div>
+</div>
+<div id="test">
+    {% include 'parciais/parceiros/parceiros.html'%}
 </div>

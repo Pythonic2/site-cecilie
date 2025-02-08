@@ -18,6 +18,8 @@ from carrinho.models import Carrinho
 from authentication.models import Usuario
 from carrinho.models import ItemCarrinho
 from produto.models import Produto
+import requests
+from parceiros.models import Parceiro
 load_dotenv() 
 
 logger = logging.getLogger(__name__)
@@ -45,6 +47,19 @@ class IndexView(TemplateView):
         context = {'destaques':produtos,'categorias':categorias,'mais_vendidos':mais_vendidos,'produtos_p':premiums,'quantidade':sum(item.quantidade for item in itens)}
         return render(request, self.template_name, context)
     
+    def post(self, request):
+        cep = request.POST.get("cep")
+        
+        # Consulta na API ViaCEP
+        url = f"https://viacep.com.br/ws/{cep}/json/"
+        response = requests.get(url)
+
+        if response.status_code == 200:
+            data = response.json()
+            parceiros = Parceiro.objects.filter(cidade=data['localidade'])
+            return render(request, 'parciais/parceiros/parceiros.html',{'parceiros':parceiros})
+        else:
+            return JsonResponse({"error": "Erro ao consultar o CEP!"}, status=500)
         
 @csrf_exempt
 def filtrar_destaques(request, categoria_id):
