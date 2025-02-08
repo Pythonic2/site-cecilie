@@ -16,7 +16,16 @@
                             hx-swap="innerHTML"
                             hx-trigger="submit"
                             class="d-flex flex-column flex-sm-row align-items-center">
+                            
                         {% csrf_token %}
+                        
+                        <button type="button" class="btn btn-outline-secondary" onclick="decrementar('{{ produto.id }}')">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <input type="number" id="quantidade_{{ produto.id }}" name="quantidade" value="1" min="1" class="form-control text-center" style="max-width: 80px;">
+                        <button type="button" class="btn btn-outline-secondary" onclick="incrementar('{{ produto.id }}')">
+                            <i class="fas fa-plus"></i>
+                        </button>
                         <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> +</button>
                     </form>
 
@@ -43,4 +52,19 @@
         </div>
     </div>
 </div>
+<script>
+    function incrementar(produtoId) {
+        const input = document.getElementById(`quantidade_${produtoId}`);
+        let quantidade = parseInt(input.value, 10);
+        input.value = quantidade + 1;
+    }
+
+    function decrementar(produtoId) {
+        const input = document.getElementById(`quantidade_${produtoId}`);
+        let quantidade = parseInt(input.value, 10);
+        if (quantidade > 1) {
+            input.value = quantidade - 1;
+        }
+    }
+</script>
 {%endfor%}

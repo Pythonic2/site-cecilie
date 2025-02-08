@@ -42,13 +42,12 @@ class CardapioView(TemplateView):
         # Carrinho e itens
         carrinho = Carrinho.objects.filter(usuario=user).exclude(status='pago').last()
         itens = ItemCarrinho.objects.filter(carrinho=carrinho)
+        
         context['quantidade'] = sum(item.quantidade for item in itens)
-
         return render(request, self.template_name, context)
 
 
 def htmx_list_produtos(request,categoria_id):
-    print("entrou aqui")
     context = {'produtos':Produto.objects.all().filter(categoria=categoria_id)} 
 
     return render(request, 'parciais/produtos/produtos.html' , context)
