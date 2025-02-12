@@ -30,21 +30,21 @@ class IndexView(TemplateView):
 
     method_decorator(cache_page(60 * 60 * 24))
     def get(self,request):
-        produtos = Produto.objects.filter(destaque=True).order_by('-id')
-        mais_vendidos = Produto.objects.filter(mais_vendido=True).order_by('-id')
-        premiums = Produto.objects.filter(premium=True)
-         
-        usuario = request.user.username
+        # produtos = Produto.objects.filter(destaque=True).order_by('-id')
+        # mais_vendidos = Produto.objects.filter(mais_vendido=True).order_by('-id')
+        # premiums = Produto.objects.filter(premium=True)
+        
+        # usuario = request.user.username
 
-        # Obtém o usuário atual
-        user = Usuario.objects.get(username=usuario)
+        # # Obtém o usuário atual
+        # user = Usuario.objects.get(username=usuario)
 
-        carrinho = Carrinho.objects.filter(usuario=user).exclude(status='pago').last()
-        categorias = Categoria.objects.all().order_by('-id')
+        # carrinho = Carrinho.objects.filter(usuario=user).exclude(status='pago').last()
+        # categorias = Categoria.objects.all().order_by('-id')
 
-        itens = ItemCarrinho.objects.filter(carrinho=carrinho)
-        context = {'destaques':produtos,'categorias':categorias,'mais_vendidos':mais_vendidos,'produtos_p':premiums,'quantidade':sum(item.quantidade for item in itens)}
-        return render(request, self.template_name, context)
+        # itens = ItemCarrinho.objects.filter(carrinho=carrinho)
+        #context = {'destaques':produtos,'categorias':categorias,'mais_vendidos':mais_vendidos,'produtos_p':premiums,'quantidade':sum(item.quantidade for item in itens)}
+        return render(request, self.template_name)
     
     def post(self, request):
         cep = request.POST.get("cep")
