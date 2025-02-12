@@ -19,11 +19,10 @@
                                name="cep" 
                                required>
                         
-                        <button type="submit" 
-                                class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" 
-                                style="top: 0; right: 25%;">
-                            Procurar
+                        <button style="top: 0; right: 25%;" type="submit" class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Procurar
                         </button>
+                        
                     </form>
                 </div>
             </div>
@@ -31,12 +30,12 @@
                 <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active rounded">
-                            <img src="static/img/hero-img-1.png" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
-                            <a href="#" class="btn px-4 py-2 text-white rounded">Fruites</a>
+                            <img src="" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
+                            <a href="#" class="btn px-4 py-2 text-white rounded">Marcas</a>
                         </div>
                         <div class="carousel-item rounded">
-                            <img src="static/img/hero-img-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
-                            <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a>
+                            <img src="" class="img-fluid w-100 h-100 rounded" alt="Second slide">
+                            <a href="#" class="btn px-4 py-2 text-white rounded">Marcas</a>
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
@@ -51,7 +50,4 @@
             </div>
         </div>
     </div>
-</div>
-<div id="test">
-    {% include 'parciais/parceiros/parceiros.html'%}
 </div>

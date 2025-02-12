@@ -7,18 +7,18 @@ class CustomUserAdmin(UserAdmin):
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('username', 'password1', 'password2', 'email'),
+            'fields': ('username','nome','password1', 'password2', 'email'),
         }),
     )
 
     # Campos a serem exibidos na lista de usuários
-    list_display = ('username', 'email', 'is_staff', 'is_superuser')
-    search_fields = ('username', 'email')
+    list_display = ('username','nome', 'email','status_pagamento', 'is_staff', 'is_superuser')
+    search_fields = ('username', 'email', 'nome')
     ordering = ('username',)
 
     fieldsets = (
-        (None, {'fields': ('username', 'password')}),
-        ('Personal info', {'fields': ('email',)}),
+        (None, {'fields': ('username', 'password','status_pagamento')}),
+        ('Personal info', {'fields': ('email','nome')}),
         ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'user_permissions', 'groups')}),
         ('Important dates', {'fields': ('last_login', 'date_joined')}),
     )

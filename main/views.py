@@ -43,7 +43,6 @@ class IndexView(TemplateView):
         categorias = Categoria.objects.all().order_by('-id')
 
         itens = ItemCarrinho.objects.filter(carrinho=carrinho)
-
         context = {'destaques':produtos,'categorias':categorias,'mais_vendidos':mais_vendidos,'produtos_p':premiums,'quantidade':sum(item.quantidade for item in itens)}
         return render(request, self.template_name, context)
     
@@ -53,11 +52,11 @@ class IndexView(TemplateView):
         # Consulta na API ViaCEP
         url = f"https://viacep.com.br/ws/{cep}/json/"
         response = requests.get(url)
-
         if response.status_code == 200:
             data = response.json()
             parceiros = Parceiro.objects.filter(cidade=data['localidade'])
-            return render(request, 'parciais/parceiros/parceiros.html',{'parceiros':parceiros})
+           
+            return render(request, 'parciais/produtos_categoria_unica.html',{'parceiros':parceiros,'titulo':'Parceiros'})
         else:
             return JsonResponse({"error": "Erro ao consultar o CEP!"}, status=500)
         

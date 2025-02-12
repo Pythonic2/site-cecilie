@@ -1,17 +1,30 @@
 # authentication/models.py
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from datetime import timedelta
+from django.utils import timezone
+from datetime import datetime
+
+
 
 class Usuario(AbstractUser):
-    nome = models.CharField(max_length=100)
-    email = models.EmailField(max_length=100, blank=True, null=True)
-
+    nome = models.CharField(max_length=80)
+    email = models.EmailField(unique=True)
+    status_pagamento = models.BooleanField(default=False)
+    data_pagamento = models.DateTimeField(default=timezone.now)
+    data_cobrar = models.DateTimeField(default=timezone.now() + timedelta(days=30))
+    
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
     def __str__(self):
         return self.username
 
+    @property
+    def pagamento_atrasado(self):
+        return timezone.now() >= self.data_cobrar
+    
+    
 class Evento(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     celular = models.CharField(max_length=11)

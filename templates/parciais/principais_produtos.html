@@ -12,13 +12,11 @@
                                 <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-1" hx-post="{% url 'filter' categoria.id %}" hx-trigger="click" hx-target="#resultados">
                                     <span class="text-dark" style="width: 130px;">{{ categoria.nome }}</span>
                                 </a>
-                                <!-- Usando hx-post para fazer a requisição -->
                                 
                             </li>
                         {% endfor %}
                     </ul>
                     
-                    <!-- Div para exibir os resultados -->
                     
                 </div>
             </div>
