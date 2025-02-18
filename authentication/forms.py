@@ -3,40 +3,50 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .models import Usuario, Evento
 
 class SignUpForm(UserCreationForm):
+    cep = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "CEP",
+                "class": "form-control border-2 border-secondary w-75 w-md-100 py-3 px-4 rounded-pill mb-3"
+            }
+        ))
     username = forms.CharField(
         widget=forms.TextInput(
             attrs={
                 "placeholder": "Username",
-                "class": "form-control"
+                "class": "form-control border-2 border-secondary w-75 w-md-100 py-3 px-4 rounded-pill mb-3"
             }
         ))
     nome = forms.CharField(
         widget=forms.TextInput(
             attrs={
                 "placeholder": "Nome",
-                "class": "form-control"
+                "class": "form-control border-2 border-secondary w-75 w-md-100 py-3 px-4 rounded-pill mb-3"
             }
         ))
     email = forms.EmailField(
         widget=forms.EmailInput(
             attrs={
                 "placeholder": "Email",
-                "class": "form-control"
+                "class": "form-control border-2 border-secondary w-75 w-md-100 py-3 px-4 rounded-pill mb-3"
             }
         ))
     
     password1 = forms.CharField(
+        label="Senha",
         widget=forms.PasswordInput(
             attrs={
                 "placeholder": "Senha",
-                "class": "form-control"
+                "class": "form-control border-2 border-secondary w-75 w-md-100 py-3 px-4 rounded-pill mb-3"
             }
         ))
     password2 = forms.CharField(
+        label="Confirme a Senha",
         widget=forms.PasswordInput(
             attrs={
+                "label":"Senha",
                 "placeholder": "Confirme a Senha",
-                "class": "form-control"
+                "class": "form-control border-2 border-secondary w-75 w-md-100 py-3 px-4 rounded-pill mb-3"
             }
         ),
         help_text="Digite a mesma senha para confirmação.",
@@ -44,7 +54,7 @@ class SignUpForm(UserCreationForm):
     
     class Meta:
         model = Usuario
-        fields = ('nome','username', 'email', 'password1', 'password2')
+        fields = ('cep','nome','username', 'email', 'password1', 'password2')
 
 
 
@@ -53,19 +63,22 @@ class LoginForm(AuthenticationForm):
         widget=forms.TextInput(
             attrs={
                 "placeholder": "Username",
-                "class": "form-control"
+                "class": "form-control border-2 border-secondary w-75 w-md-100 py-3 px-4 rounded-pill mb-3"
             }
-        ))
+        )
+    )
     password = forms.CharField(
         widget=forms.PasswordInput(
             attrs={
                 "placeholder": "Senha",
-                "class": "form-control"
+                "class": "form-control border-2 border-secondary w-75 w-md-100 py-3 px-4 rounded-pill mb-3"
             }
-        ))
+        )
+    )
 
     class Meta:
         fields = ['username', 'password']
+
 
 
 

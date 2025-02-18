@@ -1,0 +1,63 @@
+<div class="container-fluid py-5 mb-5 hero-header" id="mobile">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center justify-content-center">
+            <!-- Coluna para a logo (no topo) -->
+            <div class="col-12 text-center mb-4">
+                <img src="/static/img/logo.jpeg" alt="Logo" class="img-fluid w-50 w-sm-75">
+            </div>
+
+            <!-- Coluna para o formulário de login (centralizado) -->
+            <div class="col-12 col-md-8 col-lg-6 text-center mx-auto">
+                <h4 class="mb-3 text-secondary"></h4>
+                <h1 class="mb-5 display-3 text-primary">Criar Conta</h1>
+                <div class="position-relative mx-auto">
+                    <!-- Formulário de login -->
+                    <form action="{% url 'register'%}" method="POST" class="mx-auto">
+                        {% csrf_token %}
+                        {{ form }}  <!-- Exibe os campos do formulário -->
+                        <!-- Botão de login -->
+                        <button id="entrar" type="submit" class="btn btn-primary border-2 border-secondary py-3 px-4 w-75 w-sm-100 rounded-pill text-white">
+                            Entrar
+                        </button>
+                    </form>
+                </div>
+                <div>
+                    Já tem conta? <a href="{% url 'login'%}">Clique aqui</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-5 mb-5 hero-header" id="pc">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-md-12 col-lg-7">
+                <h4 class="mb-3 text-secondary">Faça seu login</h4>
+                <h1 class="mb-5 display-3 text-primary">Login</h1>
+                <div class="position-relative mx-auto">
+                    <!-- Formulário de login -->
+                    <form action="{% url 'register'%}" method="POST">
+                          
+                        {% csrf_token %}
+                        
+                        {{form}}
+                        <!-- Botão de login -->
+                        <button id="entrar" type="submit" class="btn btn-primary border-2 border-secondary py-3 px-4 w-75 rounded-pill text-white">
+                            Entrar
+                        </button>
+                    </form>
+                </div>
+                <div>
+                    Já tem Usuário? <a href="{% url 'login'%}"> Click aqui</a>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-5">
+                <!-- Remover o carrossel e adicionar a logo -->
+                <div class="text-center">
+                    <img src="/static/img/logo.jpeg" alt="Logo" class="img-fluid w-75">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -9,8 +9,9 @@ from django.utils.translation import gettext_lazy
 from django.contrib.auth import get_user_model
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
-User = Usuario
+import requests
 from carrinho.models import Carrinho
+User = Usuario
 
 # Create your views here.
 def logout_view(request):
@@ -28,7 +29,16 @@ class RegisterUser(CreateView):
         form = SignUpForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data.get("username")
-            
+            cep = form.cleaned_data.get("cep")
+            url = f"https://viacep.com.br/ws/{cep}/json/"
+            response = requests.get(url)
+            if response.status_code == 200:
+                data = response.json()
+                if data['localidade'] == 'Campina Grande':
+                    pass
+                else:
+                    form.add_error('cep','⚠️ Ainda não atendemos a sua Região, Penas Fortaleza e a Metrópoles')
+                    return render(request, "register.html", {"form": form})
             if get_user_model().objects.filter(username=username).exists():
                 form.add_error('username', 'Este nome de usuário já está em uso.')
                 return render(request, "register.html", {"form": form})
@@ -39,9 +49,9 @@ class RegisterUser(CreateView):
             user = authenticate(username=username, password=raw_password)
             if user is not None:
                 login(request, user)  # Faz o login automático
-                return redirect("cardapio")
+                return redirect("produtos")
             else:
-                return redirect("cardapio")
+                return redirect("register")
         else:
             return render(request, "register.html", {"form": form, "erro": form.errors})
 

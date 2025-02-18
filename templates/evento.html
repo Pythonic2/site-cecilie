@@ -1,0 +1,107 @@
+{%extends 'base.html'%}
+
+{%block 'content'%}
+{% include 'parciais/nav_bar.html'%}
+
+
+
+        <div class="container-xxl py-5 bg-dark hero-header mb-5">
+            <div class="container text-center my-5 pt-5 pb-4">
+                <h1 class="mb-5 display-3 text-primary">Detalhe seu Evento</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center text-uppercase">
+                        <li class="breadcrumb-item"><a href="#">Evento</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s" id="contato">
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <div class="video">
+                        <button type="button" data-bs-toggle="modal" data-src="#" data-bs-target="#videoModal">
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6 bg-dark d-flex align-items-center">
+                    <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+                        <ul>
+                            <li class="text-white">
+                                Preencha os detalhes do seu evento para te atendermos da melhor forma.
+                            </li>
+                        </ul>
+                        <form method="POST" action="" enctype="multipart/form-data" id='evento'>
+                            {% csrf_token %}
+                            {% if erro %}
+                                <div class="alert alert-danger">{{ erro }}</div>
+                            {% endif %}
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        {{form.celular}}
+                                        <label for="name">Celular/whatsapp</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        {{form.bairro}}
+                                        <label for="name">Bairro do Evento</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        {{form.endereco}}
+                                        <label for="email">Endereço Do Evento</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-12">
+                                    <div class="form-floating" id="password1" data-target-input="nearest">
+                                        {{form.data_evento}}
+                                        <label for="datetime">Data do Evento</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-floating" id="password2" data-target-input="nearest">
+                                        {{form.tipo_evento}}
+                                        <label for="datetime">Tido do Evento</label>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3 text-light" type="submit">Salvar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Inove seu Evento</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="ratio ratio-16x9">
+                            <video width="100%" height="auto" controls>
+                                <source src="/static/img/logo.jpeg" type="video/mp4">
+                                Seu navegador não suporta a tag de vídeo.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+
+{%endblock%}

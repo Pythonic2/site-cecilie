@@ -15,10 +15,10 @@ class CardapioView(TemplateView):
 
     def get(self, request, **kwargs):
         context = super().get_context_data(**kwargs)
-        usuario = request.user.username
+        # usuario = request.user.username
 
-        # Obtém o usuário atual
-        user = Usuario.objects.get(username=usuario)
+        # # Obtém o usuário atual
+        # user = Usuario.objects.get(username=usuario)
         context['categorias'] = Categoria.objects.all()
         context['titulo'] = 'Produtos'
 
@@ -40,10 +40,10 @@ class CardapioView(TemplateView):
         context['categoria_atual'] = categoria_id
 
         # Carrinho e itens
-        carrinho = Carrinho.objects.filter(usuario=user).exclude(status='pago').last()
-        itens = ItemCarrinho.objects.filter(carrinho=carrinho)
+        # carrinho = Carrinho.objects.filter(usuario=user).exclude(status='pago').last()
+        # itens = ItemCarrinho.objects.filter(carrinho=carrinho)
         
-        context['quantidade'] = sum(item.quantidade for item in itens)
+        #context['quantidade'] = sum(item.quantidade for item in itens)
         return render(request, self.template_name, context)
 
 

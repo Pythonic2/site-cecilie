@@ -8,6 +8,7 @@ from datetime import datetime
 
 
 class Usuario(AbstractUser):
+    cep = models.CharField(max_length=8, default='00000000')
     nome = models.CharField(max_length=80)
     email = models.EmailField(unique=True)
     status_pagamento = models.BooleanField(default=False)

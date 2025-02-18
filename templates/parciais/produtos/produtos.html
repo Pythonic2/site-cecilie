@@ -1,5 +1,5 @@
 {% for produto in produtos%}
-        
+
 <div class="col-md-6 col-lg-6 col-xl-4" >
     <div class="rounded position-relative fruite-item">
         <div class="fruite-img">
@@ -26,6 +26,7 @@
                         <button type="button" class="btn btn-outline-secondary" onclick="incrementar('{{ produto.id }}')">
                             <i class="fas fa-plus"></i>
                         </button>
+                        
                         <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> +</button>
                     </form>
 
@@ -45,7 +46,8 @@
                                 </button>
                             {% endif %}
                         </div>
-                        <button type="submit" class="btn btn-primary">Adicionar</button>
+                        <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> +</button>
+
                     </form>
                 {% endif %}
             </div>
