@@ -3647,3 +3647,311 @@ django.template.exceptions.TemplateDoesNotExist: evento.html
 2025-02-18 02:05:44,866 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 821
 2025-02-18 02:06:00,920 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
 2025-02-18 02:06:01,397 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 823
+2025-02-18 02:13:38,853 - WARNING - Not Found: /register/img/payment.png
+2025-02-18 02:13:39,009 - WARNING - Not Found: /favicon.ico
+2025-02-18 02:13:58,024 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 02:13:58,039 - WARNING - Not Found: /img/payment.png
+2025-02-18 02:13:58,078 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 02:13:58,269 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 02:14:10,589 - WARNING - Not Found: /login/img/payment.png
+2025-02-18 02:15:14,533 - WARNING - Not Found: /login/img/payment.png
+2025-02-18 02:15:15,109 - WARNING - Not Found: /login/img/payment.png
+2025-02-18 02:15:18,823 - WARNING - Not Found: /register/img/payment.png
+2025-02-18 02:15:27,595 - WARNING - Not Found: /login/img/payment.png
+2025-02-18 02:15:47,408 - WARNING - Not Found: /login/img/payment.png
+2025-02-18 02:15:48,284 - WARNING - Not Found: /login/img/payment.png
+2025-02-18 02:15:48,444 - WARNING - Not Found: /login/img/payment.png
+2025-02-18 02:15:48,624 - WARNING - Not Found: /login/img/payment.png
+2025-02-18 02:15:49,313 - WARNING - Not Found: /register/img/payment.png
+2025-02-18 02:16:02,867 - WARNING - Not Found: /login/img/payment.png
+2025-02-18 02:16:06,092 - WARNING - Not Found: /register/img/payment.png
+2025-02-18 02:17:50,552 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\authentication\views.py changed, reloading.
+2025-02-18 02:18:01,298 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\authentication\views.py changed, reloading.
+2025-02-18 02:18:11,124 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\authentication\views.py changed, reloading.
+2025-02-18 02:18:17,172 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\authentication\views.py changed, reloading.
+2025-02-18 02:18:25,499 - WARNING - Not Found: /register/img/payment.png
+2025-02-18 02:18:51,654 - WARNING - Not Found: /register/img/payment.png
+2025-02-18 02:19:08,733 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-02-18 02:19:09,109 - DEBUG - https://viacep.com.br:443 "GET /ws/58414565/json/ HTTP/1.1" 200 None
+2025-02-18 02:19:09,144 - WARNING - Not Found: /register/img/payment.png
+2025-02-18 02:25:12,245 - WARNING - Not Found: /pedidos/
+2025-02-18 02:25:22,545 - WARNING - Not Found: /sucesso/
+2025-02-18 03:10:53,224 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-18 03:10:53,789 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 821
+2025-02-18 03:11:50,484 - WARNING - Not Found: /carrinho/index.html
+2025-02-18 03:12:33,315 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-18 03:12:33,921 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-18 03:12:34,291 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 823
+2025-02-18 03:12:34,337 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 822
+2025-02-18 03:12:35,130 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:12:35,136 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:13:48,338 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:15:02,508 - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\main\views.py", line 47, in get
+    return render(request, self.template_name)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'minhas-compras' not found. 'minhas-compras' is not a valid view function or pattern name.
+2025-02-18 03:15:04,616 - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\main\views.py", line 47, in get
+    return render(request, self.template_name)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'minhas-compras' not found. 'minhas-compras' is not a valid view function or pattern name.
+2025-02-18 03:15:43,462 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:15:43,482 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:15:43,504 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:15:43,693 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:15:58,105 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-18 03:15:58,660 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 822
+2025-02-18 03:16:14,618 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:16:14,624 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:16:14,659 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:16:14,789 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:17:38,870 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:17:38,879 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:17:39,027 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:17:39,352 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:17:39,370 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:17:39,391 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:17:39,531 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:17:39,824 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:17:39,831 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:17:39,880 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:17:39,958 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:17:40,317 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:17:40,325 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:17:40,371 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:17:40,487 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:17:40,696 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:17:40,701 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:17:40,809 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:17:44,771 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:18:02,242 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-02-18 03:18:02,617 - DEBUG - https://viacep.com.br:443 "GET /ws/58414565/json/ HTTP/1.1" 200 None
+2025-02-18 03:18:47,592 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:18:47,600 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:18:47,733 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:18:48,069 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:18:48,079 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:18:48,089 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:18:51,799 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:18:51,803 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:18:55,053 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:19:02,134 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:19:02,147 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:19:02,163 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:19:02,314 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:19:03,011 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:19:03,016 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:19:03,120 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:41,869 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:41,876 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:20:42,010 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:42,312 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:42,329 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:20:42,344 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:42,478 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:42,485 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:20:42,497 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:42,577 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:47,767 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:47,777 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:20:47,804 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:47,898 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:48,079 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:48,086 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:20:48,190 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:48,231 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:48,238 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:20:48,354 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:48,504 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:48,510 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:20:48,596 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:48,604 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:20:48,713 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:48,756 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:48,768 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:20:48,780 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:48,872 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:48,948 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:48,953 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:20:49,052 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:49,115 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:49,120 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:20:49,225 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:49,290 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:49,299 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:20:49,377 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:49,458 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:49,467 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:20:49,607 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:49,652 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:49,660 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:20:49,766 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:49,809 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:49,817 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:20:49,924 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:49,971 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:49,977 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:20:50,065 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:50,184 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:20:50,184 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:50,301 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:50,386 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:20:50,391 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:20:50,491 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:21:04,396 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:21:04,402 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:21:04,499 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:21:04,715 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:21:04,722 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:21:04,812 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:21:04,952 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:21:04,958 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:21:05,064 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:21:05,072 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:21:05,181 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:21:42,456 - WARNING - Not Found: /img/testimonial-1.jpg
+2025-02-18 03:21:42,464 - WARNING - Not Found: /img/payment.png
+2025-02-18 03:21:42,511 - WARNING - Not Found: /img/testimonial-1.jpg

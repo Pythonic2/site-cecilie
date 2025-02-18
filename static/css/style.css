@@ -136,6 +136,21 @@ ul.errorlist li {
     #id_password{
         width: 100% !important;
     }
+    #id_password1{
+        width: 100% !important;
+    }
+    #id_password2{
+        width: 100% !important;
+    }
+    #id_cep{
+        width: 100% !important;
+    }
+    #id_nome{
+        width: 100% !important;
+    }
+    #id_email{
+        width: 100% !important;
+    }
     #entrar{
         width: 100% !important;
     }

@@ -34,7 +34,30 @@ class RegisterUser(CreateView):
             response = requests.get(url)
             if response.status_code == 200:
                 data = response.json()
-                if data['localidade'] == 'Campina Grande':
+                cidades_rm_fortaleza = [
+                            "Fortaleza",
+                            "Aquiraz",
+                            "Caucaia",
+                            "Maracanaú",
+                            "Pacatuba",
+                            "São Gonçalo do Amarante",
+                            "Eusébio",
+                            "Itaitinga",
+                            "Iguatu",
+                            "Guaiúba",
+                            "Baturité",
+                            "Pindoretama",
+                            "Barreira",
+                            "Horizonte",
+                            "Cascavel",
+                            "Choro",
+                            "Itapipoca",
+                            "Beberibe",
+                            "Aracati",
+                            "Acaraú"
+                        ]
+
+                if data['localidade'] in cidades_rm_fortaleza:
                     pass
                 else:
                     form.add_error('cep','⚠️ Ainda não atendemos a sua Região, Penas Fortaleza e a Metrópoles')

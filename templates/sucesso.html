@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block 'content'%}
+{% include 'parciais/nav_bar.html'%}
+
+<style>
+  /* Para esconder a tabela em dispositivos móveis */
+@media (max-width: 768px) {
+    .table {
+        display: none;
+    }
+    ul {
+        display: block;
+    }
+}
+
+/* Para esconder a lista em telas maiores */
+@media (min-width: 768px) {
+    ul {
+        display: none;
+    }
+    .table {
+        display: table;
+    }
+}
+
+</style>
+<div class="container-xxl py-5 bg-dark hero-header mb-5">
+    <div class="container text-center my-5 pt-5 pb-4">
+        <h1 class="mb-5 display-3 text-primary">Minhas Compras</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center text-uppercase">
+                <li class="breadcrumb-item"><a href="#">Pedidos</a></li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+{% if pagamentos %}
+    <!-- Tabela para telas maiores -->
+    <table class="table d-none d-md-table">
+        <thead>
+            <tr>
+                <th scope="col">Evento</th>
+                <th scope="col">Data do Evento</th>
+                <th scope="col">Bairro do Evento</th>
+                <th scope="col">Endereço do Evento</th>
+                <th scope="col">Valor do Pagamento</th>
+                <th scope="col">Status do Pagamento</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pag in pagamentos %}
+            <tr>
+                <td>{{ pag.tipo_evento }}</td>
+                <td>{{ pag.data_evento }}</td>
+                <td>{{ pag.bairro }}</td>
+                <td>{{ pag.endereco }}</td>
+                <td>{{ pag.valor }}</td>
+                <td class="badge bg-success">{{ pag.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Lista para telas móveis -->
+    <ul class="d-md-none">
+        {% for pag in pagamentos %}
+        <li class="border-bottom py-2">
+            <p><strong>Evento:</strong> {{ pag.tipo_evento }}</p>
+            <p><strong>Data:</strong> {{ pag.data_evento }}</p>
+            <p><strong>Bairro:</strong> {{ pag.bairro }}</p>
+            <p><strong>Endereço:</strong> {{ pag.endereco }}</p>
+            <p><strong>Valor:</strong> {{ pag.valor }}</p>
+            <p><strong>Status:</strong> <span class="badge bg-success">{{ pag.status }}</span></p>
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Você ainda não fez nenhuma compra.</p>
+{% endif %}
+
+{% endblock %}
