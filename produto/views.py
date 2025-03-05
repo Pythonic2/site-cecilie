@@ -55,9 +55,9 @@ class CardapioView(TemplateView):
         #cep_usuario = request.GET.get("cep")  # Pega o CEP via GET (ou pode ser de um formulário)
         
         #if cep_usuario:
-        cep = Evento.objects.last()
-        print(cep.cep)
-        taxa_cidade = obter_taxa_por_cep('58414565')  # Busca a taxa no banco
+        evento = Evento.objects.last()
+        cep = evento.cep
+        taxa_cidade = obter_taxa_por_cep(cep)  # Busca a taxa no banco
         request.session["taxa_cidade"] = taxa_cidade  # Armazena na sessão
 
         #else:

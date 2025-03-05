@@ -19,7 +19,7 @@ class Produto(models.Model):
     disponivel = models.BooleanField(default=True)
     valor = models.DecimalField(max_digits=10, decimal_places=2)
     litros = models.PositiveIntegerField(blank=True, null=True)
-    imagem = models.ImageField(upload_to='chopps/', blank=True, null=True, default=None)
+    imagem = models.ImageField(upload_to='media/', blank=True, null=True, default=None)
     servico = models.BooleanField(default=False)
     disponivel = models.BooleanField(default=True)
     destaque = models.BooleanField(default=False)
