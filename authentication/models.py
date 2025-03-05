@@ -8,12 +8,9 @@ from datetime import datetime
 
 
 class Usuario(AbstractUser):
-    cep = models.CharField(max_length=8, default='00000000')
     nome = models.CharField(max_length=80)
     email = models.EmailField(unique=True)
-    status_pagamento = models.BooleanField(default=False)
-    data_pagamento = models.DateTimeField(default=timezone.now)
-    data_cobrar = models.DateTimeField(default=timezone.now() + timedelta(days=30))
+    
     
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
@@ -21,13 +18,10 @@ class Usuario(AbstractUser):
     def __str__(self):
         return self.username
 
-    @property
-    def pagamento_atrasado(self):
-        return timezone.now() >= self.data_cobrar
-    
     
 class Evento(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    cep = models.CharField(max_length=8, default=0)
     celular = models.CharField(max_length=11)
     bairro = models.CharField(max_length=100, default='None')
     endereco = models.CharField(max_length=100)

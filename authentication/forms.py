@@ -83,6 +83,16 @@ class LoginForm(AuthenticationForm):
 
 
 class EventoForm(forms.ModelForm):
+    cep = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Cep",
+                "class": "form-control",
+                "maxlength":"8",
+                "required":"true"
+            }
+        ),
+    )
     celular = forms.CharField(
         widget=forms.TextInput(
             attrs={

@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{% block 'content'%}
+        {%include  'parciais/nav_bar.html' with quantidade=quantidade%}
+
+        {%include  'parciais/pesquisa.html'%}
+
+        <div class="container-xxl py-5 bg-dark hero-header mb-5">
+            <div class="container text-center my-5 pt-5 pb-4">
+                <h1 class="mb-5 display-3 text-primary">Feedback</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center text-uppercase">
+                        {% comment %} <li class="breadcrumb-item"><a href="#">Deixe seu Feedback</a></li> {% endcomment %}
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="container mt-5">
+            <h2>Deixe sua Avaliação</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}  <!-- Renderiza o formulário -->
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+
+{%endblock%}

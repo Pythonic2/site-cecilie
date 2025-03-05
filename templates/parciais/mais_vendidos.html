@@ -10,16 +10,16 @@
                     <div class="p-4 rounded bg-light">
                         <div class="row align-items-center">
                             <div class="col-6">
-                                <img src="{{produto.imagem.url}}" class="img-fluid rounded-circle w-100" alt="">
+                                <img src="{{produto.imagem.url}}" class="img-fluid w-100" alt="">
                             </div>
                             <div class="col-6">
-                                <a href="#" class="h5">Organic Tomato</a>
+                                <a href="#" class="h5">{{produto.nome}}</a>
                                 <div class="d-flex my-3">
                                     
                                     {{produto.categoria}}
                                 </div>
-                                <h4 class="mb-3">R$ {{produto.valor}}</h4>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                <h4 class="mb-3">{{produto.descricao}}</h4>
+                                <a href="{% url 'produtos'%}" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Ver todos</a>
                             </div>
                         </div>
                     </div>

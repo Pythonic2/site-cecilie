@@ -93,7 +93,7 @@ def obter_quantidade_carrinho_htmx(request):
 @login_required
 def adicionar_ao_carrinho(request, produto_id):
     # Verifica se o usuário está autenticado
-    if request.user.is_authenticated:
+    if request.method == 'POST' and request.user.is_authenticated:
         usuario = request.user.username
         print(f"Usuário autenticado: {usuario}")
 
@@ -109,9 +109,9 @@ def adicionar_ao_carrinho(request, produto_id):
 
         # Obtém o produto
         produto = get_object_or_404(Produto, pk=produto_id)
-        quantidade = int(request.POST.get('quantidade', 0))
+        quantidade = 1
 
-        if quantidade >= 1 and quantidade <= produto.quantidade:
+        if quantidade >= 1:
             # Verifica se o produto já está no carrinho
             item_carrinho, created = ItemCarrinho.objects.get_or_create(
                 carrinho=carrinho, 
@@ -130,16 +130,16 @@ def adicionar_ao_carrinho(request, produto_id):
 
             # Mensagem de sucesso para o HTMX
             mensagem = f'''
-                <span class="text-success">{quantidade} Unidade(s) do Produto "{produto.nome}" adicionado ao carrinho!</span>
-                <script>removerMensagem('mensagem-produto-{produto.id}');</script>
+               {item_carrinho.quantidade} Unidade(s) do Produto "{produto.nome}" adicionado ao carrinho!
+               
             '''
-            return HttpResponse(mensagem)
+            return render(request,'parciais/retorno.html',{'mensagem':mensagem})
 
         else:
             mensagem = f'''
                 <span class="text-danger"></script>
             '''
-            return HttpResponse(mensagem)
+            return render(request,'parciais/retorno.html',{'mensagem':mensagem})
     
     else:
         return HttpResponse("Usuário não autenticado", status=403)

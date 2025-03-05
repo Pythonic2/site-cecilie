@@ -1,72 +1,69 @@
-{% for produto in produtos%}
+<style>
+    .fruite-item {
+        min-height: 350px; /* Ajuste conforme necessário */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
-<div class="col-md-6 col-lg-6 col-xl-4" >
+    .fruite-item p {
+        min-height: 60px; /* Garante que todas as descrições tenham o mesmo tamanho */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .fruite-img img {
+        object-fit: cover;
+        height: 200px; /* Defina um tamanho fixo para as imagens */
+        width: 100%;
+    }
+</style>
+
+{% for produto in produtos %}
+<div class="col-md-6 col-lg-6 col-xl-4">
     <div class="rounded position-relative fruite-item">
         <div class="fruite-img">
             <img src="{{produto.imagem.url}}" class="img-fluid w-100 rounded-top" alt="">
         </div>
-        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">{{produto.categoria}}</div>
+        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">
+            {{produto.categoria}}
+        </div>
         <div class="p-4 border border-secondary border-top-0 rounded-bottom">
             <h4>{{produto.nome}} - {{produto.tamanho}}</h4>
             <p>{{produto.descricao}}</p>
+
             <div class="d-flex justify-content-between flex-lg-wrap">
-                <p class="text-dark fs-5 fw-bold mb-0">${{produto.valor}}</p>
-                {% if request.user.is_authenticated %}
-                    <form hx-post="{% url 'adicionar_ao_carrinho' produto.id %}"
-                            hx-swap="innerHTML"
-                            hx-trigger="submit"
-                            class="d-flex flex-column flex-sm-row align-items-center">
-                            
-                        {% csrf_token %}
-                        
-                        <button type="button" class="btn btn-outline-secondary" onclick="decrementar('{{ produto.id }}')">
-                            <i class="fas fa-minus"></i>
-                        </button>
-                        <input type="number" id="quantidade_{{ produto.id }}" name="quantidade" value="1" min="1" class="form-control text-center" style="max-width: 80px;">
-                        <button type="button" class="btn btn-outline-secondary" onclick="incrementar('{{ produto.id }}')">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                        
-                        <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> +</button>
-                    </form>
+                <p class="text-dark fs-5 fw-bold mb-0">${{ produto.valor_com_taxa|floatformat:2 }}</p>
 
-
-                {% else %}
-                    <form method="POST" action="{% url 'login' %}" class="d-flex flex-column flex-sm-row align-items-center">
-                        {% csrf_token %}
-                        <input type="hidden" name="produto_id" value="{{ produto.id }}">
-                        <div class="input-group mb-2 mb-sm-0" style="width: 150px;">
-                            {% if not produto.servico %}
-                                <button type="button" class="btn btn-outline-secondary" onclick="decrementar('{{ produto.id }}')">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                                <input type="number" id="quantidade_{{ produto.id }}" name="quantidade" value="1" min="1" class="form-control text-center" style="max-width: 80px;">
-                                <button type="button" class="btn btn-outline-secondary" onclick="incrementar('{{ produto.id }}')">
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            {% endif %}
-                        </div>
-                        <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> +</button>
-
-                    </form>
-                {% endif %}
+                  {# Verifica se o produto tem estoque #}
+                    {% if request.user.is_authenticated %}
+                        <form hx-post="{% url 'adicionar_ao_carrinho' produto.id %}"
+                              hx-swap="innerHTML"
+                              hx-trigger="submit"
+                              class="d-flex flex-column flex-sm-row align-items-center" hx-target="#mensagem_{{ produto.id }}"
+                              >
+                            {% csrf_token %}
+                            <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                <i class="fa fa-shopping-bag me-2 text-primary"></i> + 1
+                            </button>
+                        </form>
+                    {% else %}
+                        <form method="POST" action="{% url 'login' %}" class="d-flex flex-column flex-sm-row align-items-center">
+                            {% csrf_token %}
+                            <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                <i class="fa fa-shopping-bag me-2 text-primary"></i> +
+                            </button>
+                        </form>
+                    {% endif %}
+                
             </div>
+
+            <div class="col-md-12 col-lg-12 col-xl-12" id="mensagem_{{ produto.id }}">
+                {% include 'parciais/retorno.html'%}
+            </div>
+            
         </div>
     </div>
 </div>
-<script>
-    function incrementar(produtoId) {
-        const input = document.getElementById(`quantidade_${produtoId}`);
-        let quantidade = parseInt(input.value, 10);
-        input.value = quantidade + 1;
-    }
-
-    function decrementar(produtoId) {
-        const input = document.getElementById(`quantidade_${produtoId}`);
-        let quantidade = parseInt(input.value, 10);
-        if (quantidade > 1) {
-            input.value = quantidade - 1;
-        }
-    }
-</script>
-{%endfor%}
+{% endfor %}

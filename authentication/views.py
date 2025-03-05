@@ -11,6 +11,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 import requests
 from carrinho.models import Carrinho
+from produto.models import Cidade
 User = Usuario
 
 # Create your views here.
@@ -34,29 +35,8 @@ class RegisterUser(CreateView):
             response = requests.get(url)
             if response.status_code == 200:
                 data = response.json()
-                cidades_rm_fortaleza = [
-                            "Fortaleza",
-                            "Aquiraz",
-                            "Caucaia",
-                            "Maracanaú",
-                            "Pacatuba",
-                            "São Gonçalo do Amarante",
-                            "Eusébio",
-                            "Itaitinga",
-                            "Iguatu",
-                            "Guaiúba",
-                            "Baturité",
-                            "Pindoretama",
-                            "Barreira",
-                            "Horizonte",
-                            "Cascavel",
-                            "Choro",
-                            "Itapipoca",
-                            "Beberibe",
-                            "Aracati",
-                            "Acaraú"
-                        ]
-
+                cidades_rm_fortaleza = [cidade.nome for cidade in Cidade.objects.all() ]
+                        
                 if data['localidade'] in cidades_rm_fortaleza:
                     pass
                 else:
@@ -133,11 +113,25 @@ class EventoView(TemplateView):
 
         form = EventoForm(request.POST)
         if form.is_valid():
-            evento = form.save(commit=False)  # Não salva no banco ainda
-            evento.usuario = request.user
-            evento.status = 'Aguardando Pagamento'
-            evento.save()  # Agora salva com o usuário
-            return redirect('pagina_carrinho')  # Substitua por uma URL válida
+            cep = form.cleaned_data.get("cep")
+            print(f"**************** CEP {cep} *********************")
+            url = f"https://viacep.com.br/ws/{cep}/json/"
+            response = requests.get(url)
+            if response.status_code == 200:
+                data = response.json()
+                cidades_rm_fortaleza = [cidade.nome for cidade in Cidade.objects.all() ]
+
+                if data['localidade'] in cidades_rm_fortaleza:
+                    evento = form.save(commit=False)  # Não salva no banco ainda
+                    evento.usuario = request.user
+                    evento.status = 'Aguardando Pagamento'
+                    evento.cep = cep
+                    evento.save()  # Agora salva com o usuário
+                    return redirect('pagina_carrinho')  # Substitua por uma URL válida
+                else:
+                    form.add_error('cep','⚠️ Ainda não atendemos a sua Região, Penas Fortaleza e a Metrópoles')
+                    return render(request, "evento.html", {"form": form, "erro": form.errors})
+    
         else:
             return render(request, "evento.html", {"form": form, "erro": form.errors})
 
