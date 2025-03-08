@@ -27,7 +27,7 @@ logging.basicConfig(
 @csrf_exempt
 def simple_test(request):
     logging.debug("Recebendo requisição POST")
-    
+
     if request.method == "POST":
         if not request.body:
             logging.warning("Corpo da requisição vazio")
@@ -43,9 +43,7 @@ def simple_test(request):
             tipo = webhook_data.get('type', {})
             logging.debug(f"Pagamento ID: {pagamento_id}, Tipo: {tipo}")
 
-            # Criar um DataFrame do webhook_data e salvar em CSV
-            df = pd.DataFrame([webhook_data])  # Convertendo o dict para DataFrame
-            df.to_csv('recibo.csv')
+
             logging.info("Dados do webhook salvos em recibo.csv")
 
             # Buscar pagamento usando a função definida anteriormente
@@ -82,9 +80,9 @@ def simple_test(request):
                     print(f'---------{evento}------------EVENTO')
                     logging.debug(f"consulta evento: {evento}")
 
-                    
+
                     print(f'status ----------------------{status}')
-                
+
                     #carrinho.status = 'Pago'
                     evento.status = 'Pago'
                     evento.save()
