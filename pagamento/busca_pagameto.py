@@ -52,6 +52,3 @@ def buscar_pagamento_mercado_pago(pagamento_id):
     
     except Exception as e:
         print(f"Ocorreu um erro: {str(e)}")
-
-buscar_pagamento_mercado_pago(1332875515)
-
