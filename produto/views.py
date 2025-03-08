@@ -11,17 +11,24 @@ import requests
 from .models import Cidade
 from authentication.models import Evento
 
-def obter_taxa_por_cep(cep):
+def obter_taxa_por_cep_ou_cidade(cep=None, cidade_nome=None):
 
     try:
-        url = f"https://viacep.com.br/ws/{cep}/json/"
-        response = requests.get(url)
-        
-        if response.status_code == 200:
-            dados = response.json()
-            cidade = dados.get('localidade')
-            cidade = Cidade.objects.get(nome=cidade)
-            return float(cidade.taxa)
+        if cidade_nome:
+            cidade = Cidade.objects.get(nome=cidade_nome)
+        elif cep:
+            url = f"https://viacep.com.br/ws/{cep}/json/"
+            response = requests.get(url)
+            if response.status_code == 200:
+                dados = response.json()
+                cidade_nome = dados.get('localidade')
+                cidade = Cidade.objects.get(nome=cidade_nome)
+            else:
+                return 0  # Sem taxa se a cidade não estiver cadastrada
+        else:
+            return 0  # Sem taxa se nem cidade nem CEP forem fornecidos
+
+        return float(cidade.taxa)
     except Cidade.DoesNotExist:
         return 0  # Sem taxa se a cidade não estiver cadastrada
 
@@ -56,8 +63,7 @@ class CardapioView(TemplateView):
         
         #if cep_usuario:
         evento = Evento.objects.last()
-        cep = evento.cep
-        taxa_cidade = obter_taxa_por_cep(cep)  # Busca a taxa no banco
+        taxa_cidade = obter_taxa_por_cep_ou_cidade(cidade_nome=request.session['cidade_selecionada'])  # Busca a taxa no banco
         request.session["taxa_cidade"] = taxa_cidade  # Armazena na sessão
 
         #else:

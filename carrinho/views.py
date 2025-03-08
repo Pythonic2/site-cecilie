@@ -9,6 +9,7 @@ from django.http import HttpResponse
 from produto.models import Produto
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from produto.views import obter_taxa_por_cep_ou_cidade
 import logging
 
 # Configurando o logger no início do arquivo
@@ -20,6 +21,8 @@ logging.basicConfig(
     handlers=[logging.FileHandler('transacoes.log', mode='a'),  # Salvar no arquivo transacoes.log
               logging.StreamHandler()]  # Exibir no console também
 )
+
+
 @login_required
 def pagina_carrinho(request):
     """ Renderiza a página do carrinho e carrega as informações descritas no dict context """
@@ -31,18 +34,39 @@ def pagina_carrinho(request):
 
     # Obtém o carrinho do usuário
     carrinho = Carrinho.objects.filter(usuario=user).exclude(status='pago').last()
-    
+    evento = Evento.objects.filter(usuario=user).exclude(status='pago').last()
+
     if not carrinho:
         return render(request, 'cart.html', {'produtos': [], 'valor_total': 0, 'title': 'Carrinho'})
 
     # Obtém os itens do carrinho
     itens = ItemCarrinho.objects.filter(carrinho=carrinho)
-    produtos_no_carrinho = [(item.produto, item.quantidade) for item in itens]
+    produtos_no_carrinho = []
 
-    # Calcula o valor total
-    valor_total = sum(item.produto.valor * item.quantidade for item in itens)
+    #se tiver evento ele aplica taxa com o cep do evento
+    if evento:
+        # Aplica a taxa com base no CEP do evento
+        taxa = Decimal(obter_taxa_por_cep_ou_cidade(cep=evento.cep))
+        for item in itens:
+            item.valor = item.produto.valor + taxa
+            item.save()
+            produtos_no_carrinho.append((item.produto, item.quantidade, item.valor))
+        # Limpa a variável 'produtos_com_taxa' da sessão se um evento for encontrado
+
+    # ele aplica taxa da variavel de cidade q ele cadastrou no início da tela e joguo produtos_com_taxa na session 
+    else:
+        todos_itens_com_taxa = request.session.get("produtos_com_taxa", {})
+        for item in itens:
+            # Verifica se o item está presente no dicionário todos_itens_com_taxa
+            if str(item.produto.id) in todos_itens_com_taxa:
+                # Define o valor do item com base no valor do dicionário todos_itens_com_taxa
+                item.valor = Decimal(todos_itens_com_taxa[str(item.produto.id)])
+                item.save()
+            produtos_no_carrinho.append((item.produto, item.quantidade, item.valor))
+
+    # Calcula o valor total usando o valor com taxa
+    valor_total = sum(item.valor * item.quantidade for item in itens)
     
-    evento = Evento.objects.filter(usuario=user).exclude(status='pago').last()
     if evento:
         evento.carrinho = carrinho.id
         evento.valor = valor_total
@@ -53,13 +77,14 @@ def pagina_carrinho(request):
         'total': valor_total,
         'title': 'Carrinho',
         'evento': evento,
-        'titulo':'carrinho',
-        'quantidade':sum(item.quantidade for item in itens),
+        'titulo': 'carrinho',
+        'quantidade': sum(item.quantidade for item in itens),
+        
     }
     try:
-        carrinho = carrinho.id
+        carrinho_id = carrinho.id
         evento_id = evento.id if evento else None
-        pag, carrinho_id = gerar_pagamento(user.id, produtos_no_carrinho, evento_id, carrinho)
+        pag, carrinho_id = gerar_pagamento(user.id, produtos_no_carrinho, evento_id, carrinho_id)
         
         context['link'] = pag
     except Exception as e:
@@ -90,6 +115,8 @@ def obter_quantidade_carrinho_htmx(request):
     
     return render(request, 'parciais/qtd_carrinho.html',{'quantidade_carrinho':quantidade_total})
 
+from decimal import Decimal
+
 @login_required
 def adicionar_ao_carrinho(request, produto_id):
     # Verifica se o usuário está autenticado
@@ -111,21 +138,26 @@ def adicionar_ao_carrinho(request, produto_id):
         produto = get_object_or_404(Produto, pk=produto_id)
         quantidade = 1
 
+        # Obtém o valor com taxa da sessão
+        valores_com_taxa = request.session.get('valores_com_taxa', {})
+        valor_com_taxa = Decimal(valores_com_taxa.get(str(produto_id), produto.valor))
+
         if quantidade >= 1:
             # Verifica se o produto já está no carrinho
             item_carrinho, created = ItemCarrinho.objects.get_or_create(
                 carrinho=carrinho, 
                 produto=produto,
-                defaults={'quantidade': quantidade}  # Define a quantidade na criação
+                defaults={'quantidade': quantidade, 'valor': valor_com_taxa}  # Define a quantidade e o valor na criação
             )
 
             if not created:
                 # Se o produto já estiver no carrinho, atualiza a quantidade
                 item_carrinho.quantidade += quantidade
+                item_carrinho.valor = valor_com_taxa  # Atualiza o valor com taxa
                 item_carrinho.save()
 
             # Atualiza o valor total do carrinho
-            carrinho.valor += produto.valor * quantidade
+            carrinho.valor += valor_com_taxa * quantidade
             carrinho.save()
 
             # Mensagem de sucesso para o HTMX
@@ -133,13 +165,13 @@ def adicionar_ao_carrinho(request, produto_id):
                {item_carrinho.quantidade} Unidade(s) do Produto "{produto.nome}" adicionado ao carrinho!
                
             '''
-            return render(request,'parciais/retorno.html',{'mensagem':mensagem})
+            return render(request, 'parciais/retorno.html', {'mensagem':mensagem})
 
         else:
             mensagem = f'''
                 <span class="text-danger"></script>
             '''
-            return render(request,'parciais/retorno.html',{'mensagem':mensagem})
+            return render(request, 'parciais/retorno.html', {'mensagem':mensagem})
     
     else:
         return HttpResponse("Usuário não autenticado", status=403)

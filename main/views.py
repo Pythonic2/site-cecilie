@@ -12,7 +12,9 @@ import os
 from dotenv import load_dotenv
 from produto.models import Produto
 from django.views.decorators.csrf import csrf_exempt
-from produto.models import Produto
+from produto.models import Cidade
+from produto.views import obter_taxa_por_cep_ou_cidade
+from .models import ImagemSlide
 load_dotenv() 
 
 logger = logging.getLogger(__name__)
@@ -23,25 +25,50 @@ class IndexView(TemplateView):
 
     method_decorator(cache_page(60 * 60 * 24))
     def get(self,request):
-        produtos = Produto.objects.filter(destaque=True).order_by('-id')
-        mais_vendidos = Produto.objects.filter(mais_vendido=True).order_by('-id')
-        # premiums = Produto.objects.filter(premium=True)
         
-        # usuario = request.user.username
-
-        # # Obtém o usuário atual
-        # user = Usuario.objects.get(username=usuario)
-
-        # carrinho = Carrinho.objects.filter(usuario=user).exclude(status='pago').last()
-        # categorias = Categoria.objects.all().order_by('-id')
-
-        # itens = ItemCarrinho.objects.filter(carrinho=carrinho)
-        #context = {'destaques':produtos,'categorias':categorias,'mais_vendidos':mais_vendidos,'produtos_p':premiums,'quantidade':sum(item.quantidade for item in itens)}
-        feedbacks = Testemunho.objects.all().order_by('-id')
-        context = {'destaques':produtos,'feedbacks':feedbacks,'mais_vendidos':mais_vendidos}
+        cidades = Cidade.objects.all()
+        imagens = ImagemSlide.objects.all()
+        context = {'cidades':cidades,'imagens':imagens}
         return render(request, self.template_name,context)
     
-    
+class HomeView(TemplateView):
+    template_name = 'home.html'
+
+    method_decorator(cache_page(60 * 60 * 24))
+    def post(self, request, cidade_id):
+        # cidade_id = request.POST.get('cidade')
+        cidades = Cidade.objects.all()
+        produtos = Produto.objects.filter(destaque=True).order_by('-id')
+        cidade = get_object_or_404(Cidade, id=cidade_id)
+        print(cidade)
+        taxa_cidade = obter_taxa_por_cep_ou_cidade(cidade_nome=cidade)  # Busca a taxa no banco
+        request.session["taxa_cidade"] = taxa_cidade  # Armazena na sessão
+        
+        #else:
+        #taxa_cidade = request.session.get("taxa_cidade", 0)  # Se não houver CEP, usa 0
+
+        # 🔹 Aplica a taxa sem acumular ao recarregar a página
+        produtos_com_taxa = request.session.get("produtos_com_taxa", {})
+
+        for produto in produtos:
+            if produto.id not in produtos_com_taxa:
+                produtos_com_taxa[produto.id] = float(produto.valor) + float(taxa_cidade)  # ✅ Converte ambos
+
+            produto.valor_com_taxa = produtos_com_taxa[produto.id]  # ✅ Usa valor já convertido
+
+        request.session["produtos_com_taxa"] = {k: float(v) for k, v in produtos_com_taxa.items()}  # ✅ Converte tudo para float antes de salvar
+        request.session['cidade_selecionada'] = cidade.nome
+        # Calcular os valores dos produtos com a taxa da cidade e armazenar na sessão
+        # produtos = Produto.objects.all()
+        # valores_com_taxa = {}
+        # p_taxa = []
+        # for produto in produtos:
+        #     valor_com_taxa =float(produto.valor + cidade.taxa)
+        #     valores_com_taxa[produto.id] = valor_com_taxa
+        #     p_taxa.append(valores_com_taxa)
+        # request.session['valores_com_taxa'] = valores_com_taxa
+        
+        return render(request, self.template_name,{'destaques':produtos,'cidades':cidades,'cidade':cidade,'taxa':taxa_cidade})
         
 @csrf_exempt
 def filtrar_destaques(request, categoria_id):

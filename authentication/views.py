@@ -17,7 +17,7 @@ User = Usuario
 # Create your views here.
 def logout_view(request):
     logout(request)
-    return redirect("login")
+    return redirect("index")
 
 
 class RegisterUser(CreateView):

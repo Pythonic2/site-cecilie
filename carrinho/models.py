@@ -17,7 +17,7 @@ class ItemCarrinho(models.Model):
     carrinho = models.ForeignKey(Carrinho, on_delete=models.CASCADE, related_name='itens')
     produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
     quantidade = models.PositiveIntegerField()
-
+    valor = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     class Meta:
         unique_together = ('carrinho', 'produto')
 

@@ -1,5 +1,6 @@
+<h2 class="text-primary display-6">Voce está vendo preços da Cidade: <span style="color:black">{{cidade}}<span></h1>
 {% for destaque in destaques %}
-    <div class="col-md-6 col-lg-4 col-xl-3">
+    <div class="col-md-6 col-lg-4 col-xl-3" >
         <div class="rounded position-relative fruite-item">
             <div class="fruite-img">
                 <img src="{{destaque.imagem.url}}" class="img-fluid w-100 rounded-top" alt="">
@@ -9,7 +10,7 @@
                 <h4>{{destaque.nome}}</h4>
                 <p>{{destaque.descricao}}</p>
                 <div class="d-flex justify-content-between flex-lg-wrap">
-                    <p class="text-dark fs-5 fw-bold mb-0">📌</p>
+                    <p class="text-dark fs-5 fw-bold mb-0">{{ destaque.valor_com_taxa|floatformat:2 }}</p>
                     <a href="{% url 'produtos'%}" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Ver todos</a>
                 </div>
             </div>
