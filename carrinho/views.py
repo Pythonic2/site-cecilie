@@ -79,22 +79,18 @@ def pagina_carrinho(request):
         'evento': evento,
         'titulo': 'carrinho',
         'quantidade': sum(item.quantidade for item in itens),
-        
     }
+
     try:
         carrinho_id = carrinho.id
         evento_id = evento.id if evento else None
         pag, carrinho_id = gerar_pagamento(user.id, produtos_no_carrinho, evento_id, carrinho_id)
-        
         context['link'] = pag
     except Exception as e:
         print(f"Erro ao gerar pagamento: {e}")
         context['link'] = '#'
 
     return render(request, 'cart.html', context)
-
-
-
 def obter_quantidade_carrinho_htmx(request):
     usuario = request.user.username
 

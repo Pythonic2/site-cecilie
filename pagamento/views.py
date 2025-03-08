@@ -123,6 +123,9 @@ def simple_test(request):
     logging.warning("Método HTTP não permitido")
     return JsonResponse({'status': 'method_not_allowed'}, status=405)
 
+import mercadopago
+import os
+import logging
 
 def gerar_pagamento(cliente_id: int, produtos: list, evento: int, carrinho_id: int):
     # Inicializar o SDK do Mercado Pago
@@ -130,17 +133,16 @@ def gerar_pagamento(cliente_id: int, produtos: list, evento: int, carrinho_id: i
 
     # Construir a lista de itens dinamicamente
     items = []
-    for produto, quantidade in produtos:
-        # Supondo que 'produto' seja um objeto ou dicionário com os atributos 'id', 'nome', 'valor' e 'quantidade'
+    for produto, quantidade, valor in produtos:
         item = {
             "id": produto.id,
             "title": produto.nome,
             "quantity": quantidade,
             "currency_id": "BRL",
-            "unit_price": float(produto.valor)
+            "unit_price": float(valor)
         }
         items.append(item)
-
+    print(f"items -------------{items}")
     # Configurar os dados da preferência
     preference_data = {
         "items": items,
@@ -149,19 +151,21 @@ def gerar_pagamento(cliente_id: int, produtos: list, evento: int, carrinho_id: i
             "failure": "https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/",
             "pending": "https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/",
         },
-        "external_reference": f'{cliente_id}',  # Enviando o ID do usuário aqui
+        "external_reference": f'{cliente_id}',
         "auto_return": "approved",
         "notification_url": "https://plataforma-donadochopp.cloudboosterlab.org/pag/",
         "metadata": {
             "evento_id": evento,
-            "carrinho_id": carrinho_id  # Passando o carrinho_id no metadata
+            "carrinho_id": carrinho_id
         }
     }
 
-    result = sdk.preference().create(preference_data)
-    preference = result['response']
-
-    # Retornar o link de pagamento (init_point) e o carrinho_id
-    return preference['init_point'], carrinho_id
-
-
+    try:
+        result = sdk.preference().create(preference_data)
+        logging.debug(f"Resposta da criação da preferência: {result}")
+        preference = result['response']
+        logging.info("Preferência criada com sucesso.")
+        return preference['init_point'], carrinho_id
+    except Exception as e:
+        logging.error(f"Erro ao criar a preferência: {str(e)}")
+        return None, None

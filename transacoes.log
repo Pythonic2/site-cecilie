@@ -20111,3 +20111,476 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 29: 'e
 2025-03-07 23:09:16,091 - DEBUG - Recebendo requisição POST
 2025-03-07 23:09:16,094 - WARNING - Método HTTP não permitido
 2025-03-07 23:09:16,096 - WARNING - Method Not Allowed: /pag/
+2025-03-07 23:22:29,431 - WARNING - Not Found: /media/media/slides/chopp1.webp
+2025-03-07 23:22:29,436 - WARNING - Not Found: /media/media/slides/baner-1.png
+2025-03-07 23:22:31,821 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-07 23:22:32,253 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 93
+2025-03-07 23:22:34,743 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-07 23:22:36,426 - INFO - Carrinho: 3, Criado agora? False
+2025-03-07 23:22:45,057 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-07 23:22:45,411 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-07 23:22:45,474 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-07 23:22:45,777 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-07 23:22:48,008 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-07 23:22:48,311 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-07 23:25:09,141 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-07 23:25:09,469 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-07 23:25:25,390 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-07 23:25:25,770 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 11:30:00,263 - WARNING - Not Found: /favicon.ico
+2025-03-08 11:31:35,509 - WARNING - Not Found: /media/media/slides/chopp1.webp
+2025-03-08 11:31:35,524 - WARNING - Not Found: /media/media/slides/baner-1.png
+2025-03-08 11:31:35,654 - WARNING - Not Found: /media/media/slides/chopp1.webp
+2025-03-08 11:31:35,660 - WARNING - Not Found: /media/media/slides/baner-1.png
+2025-03-08 11:31:58,741 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-08 11:31:58,742 - DEBUG - STREAM b'tEXt' 41 25
+2025-03-08 11:31:58,743 - DEBUG - STREAM b'PLTE' 78 768
+2025-03-08 11:31:58,744 - DEBUG - STREAM b'tRNS' 858 1
+2025-03-08 11:31:58,745 - DEBUG - STREAM b'IDAT' 871 106894
+2025-03-08 11:31:58,746 - DEBUG - Importing BlpImagePlugin
+2025-03-08 11:31:58,752 - DEBUG - Importing BmpImagePlugin
+2025-03-08 11:31:58,753 - DEBUG - Importing BufrStubImagePlugin
+2025-03-08 11:31:58,757 - DEBUG - Importing CurImagePlugin
+2025-03-08 11:31:58,761 - DEBUG - Importing DcxImagePlugin
+2025-03-08 11:31:58,768 - DEBUG - Importing DdsImagePlugin
+2025-03-08 11:31:58,781 - DEBUG - Importing EpsImagePlugin
+2025-03-08 11:31:58,786 - DEBUG - Importing FitsImagePlugin
+2025-03-08 11:31:58,792 - DEBUG - Importing FliImagePlugin
+2025-03-08 11:31:58,795 - DEBUG - Importing FpxImagePlugin
+2025-03-08 11:31:58,800 - DEBUG - Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-03-08 11:31:58,801 - DEBUG - Importing FtexImagePlugin
+2025-03-08 11:31:58,807 - DEBUG - Importing GbrImagePlugin
+2025-03-08 11:31:58,811 - DEBUG - Importing GifImagePlugin
+2025-03-08 11:31:58,812 - DEBUG - Importing GribStubImagePlugin
+2025-03-08 11:31:58,816 - DEBUG - Importing Hdf5StubImagePlugin
+2025-03-08 11:31:58,821 - DEBUG - Importing IcnsImagePlugin
+2025-03-08 11:31:58,833 - DEBUG - Importing IcoImagePlugin
+2025-03-08 11:31:58,839 - DEBUG - Importing ImImagePlugin
+2025-03-08 11:31:58,844 - DEBUG - Importing ImtImagePlugin
+2025-03-08 11:31:58,849 - DEBUG - Importing IptcImagePlugin
+2025-03-08 11:31:58,853 - DEBUG - Importing JpegImagePlugin
+2025-03-08 11:31:58,853 - DEBUG - Importing Jpeg2KImagePlugin
+2025-03-08 11:31:58,854 - DEBUG - Importing McIdasImagePlugin
+2025-03-08 11:31:58,859 - DEBUG - Importing MicImagePlugin
+2025-03-08 11:31:58,864 - DEBUG - Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-03-08 11:31:58,865 - DEBUG - Importing MpegImagePlugin
+2025-03-08 11:31:58,869 - DEBUG - Importing MpoImagePlugin
+2025-03-08 11:31:58,882 - DEBUG - Importing MspImagePlugin
+2025-03-08 11:31:58,887 - DEBUG - Importing PalmImagePlugin
+2025-03-08 11:31:58,893 - DEBUG - Importing PcdImagePlugin
+2025-03-08 11:31:58,897 - DEBUG - Importing PcxImagePlugin
+2025-03-08 11:31:58,898 - DEBUG - Importing PdfImagePlugin
+2025-03-08 11:31:58,918 - DEBUG - Importing PixarImagePlugin
+2025-03-08 11:31:58,923 - DEBUG - Importing PngImagePlugin
+2025-03-08 11:31:58,924 - DEBUG - Importing PpmImagePlugin
+2025-03-08 11:31:58,925 - DEBUG - Importing PsdImagePlugin
+2025-03-08 11:31:58,930 - DEBUG - Importing QoiImagePlugin
+2025-03-08 11:31:58,934 - DEBUG - Importing SgiImagePlugin
+2025-03-08 11:31:58,939 - DEBUG - Importing SpiderImagePlugin
+2025-03-08 11:31:58,944 - DEBUG - Importing SunImagePlugin
+2025-03-08 11:31:58,948 - DEBUG - Importing TgaImagePlugin
+2025-03-08 11:31:58,952 - DEBUG - Importing TiffImagePlugin
+2025-03-08 11:31:58,953 - DEBUG - Importing WebPImagePlugin
+2025-03-08 11:31:59,037 - DEBUG - Importing WmfImagePlugin
+2025-03-08 11:31:59,041 - DEBUG - Importing XbmImagePlugin
+2025-03-08 11:31:59,046 - DEBUG - Importing XpmImagePlugin
+2025-03-08 11:31:59,050 - DEBUG - Importing XVThumbImagePlugin
+2025-03-08 11:32:34,524 - WARNING - Not Found: /home/2/img/fruite-item-5.jpg
+2025-03-08 11:32:34,525 - WARNING - Not Found: /home/2/img/fruite-item-2.jpg
+2025-03-08 11:32:34,550 - WARNING - Not Found: /home/2/img/fruite-item-4.jpg
+2025-03-08 11:32:34,559 - WARNING - Not Found: /home/2/img/fruite-item-3.jpg
+2025-03-08 11:32:34,566 - WARNING - Not Found: /home/2/img/fruite-item-1.jpg
+2025-03-08 11:32:34,572 - WARNING - Not Found: /home/2/img/fruite-item-6.jpg
+2025-03-08 11:32:34,586 - WARNING - Not Found: /home/2/img/payment.png
+2025-03-08 11:32:49,488 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-08 11:33:06,829 - INFO - Carrinho: 3, Criado agora? False
+2025-03-08 11:33:13,699 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 11:33:14,116 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 11:33:21,218 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 11:33:21,559 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 11:33:24,872 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 11:33:25,321 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 11:33:25,358 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 11:33:25,819 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 93
+2025-03-08 11:41:36,258 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 11:41:36,728 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 11:41:36,789 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 11:41:37,261 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 93
+2025-03-08 11:41:39,949 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 11:41:40,316 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 11:41:40,373 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 11:41:40,754 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 93
+2025-03-08 11:42:43,185 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\pagamento\busca_pagameto.py changed, reloading.
+2025-03-08 11:43:53,817 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-08 11:43:56,091 - INFO - Carrinho: 3, Criado agora? False
+2025-03-08 11:43:58,412 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 11:43:58,804 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 11:44:02,196 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 11:44:02,550 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 11:45:18,464 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 11:45:19,662 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 11:48:47,834 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 11:48:48,264 - DEBUG - https://api.mercadopago.com:443 "GET /users/me HTTP/1.1" 200 None
+2025-03-08 11:52:46,365 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-08 11:55:53,385 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 11:55:53,768 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 11:55:59,825 - ERROR - Internal Server Error: /carrinho/
+Traceback (most recent call last):
+  File "c:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py", line 94, in pagina_carrinho
+    return render(request, 'cart.html', context)
+                                        ^^^^^^^
+UnboundLocalError: cannot access local variable 'context' where it is not associated with a value
+2025-03-08 11:56:07,820 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 11:56:08,237 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 11:56:14,185 - ERROR - Internal Server Error: /carrinho/
+Traceback (most recent call last):
+  File "c:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py", line 94, in pagina_carrinho
+    return render(request, 'cart.html', context)
+                                        ^^^^^^^
+UnboundLocalError: cannot access local variable 'context' where it is not associated with a value
+2025-03-08 11:57:00,480 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-08 11:57:42,178 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 11:57:42,519 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 11:57:42,788 - ERROR - Internal Server Error: /carrinho/
+Traceback (most recent call last):
+  File "c:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The view carrinho.views.pagina_carrinho didn't return an HttpResponse object. It returned None instead.
+2025-03-08 11:57:48,153 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 11:57:48,459 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 11:57:48,657 - ERROR - Internal Server Error: /carrinho/
+Traceback (most recent call last):
+  File "c:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The view carrinho.views.pagina_carrinho didn't return an HttpResponse object. It returned None instead.
+2025-03-08 11:59:31,688 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 11:59:32,001 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 11:59:32,037 - ERROR - Internal Server Error: /carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The view carrinho.views.pagina_carrinho didn't return an HttpResponse object. It returned None instead.
+2025-03-08 11:59:45,296 - WARNING - Not Found: /home/1/img/fruite-item-5.jpg
+2025-03-08 11:59:45,304 - WARNING - Not Found: /home/1/img/fruite-item-1.jpg
+2025-03-08 11:59:45,312 - WARNING - Not Found: /home/1/img/fruite-item-2.jpg
+2025-03-08 11:59:45,319 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-08 11:59:45,326 - WARNING - Not Found: /home/1/img/fruite-item-4.jpg
+2025-03-08 11:59:45,332 - WARNING - Not Found: /home/1/img/fruite-item-6.jpg
+2025-03-08 11:59:45,336 - WARNING - Not Found: /home/1/img/fruite-item-3.jpg
+2025-03-08 11:59:48,698 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-08 11:59:51,223 - INFO - Carrinho: 3, Criado agora? False
+2025-03-08 11:59:55,736 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 11:59:56,338 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 11:59:56,390 - ERROR - Internal Server Error: /carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The view carrinho.views.pagina_carrinho didn't return an HttpResponse object. It returned None instead.
+2025-03-08 12:00:05,193 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-08 12:00:41,334 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-08 12:00:47,289 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-08 12:00:53,207 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-08 12:00:57,257 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:00:57,584 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:01:06,319 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:01:06,718 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:01:18,973 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-08 12:01:24,072 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-08 12:01:30,807 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-08 12:01:35,068 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:01:35,393 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:01:35,981 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-08 12:01:44,068 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:01:44,393 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:01:48,715 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-08 12:01:50,710 - INFO - Carrinho: 3, Criado agora? False
+2025-03-08 12:01:53,869 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:01:54,189 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:01:58,306 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-08 12:02:01,005 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-08 12:02:01,398 - WARNING - Not Found: /favicon.ico
+2025-03-08 12:02:08,664 - WARNING - Not Found: /home/2/img/fruite-item-5.jpg
+2025-03-08 12:02:08,673 - WARNING - Not Found: /home/2/img/fruite-item-2.jpg
+2025-03-08 12:02:08,682 - WARNING - Not Found: /home/2/img/fruite-item-6.jpg
+2025-03-08 12:02:08,700 - WARNING - Not Found: /home/2/img/fruite-item-3.jpg
+2025-03-08 12:02:08,705 - WARNING - Not Found: /home/2/img/fruite-item-1.jpg
+2025-03-08 12:02:08,714 - WARNING - Not Found: /home/2/img/fruite-item-4.jpg
+2025-03-08 12:02:08,744 - WARNING - Not Found: /home/2/img/payment.png
+2025-03-08 12:02:12,722 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-08 12:02:16,005 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:02:20,301 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:02:20,515 - ERROR - Internal Server Error: /carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\urllib3\connection.py", line 704, in connect
+    self.sock = sock = self._new_conn()
+                       ~~~~~~~~~~~~~~^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x00000204FA7CEE90>: Failed to resolve 'viacep.com.br' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='viacep.com.br', port=443): Max retries exceeded with url: /ws/58077128/json/ (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204FA7CEE90>: Failed to resolve 'viacep.com.br' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py", line 49, in pagina_carrinho
+    taxa = Decimal(obter_taxa_por_cep_ou_cidade(cep=evento.cep))
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\produto\views.py", line 21, in obter_taxa_por_cep_ou_cidade
+    response = requests.get(url)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\igorm\Documents\projetos\site-cecilie\venv\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='viacep.com.br', port=443): Max retries exceeded with url: /ws/58077128/json/ (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204FA7CEE90>: Failed to resolve 'viacep.com.br' ([Errno 11001] getaddrinfo failed)"))
+2025-03-08 12:02:28,636 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:02:28,955 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:02:31,363 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:03:28,404 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-08 12:03:33,703 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-08 12:03:41,412 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:03:41,988 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:05:43,014 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-08 12:05:51,541 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:05:51,942 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:06:06,194 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:06:06,517 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:06:08,916 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:06:09,274 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:07:08,694 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-08 12:07:28,771 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-08 12:07:33,668 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:07:33,999 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:07:34,027 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 12:07:34,652 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 854
+2025-03-08 12:07:34,653 - DEBUG - Resposta da criação da preferência: {'status': 201, 'response': {'additional_info': '', 'auto_return': 'approved', 'back_urls': {'failure': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'pending': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'success': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/'}, 'binary_mode': False, 'client_id': '6291587849015864', 'collector_id': 162016798, 'coupon_code': None, 'coupon_labels': None, 'date_created': '2025-03-08T11:07:35.145-04:00', 'date_of_expiration': None, 'expiration_date_from': None, 'expiration_date_to': None, 'expires': False, 'external_reference': '1', 'id': '162016798-684189d0-068e-4e91-8c7f-5e6b4a1cacf1', 'init_point': 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-684189d0-068e-4e91-8c7f-5e6b4a1cacf1', 'internal_metadata': None, 'items': [{'id': '4', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'UM mais vendido', 'quantity': 2, 'unit_price': 650}, {'id': '5', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'pto', 'quantity': 1, 'unit_price': 620}], 'marketplace': 'NONE', 'marketplace_fee': 0, 'metadata': {'carrinho_id': 3, 'evento_id': 12}, 'notification_url': 'https://plataforma-donadochopp.cloudboosterlab.org/pag/', 'operation_type': 'regular_payment', 'payer': {'phone': {'area_code': '', 'number': ''}, 'address': {'zip_code': '', 'street_name': '', 'street_number': None}, 'email': '', 'identification': {'number': '', 'type': ''}, 'name': '', 'surname': '', 'date_created': None, 'last_purchase': None}, 'payment_methods': {'default_card_id': None, 'default_payment_method_id': None, 'excluded_payment_methods': [{'id': ''}], 'excluded_payment_types': [{'id': ''}], 'installments': None, 'default_installments': None}, 'processing_modes': None, 'product_id': None, 'redirect_urls': {'failure': '', 'pending': '', 'success': ''}, 'sandbox_init_point': 'https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-684189d0-068e-4e91-8c7f-5e6b4a1cacf1', 'site_id': 'MLB', 'shipments': {'default_shipping_method': None, 'receiver_address': {'zip_code': '', 'street_name': '', 'street_number': None, 'floor': '', 'apartment': '', 'city_name': None, 'state_name': None, 'country_name': None}}, 'total_amount': None, 'last_updated': None, 'financing_group': ''}}
+2025-03-08 12:07:34,654 - INFO - Preferência criada com sucesso.
+2025-03-08 12:08:39,748 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-08 12:08:46,955 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-08 12:08:53,077 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-08 12:08:58,673 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:08:59,005 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:08:59,043 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 12:08:59,615 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 855
+2025-03-08 12:08:59,616 - DEBUG - Resposta da criação da preferência: {'status': 201, 'response': {'additional_info': '', 'auto_return': 'approved', 'back_urls': {'failure': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'pending': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'success': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/'}, 'binary_mode': False, 'client_id': '6291587849015864', 'collector_id': 162016798, 'coupon_code': None, 'coupon_labels': None, 'date_created': '2025-03-08T11:09:00.187-04:00', 'date_of_expiration': None, 'expiration_date_from': None, 'expiration_date_to': None, 'expires': False, 'external_reference': '1', 'id': '162016798-5f2a9b3c-b573-46a2-8d32-54e985deeada', 'init_point': 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-5f2a9b3c-b573-46a2-8d32-54e985deeada', 'internal_metadata': None, 'items': [{'id': '4', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'UM mais vendido', 'quantity': 2, 'unit_price': 650}, {'id': '5', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'pto', 'quantity': 1, 'unit_price': 620}], 'marketplace': 'NONE', 'marketplace_fee': 0, 'metadata': {'carrinho_id': 3, 'evento_id': 12}, 'notification_url': 'https://plataforma-donadochopp.cloudboosterlab.org/pag/', 'operation_type': 'regular_payment', 'payer': {'phone': {'area_code': '', 'number': ''}, 'address': {'zip_code': '', 'street_name': '', 'street_number': None}, 'email': '', 'identification': {'number': '', 'type': ''}, 'name': '', 'surname': '', 'date_created': None, 'last_purchase': None}, 'payment_methods': {'default_card_id': None, 'default_payment_method_id': None, 'excluded_payment_methods': [{'id': ''}], 'excluded_payment_types': [{'id': ''}], 'installments': None, 'default_installments': None}, 'processing_modes': None, 'product_id': None, 'redirect_urls': {'failure': '', 'pending': '', 'success': ''}, 'sandbox_init_point': 'https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-5f2a9b3c-b573-46a2-8d32-54e985deeada', 'site_id': 'MLB', 'shipments': {'default_shipping_method': None, 'receiver_address': {'zip_code': '', 'street_name': '', 'street_number': None, 'floor': '', 'apartment': '', 'city_name': None, 'state_name': None, 'country_name': None}}, 'total_amount': None, 'last_updated': None, 'financing_group': ''}}
+2025-03-08 12:08:59,617 - INFO - Preferência criada com sucesso.
+2025-03-08 12:09:00,390 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:09:00,719 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:09:00,746 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 12:09:01,188 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 855
+2025-03-08 12:09:01,189 - DEBUG - Resposta da criação da preferência: {'status': 201, 'response': {'additional_info': '', 'auto_return': 'approved', 'back_urls': {'failure': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'pending': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'success': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/'}, 'binary_mode': False, 'client_id': '6291587849015864', 'collector_id': 162016798, 'coupon_code': None, 'coupon_labels': None, 'date_created': '2025-03-08T11:09:01.756-04:00', 'date_of_expiration': None, 'expiration_date_from': None, 'expiration_date_to': None, 'expires': False, 'external_reference': '1', 'id': '162016798-e4a37a8f-65a3-4682-a2f2-3de911431a62', 'init_point': 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-e4a37a8f-65a3-4682-a2f2-3de911431a62', 'internal_metadata': None, 'items': [{'id': '4', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'UM mais vendido', 'quantity': 2, 'unit_price': 650}, {'id': '5', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'pto', 'quantity': 1, 'unit_price': 620}], 'marketplace': 'NONE', 'marketplace_fee': 0, 'metadata': {'carrinho_id': 3, 'evento_id': 12}, 'notification_url': 'https://plataforma-donadochopp.cloudboosterlab.org/pag/', 'operation_type': 'regular_payment', 'payer': {'phone': {'area_code': '', 'number': ''}, 'address': {'zip_code': '', 'street_name': '', 'street_number': None}, 'email': '', 'identification': {'number': '', 'type': ''}, 'name': '', 'surname': '', 'date_created': None, 'last_purchase': None}, 'payment_methods': {'default_card_id': None, 'default_payment_method_id': None, 'excluded_payment_methods': [{'id': ''}], 'excluded_payment_types': [{'id': ''}], 'installments': None, 'default_installments': None}, 'processing_modes': None, 'product_id': None, 'redirect_urls': {'failure': '', 'pending': '', 'success': ''}, 'sandbox_init_point': 'https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-e4a37a8f-65a3-4682-a2f2-3de911431a62', 'site_id': 'MLB', 'shipments': {'default_shipping_method': None, 'receiver_address': {'zip_code': '', 'street_name': '', 'street_number': None, 'floor': '', 'apartment': '', 'city_name': None, 'state_name': None, 'country_name': None}}, 'total_amount': None, 'last_updated': None, 'financing_group': ''}}
+2025-03-08 12:09:01,190 - INFO - Preferência criada com sucesso.
+2025-03-08 12:09:45,838 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-08 12:12:23,745 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-08 12:12:27,466 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:12:27,774 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:12:27,797 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 12:12:28,319 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 857
+2025-03-08 12:12:28,320 - DEBUG - Resposta da criação da preferência: {'status': 201, 'response': {'additional_info': '', 'auto_return': 'approved', 'back_urls': {'failure': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'pending': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'success': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/'}, 'binary_mode': False, 'client_id': '6291587849015864', 'collector_id': 162016798, 'coupon_code': None, 'coupon_labels': None, 'date_created': '2025-03-08T11:12:28.857-04:00', 'date_of_expiration': None, 'expiration_date_from': None, 'expiration_date_to': None, 'expires': False, 'external_reference': '1', 'id': '162016798-297627ff-31c2-4817-8071-b44c83b54e49', 'init_point': 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-297627ff-31c2-4817-8071-b44c83b54e49', 'internal_metadata': None, 'items': [{'id': '4', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'UM mais vendido', 'quantity': 2, 'unit_price': 650}, {'id': '5', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'pto', 'quantity': 1, 'unit_price': 620}], 'marketplace': 'NONE', 'marketplace_fee': 0, 'metadata': {'carrinho_id': 3, 'evento_id': 12}, 'notification_url': 'https://plataforma-donadochopp.cloudboosterlab.org/pag/', 'operation_type': 'regular_payment', 'payer': {'phone': {'area_code': '', 'number': ''}, 'address': {'zip_code': '', 'street_name': '', 'street_number': None}, 'email': '', 'identification': {'number': '', 'type': ''}, 'name': '', 'surname': '', 'date_created': None, 'last_purchase': None}, 'payment_methods': {'default_card_id': None, 'default_payment_method_id': None, 'excluded_payment_methods': [{'id': ''}], 'excluded_payment_types': [{'id': ''}], 'installments': None, 'default_installments': None}, 'processing_modes': None, 'product_id': None, 'redirect_urls': {'failure': '', 'pending': '', 'success': ''}, 'sandbox_init_point': 'https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-297627ff-31c2-4817-8071-b44c83b54e49', 'site_id': 'MLB', 'shipments': {'default_shipping_method': None, 'receiver_address': {'zip_code': '', 'street_name': '', 'street_number': None, 'floor': '', 'apartment': '', 'city_name': None, 'state_name': None, 'country_name': None}}, 'total_amount': None, 'last_updated': None, 'financing_group': ''}}
+2025-03-08 12:12:28,321 - INFO - Preferência criada com sucesso.
+2025-03-08 12:12:57,443 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-08 12:13:04,046 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:13:04,352 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:13:04,380 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 12:13:04,841 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 854
+2025-03-08 12:13:04,843 - DEBUG - Resposta da criação da preferência: {'status': 201, 'response': {'additional_info': '', 'auto_return': 'approved', 'back_urls': {'failure': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'pending': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'success': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/'}, 'binary_mode': False, 'client_id': '6291587849015864', 'collector_id': 162016798, 'coupon_code': None, 'coupon_labels': None, 'date_created': '2025-03-08T11:13:05.372-04:00', 'date_of_expiration': None, 'expiration_date_from': None, 'expiration_date_to': None, 'expires': False, 'external_reference': '1', 'id': '162016798-64581eeb-a143-4486-817d-403cab0a3d77', 'init_point': 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-64581eeb-a143-4486-817d-403cab0a3d77', 'internal_metadata': None, 'items': [{'id': '4', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'UM mais vendido', 'quantity': 2, 'unit_price': 650}, {'id': '5', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'pto', 'quantity': 1, 'unit_price': 620}], 'marketplace': 'NONE', 'marketplace_fee': 0, 'metadata': {'carrinho_id': 3, 'evento_id': 12}, 'notification_url': 'https://plataforma-donadochopp.cloudboosterlab.org/pag/', 'operation_type': 'regular_payment', 'payer': {'phone': {'area_code': '', 'number': ''}, 'address': {'zip_code': '', 'street_name': '', 'street_number': None}, 'email': '', 'identification': {'number': '', 'type': ''}, 'name': '', 'surname': '', 'date_created': None, 'last_purchase': None}, 'payment_methods': {'default_card_id': None, 'default_payment_method_id': None, 'excluded_payment_methods': [{'id': ''}], 'excluded_payment_types': [{'id': ''}], 'installments': None, 'default_installments': None}, 'processing_modes': None, 'product_id': None, 'redirect_urls': {'failure': '', 'pending': '', 'success': ''}, 'sandbox_init_point': 'https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-64581eeb-a143-4486-817d-403cab0a3d77', 'site_id': 'MLB', 'shipments': {'default_shipping_method': None, 'receiver_address': {'zip_code': '', 'street_name': '', 'street_number': None, 'floor': '', 'apartment': '', 'city_name': None, 'state_name': None, 'country_name': None}}, 'total_amount': None, 'last_updated': None, 'financing_group': ''}}
+2025-03-08 12:13:04,844 - INFO - Preferência criada com sucesso.
+2025-03-08 12:14:20,241 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-08 12:14:28,060 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-08 12:14:48,176 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-08 12:14:58,861 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:14:59,178 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:14:59,197 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 12:14:59,887 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 854
+2025-03-08 12:14:59,889 - DEBUG - Resposta da criação da preferência: {'status': 201, 'response': {'additional_info': '', 'auto_return': 'approved', 'back_urls': {'failure': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'pending': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'success': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/'}, 'binary_mode': False, 'client_id': '6291587849015864', 'collector_id': 162016798, 'coupon_code': None, 'coupon_labels': None, 'date_created': '2025-03-08T11:15:00.393-04:00', 'date_of_expiration': None, 'expiration_date_from': None, 'expiration_date_to': None, 'expires': False, 'external_reference': '1', 'id': '162016798-ce101ad4-a119-4562-859a-6de8008e1eb6', 'init_point': 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-ce101ad4-a119-4562-859a-6de8008e1eb6', 'internal_metadata': None, 'items': [{'id': '4', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'UM mais vendido', 'quantity': 2, 'unit_price': 650}, {'id': '5', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'pto', 'quantity': 1, 'unit_price': 620}], 'marketplace': 'NONE', 'marketplace_fee': 0, 'metadata': {'carrinho_id': 3, 'evento_id': 12}, 'notification_url': 'https://plataforma-donadochopp.cloudboosterlab.org/pag/', 'operation_type': 'regular_payment', 'payer': {'phone': {'area_code': '', 'number': ''}, 'address': {'zip_code': '', 'street_name': '', 'street_number': None}, 'email': '', 'identification': {'number': '', 'type': ''}, 'name': '', 'surname': '', 'date_created': None, 'last_purchase': None}, 'payment_methods': {'default_card_id': None, 'default_payment_method_id': None, 'excluded_payment_methods': [{'id': ''}], 'excluded_payment_types': [{'id': ''}], 'installments': None, 'default_installments': None}, 'processing_modes': None, 'product_id': None, 'redirect_urls': {'failure': '', 'pending': '', 'success': ''}, 'sandbox_init_point': 'https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-ce101ad4-a119-4562-859a-6de8008e1eb6', 'site_id': 'MLB', 'shipments': {'default_shipping_method': None, 'receiver_address': {'zip_code': '', 'street_name': '', 'street_number': None, 'floor': '', 'apartment': '', 'city_name': None, 'state_name': None, 'country_name': None}}, 'total_amount': None, 'last_updated': None, 'financing_group': ''}}
+2025-03-08 12:14:59,889 - INFO - Preferência criada com sucesso.
+2025-03-08 12:16:19,409 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-08 12:16:28,499 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-08 12:16:36,051 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-08 12:16:51,463 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:16:51,811 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:16:51,849 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 12:16:52,467 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 856
+2025-03-08 12:16:52,469 - DEBUG - Resposta da criação da preferência: {'status': 201, 'response': {'additional_info': '', 'auto_return': 'approved', 'back_urls': {'failure': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'pending': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'success': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/'}, 'binary_mode': False, 'client_id': '6291587849015864', 'collector_id': 162016798, 'coupon_code': None, 'coupon_labels': None, 'date_created': '2025-03-08T11:16:52.958-04:00', 'date_of_expiration': None, 'expiration_date_from': None, 'expiration_date_to': None, 'expires': False, 'external_reference': '1', 'id': '162016798-451e2022-ed3f-4f3b-b142-956935142dec', 'init_point': 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-451e2022-ed3f-4f3b-b142-956935142dec', 'internal_metadata': None, 'items': [{'id': '4', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'UM mais vendido', 'quantity': 2, 'unit_price': 650}, {'id': '5', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'pto', 'quantity': 1, 'unit_price': 620}], 'marketplace': 'NONE', 'marketplace_fee': 0, 'metadata': {'carrinho_id': 3, 'evento_id': 12}, 'notification_url': 'https://plataforma-donadochopp.cloudboosterlab.org/pag/', 'operation_type': 'regular_payment', 'payer': {'phone': {'area_code': '', 'number': ''}, 'address': {'zip_code': '', 'street_name': '', 'street_number': None}, 'email': '', 'identification': {'number': '', 'type': ''}, 'name': '', 'surname': '', 'date_created': None, 'last_purchase': None}, 'payment_methods': {'default_card_id': None, 'default_payment_method_id': None, 'excluded_payment_methods': [{'id': ''}], 'excluded_payment_types': [{'id': ''}], 'installments': None, 'default_installments': None}, 'processing_modes': None, 'product_id': None, 'redirect_urls': {'failure': '', 'pending': '', 'success': ''}, 'sandbox_init_point': 'https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-451e2022-ed3f-4f3b-b142-956935142dec', 'site_id': 'MLB', 'shipments': {'default_shipping_method': None, 'receiver_address': {'zip_code': '', 'street_name': '', 'street_number': None, 'floor': '', 'apartment': '', 'city_name': None, 'state_name': None, 'country_name': None}}, 'total_amount': None, 'last_updated': None, 'financing_group': ''}}
+2025-03-08 12:16:52,470 - INFO - Preferência criada com sucesso.
+2025-03-08 12:17:58,293 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:17:58,617 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:17:58,636 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 12:17:59,229 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 839
+2025-03-08 12:17:59,230 - DEBUG - Resposta da criação da preferência: {'status': 201, 'response': {'additional_info': '', 'auto_return': 'approved', 'back_urls': {'failure': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'pending': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'success': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/'}, 'binary_mode': False, 'client_id': '6291587849015864', 'collector_id': 162016798, 'coupon_code': None, 'coupon_labels': None, 'date_created': '2025-03-08T11:17:59.711-04:00', 'date_of_expiration': None, 'expiration_date_from': None, 'expiration_date_to': None, 'expires': False, 'external_reference': '1', 'id': '162016798-37a5bb84-36a7-4db5-b103-ca564ecc00f6', 'init_point': 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-37a5bb84-36a7-4db5-b103-ca564ecc00f6', 'internal_metadata': None, 'items': [{'id': '4', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'UM mais vendido', 'quantity': 2, 'unit_price': 650}], 'marketplace': 'NONE', 'marketplace_fee': 0, 'metadata': {'carrinho_id': 3, 'evento_id': 12}, 'notification_url': 'https://plataforma-donadochopp.cloudboosterlab.org/pag/', 'operation_type': 'regular_payment', 'payer': {'phone': {'area_code': '', 'number': ''}, 'address': {'zip_code': '', 'street_name': '', 'street_number': None}, 'email': '', 'identification': {'number': '', 'type': ''}, 'name': '', 'surname': '', 'date_created': None, 'last_purchase': None}, 'payment_methods': {'default_card_id': None, 'default_payment_method_id': None, 'excluded_payment_methods': [{'id': ''}], 'excluded_payment_types': [{'id': ''}], 'installments': None, 'default_installments': None}, 'processing_modes': None, 'product_id': None, 'redirect_urls': {'failure': '', 'pending': '', 'success': ''}, 'sandbox_init_point': 'https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-37a5bb84-36a7-4db5-b103-ca564ecc00f6', 'site_id': 'MLB', 'shipments': {'default_shipping_method': None, 'receiver_address': {'zip_code': '', 'street_name': '', 'street_number': None, 'floor': '', 'apartment': '', 'city_name': None, 'state_name': None, 'country_name': None}}, 'total_amount': None, 'last_updated': None, 'financing_group': ''}}
+2025-03-08 12:17:59,231 - INFO - Preferência criada com sucesso.
+2025-03-08 12:20:03,047 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-08 12:20:15,514 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-08 12:20:20,610 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-08 12:20:43,400 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:20:43,829 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:20:43,855 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 12:20:44,383 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 828
+2025-03-08 12:20:44,384 - DEBUG - Resposta da criação da preferência: {'status': 201, 'response': {'additional_info': '', 'auto_return': 'approved', 'back_urls': {'failure': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'pending': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'success': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/'}, 'binary_mode': False, 'client_id': '6291587849015864', 'collector_id': 162016798, 'coupon_code': None, 'coupon_labels': None, 'date_created': '2025-03-08T11:20:44.841-04:00', 'date_of_expiration': None, 'expiration_date_from': None, 'expiration_date_to': None, 'expires': False, 'external_reference': '1', 'id': '162016798-312c48b1-6959-453c-90cc-4cc7d7c447b3', 'init_point': 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-312c48b1-6959-453c-90cc-4cc7d7c447b3', 'internal_metadata': None, 'items': [{'id': '1', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'Chopp', 'quantity': 1, 'unit_price': 10}], 'marketplace': 'NONE', 'marketplace_fee': 0, 'metadata': {'carrinho_id': 3, 'evento_id': 12}, 'notification_url': 'https://plataforma-donadochopp.cloudboosterlab.org/pag/', 'operation_type': 'regular_payment', 'payer': {'phone': {'area_code': '', 'number': ''}, 'address': {'zip_code': '', 'street_name': '', 'street_number': None}, 'email': '', 'identification': {'number': '', 'type': ''}, 'name': '', 'surname': '', 'date_created': None, 'last_purchase': None}, 'payment_methods': {'default_card_id': None, 'default_payment_method_id': None, 'excluded_payment_methods': [{'id': ''}], 'excluded_payment_types': [{'id': ''}], 'installments': None, 'default_installments': None}, 'processing_modes': None, 'product_id': None, 'redirect_urls': {'failure': '', 'pending': '', 'success': ''}, 'sandbox_init_point': 'https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-312c48b1-6959-453c-90cc-4cc7d7c447b3', 'site_id': 'MLB', 'shipments': {'default_shipping_method': None, 'receiver_address': {'zip_code': '', 'street_name': '', 'street_number': None, 'floor': '', 'apartment': '', 'city_name': None, 'state_name': None, 'country_name': None}}, 'total_amount': None, 'last_updated': None, 'financing_group': ''}}
+2025-03-08 12:20:44,385 - INFO - Preferência criada com sucesso.
+2025-03-08 12:21:35,881 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-08 12:21:52,604 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:21:52,911 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:21:52,932 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 12:21:53,385 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 102
+2025-03-08 12:21:53,387 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'items.0 must be a object', 'error': 'invalid_items', 'status': 400, 'cause': None}}
+2025-03-08 12:21:53,387 - INFO - Preferência criada com sucesso.
+2025-03-08 12:21:53,388 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-08 12:21:54,317 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:21:56,356 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:21:56,381 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 12:21:56,780 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 102
+2025-03-08 12:21:56,781 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'items.0 must be a object', 'error': 'invalid_items', 'status': 400, 'cause': None}}
+2025-03-08 12:21:56,782 - INFO - Preferência criada com sucesso.
+2025-03-08 12:21:56,782 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-08 12:22:00,551 - WARNING - Not Found: /carrinho/None
+2025-03-08 12:22:04,533 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:22:04,830 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:22:04,844 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 12:22:05,173 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 102
+2025-03-08 12:22:05,175 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'items.0 must be a object', 'error': 'invalid_items', 'status': 400, 'cause': None}}
+2025-03-08 12:22:05,175 - INFO - Preferência criada com sucesso.
+2025-03-08 12:22:05,175 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-08 12:22:06,924 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:22:07,241 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:22:07,256 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 12:22:07,599 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 102
+2025-03-08 12:22:07,601 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'items.0 must be a object', 'error': 'invalid_items', 'status': 400, 'cause': None}}
+2025-03-08 12:22:07,601 - INFO - Preferência criada com sucesso.
+2025-03-08 12:22:07,601 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-08 12:22:17,446 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:22:17,753 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:22:17,768 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 12:22:18,117 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 102
+2025-03-08 12:22:18,118 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'items.0 must be a object', 'error': 'invalid_items', 'status': 400, 'cause': None}}
+2025-03-08 12:22:18,119 - INFO - Preferência criada com sucesso.
+2025-03-08 12:22:18,119 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-08 12:22:24,677 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-08 12:22:26,970 - INFO - Carrinho: 3, Criado agora? False
+2025-03-08 12:22:28,857 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:22:29,177 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:22:29,206 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 12:22:29,547 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 102
+2025-03-08 12:22:29,548 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'items.0 must be a object', 'error': 'invalid_items', 'status': 400, 'cause': None}}
+2025-03-08 12:22:29,549 - INFO - Preferência criada com sucesso.
+2025-03-08 12:22:29,549 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-08 12:22:52,252 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-08 12:22:57,140 - INFO - C:\Users\igorm\Documents\projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-08 12:23:00,289 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:23:00,603 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:23:00,627 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 12:23:00,832 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:23:01,157 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 838
+2025-03-08 12:23:01,158 - DEBUG - Resposta da criação da preferência: {'status': 201, 'response': {'additional_info': '', 'auto_return': 'approved', 'back_urls': {'failure': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'pending': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'success': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/'}, 'binary_mode': False, 'client_id': '6291587849015864', 'collector_id': 162016798, 'coupon_code': None, 'coupon_labels': None, 'date_created': '2025-03-08T11:23:01.596-04:00', 'date_of_expiration': None, 'expiration_date_from': None, 'expiration_date_to': None, 'expires': False, 'external_reference': '1', 'id': '162016798-a77a9e07-294a-4f76-b8af-33aaaa7d4a40', 'init_point': 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-a77a9e07-294a-4f76-b8af-33aaaa7d4a40', 'internal_metadata': None, 'items': [{'id': '4', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'UM mais vendido', 'quantity': 2, 'unit_price': 650}], 'marketplace': 'NONE', 'marketplace_fee': 0, 'metadata': {'carrinho_id': 3, 'evento_id': 12}, 'notification_url': 'https://plataforma-donadochopp.cloudboosterlab.org/pag/', 'operation_type': 'regular_payment', 'payer': {'phone': {'area_code': '', 'number': ''}, 'address': {'zip_code': '', 'street_name': '', 'street_number': None}, 'email': '', 'identification': {'number': '', 'type': ''}, 'name': '', 'surname': '', 'date_created': None, 'last_purchase': None}, 'payment_methods': {'default_card_id': None, 'default_payment_method_id': None, 'excluded_payment_methods': [{'id': ''}], 'excluded_payment_types': [{'id': ''}], 'installments': None, 'default_installments': None}, 'processing_modes': None, 'product_id': None, 'redirect_urls': {'failure': '', 'pending': '', 'success': ''}, 'sandbox_init_point': 'https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-a77a9e07-294a-4f76-b8af-33aaaa7d4a40', 'site_id': 'MLB', 'shipments': {'default_shipping_method': None, 'receiver_address': {'zip_code': '', 'street_name': '', 'street_number': None, 'floor': '', 'apartment': '', 'city_name': None, 'state_name': None, 'country_name': None}}, 'total_amount': None, 'last_updated': None, 'financing_group': ''}}
+2025-03-08 12:23:01,159 - INFO - Preferência criada com sucesso.
+2025-03-08 12:23:01,206 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:23:01,234 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 12:23:01,666 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 838
+2025-03-08 12:23:01,668 - DEBUG - Resposta da criação da preferência: {'status': 201, 'response': {'additional_info': '', 'auto_return': 'approved', 'back_urls': {'failure': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'pending': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'success': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/'}, 'binary_mode': False, 'client_id': '6291587849015864', 'collector_id': 162016798, 'coupon_code': None, 'coupon_labels': None, 'date_created': '2025-03-08T11:23:02.114-04:00', 'date_of_expiration': None, 'expiration_date_from': None, 'expiration_date_to': None, 'expires': False, 'external_reference': '1', 'id': '162016798-cd25dcba-bd71-41e8-8e34-7de6991157ac', 'init_point': 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-cd25dcba-bd71-41e8-8e34-7de6991157ac', 'internal_metadata': None, 'items': [{'id': '4', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'UM mais vendido', 'quantity': 2, 'unit_price': 650}], 'marketplace': 'NONE', 'marketplace_fee': 0, 'metadata': {'carrinho_id': 3, 'evento_id': 12}, 'notification_url': 'https://plataforma-donadochopp.cloudboosterlab.org/pag/', 'operation_type': 'regular_payment', 'payer': {'phone': {'area_code': '', 'number': ''}, 'address': {'zip_code': '', 'street_name': '', 'street_number': None}, 'email': '', 'identification': {'number': '', 'type': ''}, 'name': '', 'surname': '', 'date_created': None, 'last_purchase': None}, 'payment_methods': {'default_card_id': None, 'default_payment_method_id': None, 'excluded_payment_methods': [{'id': ''}], 'excluded_payment_types': [{'id': ''}], 'installments': None, 'default_installments': None}, 'processing_modes': None, 'product_id': None, 'redirect_urls': {'failure': '', 'pending': '', 'success': ''}, 'sandbox_init_point': 'https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-cd25dcba-bd71-41e8-8e34-7de6991157ac', 'site_id': 'MLB', 'shipments': {'default_shipping_method': None, 'receiver_address': {'zip_code': '', 'street_name': '', 'street_number': None, 'floor': '', 'apartment': '', 'city_name': None, 'state_name': None, 'country_name': None}}, 'total_amount': None, 'last_updated': None, 'financing_group': ''}}
+2025-03-08 12:23:01,669 - INFO - Preferência criada com sucesso.
+2025-03-08 12:26:29,311 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-08 12:26:29,868 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-08 12:26:29,967 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-08 12:26:30,683 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 841
+2025-03-08 12:26:30,693 - DEBUG - Resposta da criação da preferência: {'status': 201, 'response': {'additional_info': '', 'auto_return': 'approved', 'back_urls': {'failure': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'pending': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'success': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/'}, 'binary_mode': False, 'client_id': '6291587849015864', 'collector_id': 162016798, 'coupon_code': None, 'coupon_labels': None, 'date_created': '2025-03-08T11:26:31.099-04:00', 'date_of_expiration': None, 'expiration_date_from': None, 'expiration_date_to': None, 'expires': False, 'external_reference': '1', 'id': '162016798-f6752c4b-936b-4053-9104-6248b1e77461', 'init_point': 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-f6752c4b-936b-4053-9104-6248b1e77461', 'internal_metadata': None, 'items': [{'id': '4', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'UM mais vendido', 'quantity': 2, 'unit_price': 650}], 'marketplace': 'NONE', 'marketplace_fee': 0, 'metadata': {'carrinho_id': 3, 'evento_id': 12}, 'notification_url': 'https://plataforma-donadochopp.cloudboosterlab.org/pag/', 'operation_type': 'regular_payment', 'payer': {'phone': {'area_code': '', 'number': ''}, 'address': {'zip_code': '', 'street_name': '', 'street_number': None}, 'email': '', 'identification': {'number': '', 'type': ''}, 'name': '', 'surname': '', 'date_created': None, 'last_purchase': None}, 'payment_methods': {'default_card_id': None, 'default_payment_method_id': None, 'excluded_payment_methods': [{'id': ''}], 'excluded_payment_types': [{'id': ''}], 'installments': None, 'default_installments': None}, 'processing_modes': None, 'product_id': None, 'redirect_urls': {'failure': '', 'pending': '', 'success': ''}, 'sandbox_init_point': 'https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-f6752c4b-936b-4053-9104-6248b1e77461', 'site_id': 'MLB', 'shipments': {'default_shipping_method': None, 'receiver_address': {'zip_code': '', 'street_name': '', 'street_number': None, 'floor': '', 'apartment': '', 'city_name': None, 'state_name': None, 'country_name': None}}, 'total_amount': None, 'last_updated': None, 'financing_group': ''}}
+2025-03-08 12:26:30,700 - INFO - Preferência criada com sucesso.
