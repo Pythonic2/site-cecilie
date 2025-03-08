@@ -91,13 +91,13 @@ def simple_test(request):
                     carrinho.delete()
                     logging.info(f"Carrinho e evento atualizados para 'Pago': {carrinho.id}, {evento.id}")
                     data_evento  = datetime.strftime(evento.data_evento, '%d/%m/%Y')
-                    
+
                     send_email(
                         subject=f"Nova Compra Realizada",
                         body=f"Evento: {evento.tipo_evento}\nData: {data_evento}\nBairro: {evento.bairro}\nRua: {evento.endereco}\nValor da Compra: {evento.valor}\nCliente: {user.nome}\nContato: {evento.celular}\nProdutos: {produtos}",
                         sender_email="noticacoes@gmail.com",
                         sender_password="lqxvsvybjfumjflo",
-                        recipient_emails=["igoormarinhosilva@gmail.com", "igormarinhosilva@gmail.com"]
+                        recipient_emails=["igoormarinhosilva@gmail.com", "igormarinhosilva@gmail.com",f"{user.email}"]
                     )
                     logging.info(f"E-mail enviado para notificações")
                     return JsonResponse({'status': 'success'})
