@@ -95,8 +95,8 @@ def simple_test(request):
                         subject=f"Nova Compra Realizada",
                         body=f"Evento: {evento.tipo_evento}\nData: {evento.data_evento}\nBairro: {evento.bairro}\nRua: {evento.endereco}\nValor da Compra: {evento.valor}\nCliente: {user.nome}\nContato: {evento.celular}\nProdutos: {produtos}",
                         sender_email="noticacoes@gmail.com",
-                        sender_password=os.getenv('SENHA'),
-                        recipient_emails=["choppitinerante@gmail.com", "igormarinhosilva@gmail.com"]
+                        sender_password="lqxvsvybjfumjflo",
+                        recipient_emails=["igoormarinhosilva@gmail.com", "igormarinhosilva@gmail.com"]
                     )
                     logging.info(f"E-mail enviado para notificações")
                     return JsonResponse({'status': 'success'})
