@@ -162,6 +162,7 @@ def gerar_pagamento(cliente_id: int, produtos: list, evento: int, carrinho_id: i
 
     try:
         result = sdk.preference().create(preference_data)
+        logging.debug(f"{os.getenv('API_TOKEN')}")
         logging.debug(f"Resposta da criação da preferência: {result}")
         preference = result['response']
         logging.info("Preferência criada com sucesso.")
