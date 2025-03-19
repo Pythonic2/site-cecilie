@@ -48,6 +48,9 @@ def simple_test(request):
 
             # Buscar pagamento usando a função definida anteriormente
             pag = buscar_pagamento_mercado_pago(pagamento_id)
+            print("################## IFOR PAG ##################")
+            print(pag)
+            print("####################################")
             logging.debug(f"Informações do pagamento: {pag}")
             logging.debug(f"Informações do tipo do Pagamento: {tipo}, tam {len(tipo)}")
             pd_id = tipo
