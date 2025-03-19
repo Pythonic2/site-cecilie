@@ -39,7 +39,7 @@ def simple_test(request):
             logging.debug(f"Dados recebidos no webhook: {webhook_data}")
 
             # Capturar o pagamento_id e outras informações do webhook
-            pagamento_id = webhook_data.get('data', {}).get('id', '')
+            pagamento_id = str(webhook_data.get('data', {}).get('id', ''))
             tipo = webhook_data.get('type', {})
             logging.debug(f"Pagamento ID: {pagamento_id}, Tipo: {tipo}")
 
