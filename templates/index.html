@@ -143,5 +143,39 @@
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
-        
+        <!-- Bootstrap Modal -->
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="ageVerificationModal" tabindex="-1" aria-labelledby="modalLabel" 
+     data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Verificação de Idade</h5>
+            </div>
+            <div class="modal-body text-center">
+                <p>Este Site é proibido para menores de 18 anos, ao clicar em confirmar, você assume ter pelo menos 18 anos de idade.</p>
+                <button class="btn btn-success" id="confirmAge">Sim eu tenho 18+</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Check if the user has confirmed their age
+        if (!localStorage.getItem("ageConfirmed")) {
+            let ageModal = new bootstrap.Modal(document.getElementById("ageVerificationModal"));
+            ageModal.show();
+        }
+    
+        // When user confirms, store in localStorage and close modal
+        document.getElementById("confirmAge").addEventListener("click", function () {
+            localStorage.setItem("ageConfirmed", "true");
+            let ageModal = bootstrap.Modal.getInstance(document.getElementById("ageVerificationModal"));
+            ageModal.hide();
+        });
+    });
+    </script>
+    
+    
 {%endblock%}

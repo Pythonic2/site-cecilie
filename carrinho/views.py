@@ -108,7 +108,6 @@ def pagina_carrinho(request):
         'titulo': 'carrinho',
         'quantidade': sum(item.quantidade for item in itens),
     }
-    print(f"quantidade ------------------------- {context['quantidade']}")
     try:
         carrinho_id = carrinho.id
         evento_id = evento.id if evento else None
@@ -128,7 +127,6 @@ def obter_quantidade_carrinho_htmx(request):
 
     # Obtém o carrinho do usuário
     carrinho = Carrinho.objects.filter(usuario=user).last()  # Considera apenas o primeiro carrinho, ajuste se necessário
-    print(carrinho)
     if not carrinho:
         return 0  # Retorna 0 se não houver carrinho
 
