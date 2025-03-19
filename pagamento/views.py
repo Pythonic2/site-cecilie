@@ -62,13 +62,12 @@ def simple_test(request):
                     usuario=user,
                     data_transacao=pag['data'],
                     valor_total=pag['valor'],
-                    status=pag['collection_status']
+                    status=pag['status']
                 )
                     transacao.save()  # Salvar a transação
                     logging.info(f"Transação salva: {transacao.transacao_id}")
 
                     produtos = pag['items']
-                    
                     for produto_data in produtos:
                         produto = Produto.objects.get(nome=produto_data)
                         transacao.produtos.add(produto.id)
@@ -92,14 +91,13 @@ def simple_test(request):
                     #carrinho.save()
                     carrinho.delete()
                     logging.info(f"Carrinho e evento atualizados para 'Pago': {carrinho.id}, {evento.id}")
-                    data_evento  = datetime.strftime(evento.data_evento, '%d/%m/%Y')
 
                     send_email(
                         subject=f"Nova Compra Realizada",
-                        body=f"Evento: {evento.tipo_evento}\nData: {data_evento}\nBairro: {evento.bairro}\nRua: {evento.endereco}\nValor da Compra: {evento.valor}\nCliente: {user.nome}\nContato: {evento.celular}\nProdutos: {produtos}",
+                        body=f"Evento: {evento.tipo_evento}\nData: {evento.data_evento}\nBairro: {evento.bairro}\nRua: {evento.endereco}\nValor da Compra: {evento.valor}\nCliente: {user.nome}\nContato: {evento.celular}\nProdutos: {produtos}",
                         sender_email="noticacoes@gmail.com",
-                        sender_password="lqxvsvybjfumjflo",
-                        recipient_emails=["igoormarinhosilva@gmail.com", "igormarinhosilva@gmail.com",f"{user.email}"]
+                        sender_password=os.getenv('SENHA'),
+                        recipient_emails=["choppitinerante@gmail.com", "igormarinhosilva@gmail.com"]
                     )
                     logging.info(f"E-mail enviado para notificações")
                     return JsonResponse({'status': 'success'})
@@ -123,7 +121,6 @@ def simple_test(request):
 
     logging.warning("Método HTTP não permitido")
     return JsonResponse({'status': 'method_not_allowed'}, status=405)
-
 import mercadopago
 import os
 import logging
