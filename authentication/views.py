@@ -35,18 +35,18 @@ class RegisterUser(CreateView):
         form = SignUpForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data.get("username")
-            cep = form.cleaned_data.get("cep")
-            url = f"https://viacep.com.br/ws/{cep}/json/"
-            response = requests.get(url)
-            if response.status_code == 200:
-                data = response.json()
-                cidades_rm_fortaleza = [cidade.nome for cidade in Cidade.objects.all() ]
+            # cep = form.cleaned_data.get("cep")
+            # url = f"https://viacep.com.br/ws/{cep}/json/"
+            # response = requests.get(url)
+            # if response.status_code == 200:
+            #     data = response.json()
+            #     cidades_rm_fortaleza = [cidade.nome for cidade in Cidade.objects.all() ]
                         
-                if data['localidade'] in cidades_rm_fortaleza:
-                    pass
-                else:
-                    form.add_error('cep','⚠️ Ainda não atendemos a sua Região, Penas Fortaleza e a Metrópoles')
-                    return render(request, "register.html", {"form": form})
+            #     if data['localidade'] in cidades_rm_fortaleza:
+            #         pass
+            #     else:
+            #         form.add_error('cep','⚠️ Ainda não atendemos a sua Região, Penas Fortaleza e a Metrópoles')
+            #         return render(request, "register.html", {"form": form})
             if get_user_model().objects.filter(username=username).exists():
                 form.add_error('username', 'Este nome de usuário já está em uso.')
                 return render(request, "register.html", {"form": form})
