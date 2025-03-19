@@ -62,7 +62,7 @@ def simple_test(request):
                     usuario=user,
                     data_transacao=pag['data'],
                     valor_total=pag['valor'],
-                    status=pag['status']
+                    status=pag['collection_status']
                 )
                     transacao.save()  # Salvar a transação
                     logging.info(f"Transação salva: {transacao.transacao_id}")
