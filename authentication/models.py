@@ -19,6 +19,18 @@ class Usuario(AbstractUser):
         return self.username
 
     
+
+class Chopeira(models.Model):
+    TIPO_CHOPEIRA_CHOICES = [
+        ('bomba', 'Chopeira Bomba'),
+        ('eletrica', 'Chopeira Elétrica'),
+    ]
+    
+    tipo = models.CharField(max_length=10, choices=TIPO_CHOPEIRA_CHOICES, unique=True)
+
+    def __str__(self):
+        return dict(self.TIPO_CHOPEIRA_CHOICES).get(self.tipo, self.tipo)  # Retorna o rótulo correto
+
 class Evento(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     cep = models.CharField(max_length=8, default=0)
@@ -30,6 +42,6 @@ class Evento(models.Model):
     status = models.CharField(max_length=50, null=True, blank=True, default=' ')
     #carrinho = models.CharField(max_length=50, default=0, unique=True)
     valor = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-
+    chopeiras = models.ManyToManyField(Chopeira)
     def __str__(self):
         return f"{self.tipo_evento} - {self.data_evento}"

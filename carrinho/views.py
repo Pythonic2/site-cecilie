@@ -11,7 +11,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from produto.views import obter_taxa_por_cep_ou_cidade
 import logging
-
+from authentication.models import Usuario, Evento
 # Configurando o logger no início do arquivo
 import os
 
@@ -45,6 +45,34 @@ def pagina_carrinho(request):
 
     #se tiver evento ele aplica taxa com o cep do evento
     if evento:
+        print("********Minhas Chopeiras*****")
+        
+        # Obtém o ID do produto passado via GET (se existir)
+        produto_id_auto = request.GET.get("produto_id")
+        
+        for chopeira in evento.chopeiras.all():
+            print(chopeira)
+            
+            # Se um produto específico foi passado via GET, adiciona ao carrinho
+            if produto_id_auto:
+                produto = get_object_or_404(Produto, id=produto_id_auto)
+            else:
+                # Se não foi passado via GET, usa a chopeira como produto
+                produto = get_object_or_404(Produto, nome=chopeira)
+
+            # Adiciona o produto ao carrinho
+            item_carrinho, created = ItemCarrinho.objects.get_or_create(
+                carrinho=carrinho, 
+                produto=produto,
+                defaults={'quantidade': 1, 'valor': produto.valor}
+            )
+
+            if not created:
+                item_carrinho.quantidade += 1
+                item_carrinho.save()
+
+
+            
         # Aplica a taxa com base no CEP do evento
         taxa = Decimal(obter_taxa_por_cep_ou_cidade(cep=evento.cep))
         for item in itens:
@@ -80,7 +108,7 @@ def pagina_carrinho(request):
         'titulo': 'carrinho',
         'quantidade': sum(item.quantidade for item in itens),
     }
-
+    print(f"quantidade ------------------------- {context['quantidade']}")
     try:
         carrinho_id = carrinho.id
         evento_id = evento.id if evento else None
@@ -91,6 +119,7 @@ def pagina_carrinho(request):
         context['link'] = '#'
 
     return render(request, 'cart.html', context)
+
 def obter_quantidade_carrinho_htmx(request):
     usuario = request.user.username
 
@@ -203,4 +232,3 @@ def remover_do_carrinho(request, produto_id):
 
     # Redireciona para a página do carrinho
     return HttpResponseRedirect(reverse('pagina_carrinho') + '#id_do_elemento')
-

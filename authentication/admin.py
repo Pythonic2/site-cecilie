@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import Usuario, Evento
+from .models import Usuario, Evento,Chopeira
 
 class CustomUserAdmin(UserAdmin):
     # Campos a serem exibidos no formulário de criação de usuário
@@ -25,3 +25,4 @@ class CustomUserAdmin(UserAdmin):
 
 admin.site.register(Usuario, CustomUserAdmin)
 admin.site.register(Evento)
+admin.site.register(Chopeira)

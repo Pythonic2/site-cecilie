@@ -80,66 +80,77 @@ class LoginForm(AuthenticationForm):
         fields = ['username', 'password']
 
 
-
+from django import forms
+from .models import Evento, Chopeira
 
 class EventoForm(forms.ModelForm):
     cep = forms.CharField(
-        widget=forms.TextInput(
-            attrs={
-                "placeholder": "Cep",
-                "class": "form-control",
-                "maxlength":"8",
-                "required":"true"
-            }
-        ),
+        widget=forms.TextInput(attrs={
+            "placeholder": "Cep",
+            "class": "form-control",
+            "maxlength": "8",
+        }),
+        required=True
     )
     celular = forms.CharField(
-        widget=forms.TextInput(
-            attrs={
-                "placeholder": "Celular",
-                "class": "form-control",
-                "maxlength":"11",
-                "required":"true"
-            }
-        ),
+        widget=forms.TextInput(attrs={
+            "placeholder": "Celular",
+            "class": "form-control",
+            "maxlength": "11",
+        }),
+        required=True
     )
     bairro = forms.CharField(
-        widget=forms.TextInput(
-            attrs={
-                "placeholder": "Bairro",
-                "class": "form-control"
-            }
-        ),
+        widget=forms.TextInput(attrs={
+            "placeholder": "Bairro",
+            "class": "form-control"
+        }),
         required=False
     )
     endereco = forms.CharField(
-        widget=forms.TextInput(
-            attrs={
-                "placeholder": "Endereço",
-                "class": "form-control"
-            }
-        ))
+        widget=forms.TextInput(attrs={
+            "placeholder": "Endereço",
+            "class": "form-control"
+        }),
+        required=True
+    )
     data_evento = forms.DateField(
-        widget=forms.DateInput(
-            attrs={
-                "placeholder": "Data do Evento",
-                "class": "form-control",
-                "type": "date"
-            }
-        ),
-        required=False
+        widget=forms.DateInput(attrs={
+            "placeholder": "Data do Evento",
+            "class": "form-control",
+            "type": "date"
+        }),
+        required=True
+    )
+    hora_evento = forms.TimeField(
+        widget=forms.TimeInput(attrs={
+            "placeholder": "Hora do Evento",
+            "class": "form-control",
+            "type": "time"
+        }),
+        required=True
     )
     tipo_evento = forms.CharField(
-        widget=forms.TextInput(
-            attrs={
-                "placeholder": "Tipo de Evento",
-                "class": "form-control"
-            }
-        ),
+        widget=forms.TextInput(attrs={
+            "placeholder": "Tipo de Evento",
+            "class": "form-control"
+        }),
         required=False
     )
-    
+    chopeiras = forms.ModelMultipleChoiceField(
+        queryset=Chopeira.objects.all(),
+        widget=forms.CheckboxSelectMultiple(),
+        required=True,
+        label="Escolha pelo menos uma chopeira"
+    )
 
     class Meta:
         model = Evento
-        fields = ('celular', 'bairro', 'endereco', 'data_evento', 'tipo_evento')
+        fields = ("cep", "celular", "bairro", "endereco", "data_evento", "hora_evento", "tipo_evento", "chopeiras")
+
+    def clean_chopeiras(self):
+        """Ensure at least one chopeira is selected."""
+        chopeiras_selected = self.cleaned_data.get("chopeiras")
+        if not chopeiras_selected:
+            raise forms.ValidationError("You must select at least one chopeira.")
+        return chopeiras_selected

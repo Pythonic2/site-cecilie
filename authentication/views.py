@@ -10,8 +10,13 @@ from django.contrib.auth import get_user_model
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 import requests
-from carrinho.models import Carrinho
+from carrinho.models import Carrinho,ItemCarrinho
 from produto.models import Cidade
+from datetime import date
+from datetime import datetime, date
+
+
+
 User = Usuario
 
 # Create your views here.
@@ -110,30 +115,71 @@ class EventoView(TemplateView):
 
 
     def post(self, request):
-
         form = EventoForm(request.POST)
+
         if form.is_valid():
+            data_evento_str = form.cleaned_data.get("data_evento")  # Exemplo: "2025-03-20"
+            data_evento = data_evento_str
+            data_hoje = date.today()
+
+            # Verificação de limite de eventos pagos
+            eventos_no_dia = Evento.objects.filter(data_evento=data_evento, status='Pago')
+
+            eventos_com_bomba = eventos_no_dia.filter(chopeiras__tipo='bomba').count()
+            eventos_com_eletrica = eventos_no_dia.filter(chopeiras__tipo='eletrica').count()
+
+            # Pegando as chopeiras que o usuário escolheu no formulário
+            chopeiras_selecionadas = form.cleaned_data.get("chopeiras")
+            tem_bomba = any(chopeira.tipo == 'bomba' for chopeira in chopeiras_selecionadas)
+            tem_eletrica = any(chopeira.tipo == 'eletrica' for chopeira in chopeiras_selecionadas)
+
+            # Regras de validação
+            if tem_bomba and eventos_com_bomba >= 2:
+                form.add_error('chopeiras', "⚠️ Infelizmente não tempos mais Chopeira Bomba disponível para essa data.")
+                return render(request, "evento.html", {"form": form, "erro": form.errors})
+
+            if tem_eletrica and eventos_com_eletrica >= 10:
+                form.add_error('chopeiras', "⚠️ Infelizmente não tempos mais Chopeira Elétrica disponível para essa data.")
+                return render(request, "evento.html", {"form": form, "erro": form.errors})
+
+            # Segue o fluxo normal caso passe na verificação
+            diferenca_dias = (data_evento - data_hoje).days
+            if diferenca_dias < 10:
+                carrinho = Carrinho.objects.filter(usuario=request.user).exclude(status='pago').last()
+                itens = ItemCarrinho.objects.filter(carrinho=carrinho)
+                chopeiras_formatadas = ", ".join(['Chopeira Bomba' if chopeira.tipo == 'bomba' else 'Chopeira Elétrica' for chopeira in chopeiras_selecionadas])
+                
+                produtos = [item.produto.nome for item in itens]
+                produtos_formatados = ", ".join(produtos)
+
+                mensagem = f"Olá, faltam apenas {diferenca_dias} dias para o evento! Pode me ajudar? Produtos que escolhi: {produtos_formatados}, Chopeiras: {chopeiras_formatadas}."
+                link_whatsapp = f"https://wa.me/83998413751?text={mensagem.replace(' ', '%20')}"
+                return redirect(link_whatsapp)
             cep = form.cleaned_data.get("cep")
             print(f"**************** CEP {cep} *********************")
             url = f"https://viacep.com.br/ws/{cep}/json/"
             response = requests.get(url)
             if response.status_code == 200:
                 data = response.json()
-                cidades_rm_fortaleza = [cidade.nome for cidade in Cidade.objects.all() ]
+                cidades_rm_fortaleza = [cidade.nome for cidade in Cidade.objects.all()]
 
                 if data['localidade'] in cidades_rm_fortaleza:
-                    evento = form.save(commit=False)  # Não salva no banco ainda
+                    evento = form.save(commit=False)
                     evento.usuario = request.user
                     evento.status = 'Aguardando Pagamento'
                     evento.cep = cep
-                    evento.save()  # Agora salva com o usuário
+                    evento.save()  # Agora o evento é salvo no banco de dados
+
+                    # Agora podemos associar as chopeiras ao evento
+                    evento.chopeiras.set(chopeiras_selecionadas)
+
+                    # Agora podemos redirecionar
                     return redirect('pagina_carrinho')  # Substitua por uma URL válida
                 else:
-                    form.add_error('cep','⚠️ Ainda não atendemos a sua Região, Penas Fortaleza e a Metrópoles')
+                    form.add_error('cep', '⚠️ Ainda não atendemos a sua Região, apenas Fortaleza e a Metrópole')
                     return render(request, "evento.html", {"form": form, "erro": form.errors})
-    
-        else:
-            return render(request, "evento.html", {"form": form, "erro": form.errors})
+            
+        return render(request, "evento.html", {"form": form, "erro": form.errors})
 
 
 
@@ -150,5 +196,3 @@ class PedidosView(TemplateView):
         context = {'pagamentos':eventos}
         return render(request, self.template_name, context)
 
-
-    
