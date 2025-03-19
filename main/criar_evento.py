@@ -1,11 +1,15 @@
+import os
 from googleapiclient.discovery import build
 from google.oauth2.service_account import Credentials
 from datetime import datetime
 
+# Get the current working directory
+current_directory = os.getcwd()
+
+# Construct the full path to the credentials file
+arquivo_credenciais = os.path.join(current_directory, "main\dona-calendario.json")
+
 def criar_evento(endereco, data, cep, nome_cliente):
-    # Caminho do arquivo de credenciais da conta de serviço
-    arquivo_credenciais = r"C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\main\dona-calendario.json"
-    
     # Definição dos escopos necessários para acessar o Google Calendar
     escopos = ["https://www.googleapis.com/auth/calendar"]
 
