@@ -11,9 +11,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from produto.views import obter_taxa_por_cep_ou_cidade
 import logging
-from authentication.models import Usuario, Evento
-# Configurando o logger no início do arquivo
-import os
+from main.criar_evento import criar_evento
 
 logging.basicConfig(
     level=logging.DEBUG,  # Nível de log
@@ -60,7 +58,7 @@ def pagina_carrinho(request):
                 # Se não foi passado via GET, usa a chopeira como produto
                 produto = get_object_or_404(Produto, nome=chopeira)
 
-            # Adiciona o produto ao carrinho
+            # Verifica se o produto já está no carrinho
             item_carrinho, created = ItemCarrinho.objects.get_or_create(
                 carrinho=carrinho, 
                 produto=produto,
@@ -68,8 +66,10 @@ def pagina_carrinho(request):
             )
 
             if not created:
-                item_carrinho.quantidade += 1
-                item_carrinho.save()
+                # Se o item já existe no carrinho, não incrementa a quantidade
+                print(f"Produto {produto.nome} já está no carrinho. Nenhuma alteração feita.")
+            else:
+                print(f"Produto {produto.nome} adicionado ao carrinho.")
 
 
             
@@ -96,6 +96,7 @@ def pagina_carrinho(request):
     valor_total = sum(item.valor * item.quantidade for item in itens)
     
     if evento:
+        # criar_evento(evento_id=evento.id,produtos=produtos_no_carrinho)
         evento.carrinho = carrinho.id
         evento.valor = valor_total
         evento.save()

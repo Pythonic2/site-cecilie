@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 import os
 from datetime import datetime
 import logging
-
+from main.criar_evento import criar_evento
 load_dotenv()
 # Configurando o logger no início do arquivo
 logging.basicConfig(
@@ -68,6 +68,7 @@ def simple_test(request):
                     logging.info(f"Transação salva: {transacao.transacao_id}")
 
                     produtos = pag['items']
+                    
                     for produto_data in produtos:
                         produto = Produto.objects.get(nome=produto_data)
                         transacao.produtos.add(produto.id)
@@ -76,6 +77,7 @@ def simple_test(request):
                     #carrinho = Carrinho.objects.get(usuario=user, id=int(pag['evento']))
                     #print(f"----cart: {carrinho}")
                     id_evento = pag['evento']
+                    criar_evento(evento_id=id_evento, produtos=produtos)
                     evento = Evento.objects.get(usuario=user, id=id_evento)
                     print(f'---------{evento}------------EVENTO')
                     logging.debug(f"consulta evento: {evento}")

@@ -1,15 +1,9 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .models import Usuario, Evento
-
+from .models import Evento, Chopeira
 class SignUpForm(UserCreationForm):
-    cep = forms.CharField(
-        widget=forms.TextInput(
-            attrs={
-                "placeholder": "CEP",
-                "class": "form-control border-2 border-secondary w-75 w-md-100 py-3 px-4 rounded-pill mb-3"
-            }
-        ))
+   
     username = forms.CharField(
         widget=forms.TextInput(
             attrs={
@@ -32,6 +26,20 @@ class SignUpForm(UserCreationForm):
             }
         ))
     
+    rua = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Rua, n°",
+                "class": "form-control border-2 border-secondary w-75 w-md-100 py-3 px-4 rounded-pill mb-3"
+            }
+        ))
+    bairro = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Bairro",
+                "class": "form-control border-2 border-secondary w-75 w-md-100 py-3 px-4 rounded-pill mb-3"
+            }
+        ))
     password1 = forms.CharField(
         label="Senha",
         widget=forms.PasswordInput(
@@ -54,7 +62,7 @@ class SignUpForm(UserCreationForm):
     
     class Meta:
         model = Usuario
-        fields = ('cep','nome','username', 'email', 'password1', 'password2')
+        fields = ('nome','username', 'email','rua','bairro', 'password1', 'password2')
 
 
 
@@ -80,8 +88,6 @@ class LoginForm(AuthenticationForm):
         fields = ['username', 'password']
 
 
-from django import forms
-from .models import Evento, Chopeira
 
 class EventoForm(forms.ModelForm):
     cep = forms.CharField(

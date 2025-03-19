@@ -1,51 +1,62 @@
+from authentication.models import Usuario, Evento
+from carrinho.models import Carrinho, ItemCarrinho
+import os
 import os
 from googleapiclient.discovery import build
 from google.oauth2.service_account import Credentials
-from datetime import datetime
 
 # Get the current working directory
 current_directory = os.getcwd()
 
 # Construct the full path to the credentials file
-arquivo_credenciais = os.path.join(current_directory, "main\dona-calendario.json")
+arquivo_credenciais = os.path.join(current_directory, "/app/main/dona-calendario.json")
 
-def criar_evento(endereco, data, cep, nome_cliente):
-    # Definição dos escopos necessários para acessar o Google Calendar
+def criar_evento(evento_id, produtos):
+    # Fetch the Evento instance from the database using the ID
+    evento = Evento.objects.get(id=evento_id)
+
+    # Fetch the Usuario (User) associated with the Evento
+    usuario = evento.usuario
+
+    # Define the scopes for Google Calendar API
     escopos = ["https://www.googleapis.com/auth/calendar"]
 
-    # Carregando as credenciais da conta de serviço
+    # Load the service account credentials
     credenciais = Credentials.from_service_account_file(arquivo_credenciais, scopes=escopos)
 
-    # Construindo o serviço da API do Google Calendar
+    # Build the Google Calendar API service
     service = build("calendar", "v3", credentials=credenciais)
 
-    # Defina o ID do calendário (normalmente é o e-mail da conta associada)
-    calendar_id = "igormarinhosilva@gmail.com"
+    # Formatar os produtos de forma mais agradável
+    produtos_formatados = "\n".join(
+        [f"- {produto.nome}: {quantidade} unidade(s) - R$ {valor}" for produto, quantidade, valor in produtos]
+    )
 
-    # Criando um evento de dia inteiro
-    evento = {
-        "summary": f"Agendamento com {nome_cliente}",
-        "location": f"{cep} - {endereco}",
-        "description": f"Agendamento com {nome_cliente} no endereço informado.",
+    # Create the event
+    evento_data = {
+        "summary": f"Evento {evento.tipo_evento}  {usuario.nome} - email {usuario.email}",
+        "location": f"{evento.bairro}, {evento.endereco}, {evento.cep}",
+        "description": (
+            f"Evento de: {usuario.nome}\n"
+            f"Endereço do cliente: {usuario.rua}\n"
+            f"Bairro do Cliente: {usuario.bairro}\n"
+            f"Endereço do Evento: {evento.endereco}, {evento.bairro}\n"
+            f"Tipo de Evento: {evento.tipo_evento}\n"
+            f"Produtos:\n{produtos_formatados}\n"
+            f"Valor Total: R$ {evento.valor}"
+        ),
         "start": {
-            "date": data,  # Apenas a data, sem horário
+            "dateTime": f"{evento.data_evento}T{evento.hora_evento.strftime('%H:%M:%S')}",  # Format datetime
             "timeZone": "America/Sao_Paulo",
         },
         "end": {
-            "date": data,  # Apenas a data, sem horário
+            "dateTime": f"{evento.data_evento}T{(evento.hora_evento.replace(hour=evento.hora_evento.hour + 4)).strftime('%H:%M:%S')}",  # End time (4 hours after start)
             "timeZone": "America/Sao_Paulo",
         },
     }
 
-    # Inserindo o evento no calendário
-    evento_criado = service.events().insert(calendarId=calendar_id, body=evento).execute()
+    # Insert the event into Google Calendar
+    evento_criado = service.events().insert(calendarId='igormarinhosilva@gmail.com', body=evento_data).execute()
 
-    print(f"Evento criado com sucesso! Link: {evento_criado.get('htmlLink')}")
-
-# Chamando a função com dados de teste
-criar_evento(
-    endereco="Rua Exemplo, 123, Bairro Centro",
-    data="2025-03-19",  # Apenas a data, sem horário
-    cep="12345-678",
-    nome_cliente="João da Silva"
-)
+    # Print confirmation and the link to the created event
+    print(f"Event created successfully! Link: {evento_criado.get('htmlLink')}")
