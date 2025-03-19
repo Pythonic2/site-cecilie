@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "dona-calendario",
+  "private_key_id": "0b4ce2c3c89ab65abe99a6f0a7c9d830c35a1c6e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDRVKwg/+oslHz3\nwouIHki2XTE9uqio9wsB0gqQUMZuvxJIg+H+sVTVWvo+mw9GGm+K70jrcxoyP8I8\nvWPCSTsAbukH32YqLtjjl8yMuMsWUE/wKGgQp48OVcCpPU5q9BCYvSnh9uZGdA+y\nK/y8njOIZCjWet10Iw8szzr2cUSJ5996ucMkbRau4vooplzJ9pAnwNJ3gx4RRc8f\n/QpJCnzMR78+ZlYTEmt0YBmByREqWxs9hO1QAnGsz5liUQa2GweR5cfXzrLL/V1i\nan5AriiisFOav6QTg0zCghwyK/z593XpePM27eCtRJZOneOYUJsqeej9jeH9LmUl\neXqPTvO/AgMBAAECggEACH8LTXuVoaGVQOkgiLHR+bTmnr7IwbLlO3mu/BSLOUuA\nDnlr3s6Lxu0eYxQgFpRUGquDpirR0WBNHfIB7ozSXD4kLzGeD/A+1V3/62ZEt+8i\nj3jUYHiskcRhQX0/hY/KbKig3o8K4aksSesHIxC4vrxx++KYwnH517PBjOckBQTV\nccsBy6T2+IvNe2re6glLrHaBAXe761OWbZ2gv7lGigFPQOe2nwLQLc5kfJGty5cE\n4V4F6zfndK4KP8wGRa4BR4Ec/KQM9u3YqAzNH0j4ye2J4iYy9RBC4QLkAfCReYRu\nLs7GErr/3jNHkSjg7zzI6qKPAnHdEZfNcTXrZ215gQKBgQD4+0zI7llefK8RalFt\nvzpYeKVzBKbKA3H+c/I3bcyo8suT42uj9ayfS/kB2amX9hQpffdru8JY92qJc1Th\nOiwDcPhT73R66PQmMvmIEvtUYOe9vst1/nKMbBAq9uosBQ76y5rj72v+mA82mFX1\nWgHmFv/W7JGZHQWkjGngFL0ajwKBgQDXOz5vwSrzVbzCtQ8H+ilh3FKqhOH4I27J\nPfAInv4XSYYOp6+sdpIlaNQzeVWGjkerQ1DANV/KgUfofZZRNLBeEIdj9JJEsFXc\n6+67RV1cQSyxm0WvgCkCbcHqm3E5FK05vxMZh07Raft1nNSgFbiOoru9qbtF2SVh\naiguj0Xr0QKBgEg1odRYhCTKJn/3hLw+jK5h9yH/hFvsWeBBQktfFc8d83rlpy87\nLiBZCVPHC8+dt8U82kgtgTUKNKS+hSx5EZDB79NwDCklbMGzYPlc//U90ZgPQLTs\n4c3l/V5olAvGP8zuxfI7WufQtADSd4Ob4hcYLoTnwWZVq3BIpOAvQ5TzAoGBALpS\nQSTBlor8p+Hul8qSF4zuDGotiuki019HTSpJaTGDppe9NmkYZEAaVckRuqY3OXfb\nWGZsTjaiYDu1rJE0CZIEwRAYwx7PgCU14X8g90dL7IL8JgFd8yJ1HbAZTJTbf3JE\nJSauad8D3nncgHztEM35tojkDIjVCHUiTxKvWRphAoGBAOPtEAA99hcnSY37zWFO\nGeGUPe9nUsY8TiLcFSB2Gnzmzbg6A3FYRnuoIBhpFnqeWUi7cXTpwXw6/mRJJgUU\nqCIuJMg0tOEqyveAAyYeOEPflX/DUxYh2hwUAYVwU77VPf/g0ZhTWMCn2ABaBun+\nRtLvkxArDnC1+MahpNq5LSyU\n-----END PRIVATE KEY-----\n",
+  "client_email": "dona-calendario@dona-calendario.iam.gserviceaccount.com",
+  "client_id": "107960884711054091393",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dona-calendario%40dona-calendario.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
