@@ -57,7 +57,7 @@ class RegisterUser(CreateView):
             user = authenticate(username=username, password=raw_password)
             if user is not None:
                 login(request, user)  # Faz o login automático
-                return redirect("produtos")
+                return redirect("home")
             else:
                 return redirect("register")
         else:
