@@ -63,7 +63,10 @@ class CardapioView(TemplateView):
         
         #if cep_usuario:
         evento = Evento.objects.last()
-        taxa_cidade = obter_taxa_por_cep_ou_cidade(cidade_nome=request.session['cidade_selecionada'])  # Busca a taxa no banco
+        if request.session['cidade_selecionada']:
+            taxa_cidade = obter_taxa_por_cep_ou_cidade(cidade_nome=request.session['cidade_selecionada'])
+        else:
+            codade_selecionada = 'Campina Grande'  # Busca a taxa no banco
         request.session["taxa_cidade"] = taxa_cidade  # Armazena na sessão
 
         #else:
