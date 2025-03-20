@@ -12,5 +12,9 @@ services:
     volumes:
       - plataforma_chopp_data:/var/lib/postgresql/data
       - plataforma_chopp_app:/app/media
-    command: >
-      sh -c "apt update && apt install -y nano && mkdir -p /app/main && echo '{}' > /app/main/dona-calendario.json"
+volumes:
+  plataforma_chopp_data:
+  plataforma_chopp_app:
+networks:
+  pi_default:
+    external: true
