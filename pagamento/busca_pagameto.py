@@ -24,7 +24,7 @@ def buscar_pagamento_mercado_pago(pagamento_id):
             inf = dados_pagamento.get('metadata', {}).get('other_info', [])
             carrinho_id = dados_pagamento.get('metadata', {}).get('carrinho_id')
             evento_id = dados_pagamento.get('metadata', {}).get('evento_id')
-            
+            payment_type = pagamento['response']['payment_type_id']
             print(f"Informações adicionais: {inf}")
             print(f"Carrinho ID: {carrinho_id}, Evento ID: {evento_id}")
             
@@ -45,7 +45,9 @@ def buscar_pagamento_mercado_pago(pagamento_id):
                 "data": dados_pagamento.get('date_approved'),
                 "items": x,
                 "evento": evento_id,  
-                "carrinho_id": carrinho_id 
+                "carrinho_id": carrinho_id,
+                "payment_type": payment_type
+
             }
         else:
             print(f"Erro ao buscar o pagamento: {pagamento['status']}, {pagamento['response']}")

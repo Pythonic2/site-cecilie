@@ -1,19 +1,23 @@
 <div class="container-fluid service py-5">
+    
     <div class="container py-5">
+        <h1>Alguns Eventos</h1>
         <div class="row g-4 justify-content-center">
+            {% for evento in eventos%}
             <div class="col-md-6 col-lg-4">
-                <a href="#">
+                    
                     <div class="service-item bg-secondary rounded border border-secondary">
-                        <img src="static/img/featur-1.jpg" class="img-fluid rounded-top w-100" alt="">
+                        <img src="{{evento.imagem.url}}" class="img-fluid rounded-top w-100" alt="">
                         <div class="px-4 rounded-bottom">
                             <div class="service-content bg-primary text-center p-4 rounded">
-                                <h5 class="text-white">Vestidos</h5>
-                                <h3 class="mb-0">20% OFF</h3>
+                                <h5 class="text-white">Evento</h5>
+                                <h3 class="mb-0 text-white">{{evento.tipo_evento}}</h3>
                             </div>
                         </div>
                     </div>
-                </a>
+                    
             </div>
+            {% endfor%}
             
         </div>
     </div>

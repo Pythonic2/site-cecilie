@@ -14,7 +14,7 @@ from produto.models import Produto
 from django.views.decorators.csrf import csrf_exempt
 from produto.models import Cidade
 from produto.views import obter_taxa_por_cep_ou_cidade
-from .models import ImagemSlide
+from .models import ImagemSlide, EventoRealizado
 load_dotenv() 
 
 logger = logging.getLogger(__name__)
@@ -67,14 +67,16 @@ class HomeView(TemplateView):
         #     valores_com_taxa[produto.id] = valor_com_taxa
         #     p_taxa.append(valores_com_taxa)
         # request.session['valores_com_taxa'] = valores_com_taxa
-        
-        return render(request, self.template_name,{'destaques':produtos,'cidades':cidades,'cidade':cidade,'taxa':taxa_cidade})
+        feedbacks = Testemunho.objects.all().order_by('-id')
+        context = {'destaques':produtos,'cidades':cidades,'cidade':cidade,'taxa':taxa_cidade,'feedbacks':feedbacks}
+        eventos_realizados = EventoRealizado.objects.all().order_by('-id')
+        context['eventos'] = eventos_realizados
+        return render(request, self.template_name,context)
         
 @csrf_exempt
 def filtrar_destaques(request, categoria_id):
     produtos_data = Produto.objects.filter(categoria=categoria_id, destaque=True)
     return render(request, 'parciais/destaques.html', {'destaques': produtos_data})
-
 
 
 

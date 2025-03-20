@@ -115,10 +115,29 @@
         {% include 'parciais/copyright.html'%}
         <!-- Copyright End -->
 
+        <style>
+            .go-to-cart {
+                position: fixed;
+                bottom: 20px; /* Distância do fundo da janela */
+                right: 20px; /* Distância da lateral direita */
+                z-index: 1000; /* Para garantir que ele fique sobre outros elementos */
+                width: 60px; /* Tamanho do botão */
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: red; /* Cor de fundo */
+                border-radius: 50%; /* Deixa o botão redondo */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .go-to-cart:hover {
+                background-color: white; /* Cor de fundo ao passar o mouse */
+            }
+        </style>
+        
 
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
-
+        <a href="{% url 'pagina_carrinho' %}" class="btn btn-primary border-3 border-primary rounded-circle go-to-cart text-light">
+            <i class="fa fa-shopping-bag fa-2x"></i>
+        </a>
         
 {%endblock%}

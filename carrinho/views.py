@@ -12,7 +12,7 @@ from django.urls import reverse
 from produto.views import obter_taxa_por_cep_ou_cidade
 import logging
 from main.criar_evento import criar_evento
-
+from produto.models import Cidade
 logging.basicConfig(
     level=logging.DEBUG,  # Nível de log
     format='%(asctime)s - %(levelname)s - %(message)s',  # Formato da mensagem de log
@@ -24,7 +24,7 @@ logging.basicConfig(
 @login_required
 def pagina_carrinho(request):
     """ Renderiza a página do carrinho e carrega as informações descritas no dict context """
-    
+    print(request.session['cidade_selecionada'])
     usuario = request.user.username
 
     # Obtém o usuário atual
@@ -101,6 +101,7 @@ def pagina_carrinho(request):
         evento.valor = valor_total
         evento.save()
     
+   
     context = {
         'carrinho': produtos_no_carrinho,
         'total': valor_total,
@@ -109,6 +110,7 @@ def pagina_carrinho(request):
         'titulo': 'carrinho',
         'quantidade': sum(item.quantidade for item in itens),
     }
+    
     try:
         carrinho_id = carrinho.id
         evento_id = evento.id if evento else None

@@ -164,6 +164,8 @@ class EventoView(TemplateView):
                 cidades_rm_fortaleza = [cidade.nome for cidade in Cidade.objects.all()]
 
                 if data['localidade'] in cidades_rm_fortaleza:
+                    #passa a cidade se tiver no banco como session, para consultar se essa cidade tem frete, se tiver adiciona como item no pagamento
+                    request.session['cidade_selecionada'] = data['localidade']
                     evento = form.save(commit=False)
                     evento.usuario = request.user
                     evento.status = 'Aguardando Pagamento'

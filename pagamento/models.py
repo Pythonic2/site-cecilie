@@ -11,6 +11,8 @@ class Transacao(models.Model):
     data_transacao = models.DateTimeField(auto_now_add=True)  # Adicionando a data da transação
     valor_total = models.DecimalField(max_digits=10, decimal_places=2)  # Salvar o valor da transação
     status = models.CharField(max_length=20)
+    metodo = models.CharField(max_length=50, default=' ')
+    observacoes = models.TextField(blank=True, null=True,default='sem observações')
 
     def __str__(self):
         return f'Transação {self.transacao_id} - Usuario: {self.usuario}'

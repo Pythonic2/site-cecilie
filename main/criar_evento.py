@@ -1,10 +1,9 @@
 from authentication.models import Usuario, Evento
 from carrinho.models import Carrinho, ItemCarrinho
 import os
-import os
 from googleapiclient.discovery import build
 from google.oauth2.service_account import Credentials
-from datetime import timedelta
+from datetime import datetime, timedelta
 
 # Get the current working directory
 current_directory = os.getcwd()
@@ -28,34 +27,34 @@ def criar_evento(evento_id, produtos):
     # Build the Google Calendar API service
     service = build("calendar", "v3", credentials=credenciais)
 
-    # Formatar os produtos de forma mais agradável
-    # Formatar os produtos de forma mais agradável
+    # Format the product list
     produtos_formatados = "\n".join(
         [f"- {item.produto.nome}: {item.quantidade} unidade(s) - R$ {item.valor}" for item in produtos]
     )
-    start_time = evento.hora_evento
-    end_time = start_time + timedelta(hours=4)  # End time (4 hours after start)
 
+    # Combine event date and time into a full datetime object
+    start_datetime = datetime.combine(evento.data_evento, evento.hora_evento)
+    end_datetime = start_datetime + timedelta(hours=4)  # Event ends 4 hours later
 
-    # Create the event
+    # Create the event data
     evento_data = {
         "summary": f"Evento {evento.tipo_evento}  {usuario.nome} - email {usuario.email}",
         "location": f"{evento.bairro}, {evento.endereco}, {evento.cep}",
         "description": (
             f"Evento de: {usuario.nome}\n"
-            f"Endereço do cliente: {usuario.rua}\n"
-            f"Bairro do Cliente: {usuario.bairro}\n"
+            f"Data de Nascimento: {usuario.data_nascimento}\n"
+            f"CPF: {usuario.cpf}\n"
             f"Endereço do Evento: {evento.endereco}, {evento.bairro}\n"
             f"Tipo de Evento: {evento.tipo_evento}\n"
             f"Produtos:\n{produtos_formatados}\n"
             f"Valor Total: R$ {evento.valor}"
         ),
         "start": {
-            "dateTime": f"{evento.data_evento}T{start_time.strftime('%H:%M:%S')}",
+            "dateTime": start_datetime.strftime('%Y-%m-%dT%H:%M:%S'),
             "timeZone": "America/Sao_Paulo",
         },
         "end": {
-            "dateTime": f"{evento.data_evento}T{end_time.strftime('%H:%M:%S')}",
+            "dateTime": end_datetime.strftime('%Y-%m-%dT%H:%M:%S'),
             "timeZone": "America/Sao_Paulo",
         },
     }

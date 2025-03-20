@@ -10,8 +10,9 @@ from datetime import datetime
 class Usuario(AbstractUser):
     nome = models.CharField(max_length=80)
     email = models.EmailField(unique=True)
-    rua = models.CharField(max_length=100, default='None')
-    bairro = models.CharField(max_length=100, default='None')
+    data_nascimento = models.DateField(auto_now_add=False, null=True, blank=True)
+    cpf = models.CharField(max_length=11, unique=True)
+
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
