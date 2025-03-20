@@ -53,5 +53,3 @@ def buscar_pagamento_mercado_pago(pagamento_id):
     except Exception as e:
         print(f"Ocorreu um erro: {str(e)}")
 
-pag = buscar_pagamento_mercado_pago("1333519227")
-print(pag['status'])

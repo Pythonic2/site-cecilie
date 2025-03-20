@@ -28,9 +28,11 @@ def criar_evento(evento_id, produtos):
     service = build("calendar", "v3", credentials=credenciais)
 
     # Formatar os produtos de forma mais agradável
+    # Formatar os produtos de forma mais agradável
     produtos_formatados = "\n".join(
-        [f"- {produto.nome}: {quantidade} unidade(s) - R$ {valor}" for produto, quantidade, valor in produtos]
+        [f"- {item.produto.nome}: {item.quantidade} unidade(s) - R$ {item.valor}" for item in produtos]
     )
+
 
     # Create the event
     evento_data = {

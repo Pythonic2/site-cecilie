@@ -22571,3 +22571,655 @@ authentication.models.Usuario.DoesNotExist: Usuario matching query does not exis
 2025-03-19 01:48:00,138 - WARNING - Not Found: /login/img/payment.png
 2025-03-19 01:48:23,040 - WARNING - Not Found: /login/img/payment.png
 2025-03-19 01:48:28,128 - WARNING - Not Found: /login/img/payment.png
+2025-03-19 18:48:44,651 - WARNING - Not Found: /favicon.ico
+2025-03-19 18:49:13,740 - DEBUG - Recebendo requisição POST
+2025-03-19 18:49:13,741 - WARNING - Método HTTP não permitido
+2025-03-19 18:49:13,742 - WARNING - Method Not Allowed: /pag/
+2025-03-19 18:55:41,164 - DEBUG - Recebendo requisição POST
+2025-03-19 18:55:41,165 - WARNING - Corpo da requisição vazio
+2025-03-19 18:55:41,167 - WARNING - Bad Request: /pag/
+2025-03-19 18:57:19,128 - DEBUG - Recebendo requisição POST
+2025-03-19 18:57:19,130 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 18:57:19,131 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 18:57:19,131 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 18:57:19,135 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 18:57:19,548 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 18:57:19,554 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 18:57:19,555 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 18:57:19,557 - DEBUG - ####################################
+2025-03-19 18:57:19,558 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 18:57:19,560 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 18:57:19,561 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 18:57:19,598 - INFO - Transação salva: 1322687474
+2025-03-19 18:57:19,647 - DEBUG - Produtos associados à transação: ['pto', 'Chopeira Bomba']
+2025-03-19 18:57:19,649 - DEBUG - id evento: 23
+2025-03-19 18:57:19,655 - WARNING - Erro ao processar transação: Evento matching query does not exist.
+2025-03-19 19:03:34,526 - DEBUG - Recebendo requisição POST
+2025-03-19 19:03:34,531 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 19:03:34,532 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 19:03:34,534 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 19:03:34,548 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 19:03:34,902 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 19:03:34,913 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 19:03:34,916 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:03:34,918 - DEBUG - ####################################
+2025-03-19 19:03:34,921 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:03:34,924 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 19:03:34,927 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 19:03:34,971 - WARNING - Erro ao processar transação: UNIQUE constraint failed: pagamento_transacao.transacao_id
+2025-03-19 19:03:49,922 - DEBUG - Recebendo requisição POST
+2025-03-19 19:03:49,926 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 19:03:49,927 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 19:03:49,928 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 19:03:49,943 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 19:03:50,364 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 19:03:50,377 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 19:03:50,380 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:03:50,382 - DEBUG - ####################################
+2025-03-19 19:03:50,385 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:03:50,387 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 19:03:50,391 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 19:03:50,445 - WARNING - Erro ao processar transação: UNIQUE constraint failed: pagamento_transacao.transacao_id
+2025-03-19 19:04:03,013 - DEBUG - Recebendo requisição POST
+2025-03-19 19:04:03,015 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 19:04:03,016 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 19:04:03,017 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 19:04:03,030 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 19:04:03,398 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 19:04:03,410 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 19:04:03,411 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:04:03,413 - DEBUG - ####################################
+2025-03-19 19:04:03,414 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:04:03,416 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 19:04:03,420 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 19:04:03,469 - WARNING - Erro ao processar transação: UNIQUE constraint failed: pagamento_transacao.transacao_id
+2025-03-19 19:04:10,705 - DEBUG - Recebendo requisição POST
+2025-03-19 19:04:17,120 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 19:04:20,323 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 19:04:22,475 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 19:04:23,237 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 19:04:23,606 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 19:04:24,721 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 19:04:25,361 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:04:26,504 - DEBUG - ####################################
+2025-03-19 19:04:27,650 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:04:28,778 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 19:04:40,917 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 19:05:01,701 - WARNING - Erro ao processar transação: UNIQUE constraint failed: pagamento_transacao.transacao_id
+2025-03-19 19:05:38,294 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-19 19:06:37,505 - DEBUG - Recebendo requisição POST
+2025-03-19 19:06:37,511 - DEBUG - Recebendo requisição POST
+2025-03-19 19:06:37,511 - DEBUG - Recebendo requisição POST
+2025-03-19 19:06:37,517 - DEBUG - Recebendo requisição POST
+2025-03-19 19:06:39,423 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 19:06:39,425 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 19:06:39,426 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 19:06:39,434 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 19:06:39,629 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 19:06:39,630 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 19:06:40,479 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 19:06:40,480 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 19:06:40,481 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 19:06:40,482 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 19:06:40,491 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 19:06:40,497 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 19:06:40,575 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 19:06:40,579 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 19:06:40,580 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:06:40,581 - DEBUG - ####################################
+2025-03-19 19:06:40,582 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:06:40,583 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 19:06:40,585 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 19:06:40,601 - INFO - Transação salva: 1322687474
+2025-03-19 19:06:40,610 - WARNING - Erro ao processar transação: "<Transacao: Transação 1322687474 - Usuario: admin>" needs to have a value for field "id" before this many-to-many relationship can be used.
+2025-03-19 19:06:41,875 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 19:06:41,880 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 19:06:41,893 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 19:06:41,895 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:06:41,896 - DEBUG - ####################################
+2025-03-19 19:06:41,898 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 19:06:41,899 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:06:41,901 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:06:41,903 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 19:06:41,905 - DEBUG - ####################################
+2025-03-19 19:06:41,909 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:06:41,910 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 19:06:41,912 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 19:06:41,921 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 19:06:41,931 - INFO - Transação salva: 1322687474
+2025-03-19 19:06:41,943 - WARNING - Erro ao processar transação: "<Transacao: Transação 1322687474 - Usuario: admin>" needs to have a value for field "id" before this many-to-many relationship can be used.
+2025-03-19 19:06:41,946 - INFO - Transação salva: 1322687474
+2025-03-19 19:06:41,959 - WARNING - Erro ao processar transação: "<Transacao: Transação 1322687474 - Usuario: admin>" needs to have a value for field "id" before this many-to-many relationship can be used.
+2025-03-19 19:06:42,693 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 19:06:44,276 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 19:06:45,105 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 19:06:45,642 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 19:06:46,056 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 19:06:47,028 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 19:06:47,414 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:06:47,813 - DEBUG - ####################################
+2025-03-19 19:06:48,542 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:06:48,965 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 19:06:52,490 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 19:06:58,152 - INFO - Transação salva: 1322687474
+2025-03-19 19:07:06,144 - WARNING - Erro ao processar transação: "<Transacao: Transação 1322687474 - Usuario: admin>" needs to have a value for field "id" before this many-to-many relationship can be used.
+2025-03-19 19:07:24,750 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-19 19:08:02,326 - DEBUG - Recebendo requisição POST
+2025-03-19 19:08:02,330 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 19:08:02,331 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 19:08:02,333 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 19:08:02,351 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 19:08:02,780 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 19:08:02,792 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 19:08:02,795 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:08:02,797 - DEBUG - ####################################
+2025-03-19 19:08:02,800 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:08:02,803 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 19:08:02,807 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 19:08:02,835 - INFO - Transação salva: 1322687474
+2025-03-19 19:08:22,013 - WARNING - Erro ao processar transação: Evento matching query does not exist.
+2025-03-19 19:08:31,967 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\main\criar_evento.py changed, reloading.
+2025-03-19 19:08:52,543 - DEBUG - Recebendo requisição POST
+2025-03-19 19:08:52,546 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 19:08:52,547 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 19:08:52,548 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 19:08:52,554 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 19:08:52,893 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 19:08:52,900 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 19:08:52,902 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:08:52,904 - DEBUG - ####################################
+2025-03-19 19:08:52,906 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:08:52,908 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 19:08:52,912 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 19:08:52,936 - INFO - Transação salva: 1322687474
+2025-03-19 19:09:02,497 - WARNING - Erro ao processar transação: Evento matching query does not exist.
+2025-03-19 19:10:13,308 - DEBUG - Recebendo requisição POST
+2025-03-19 19:10:13,310 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 19:10:13,310 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 19:10:13,311 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 19:10:13,316 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 19:10:13,651 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 19:10:13,660 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 19:10:13,663 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:10:13,665 - DEBUG - ####################################
+2025-03-19 19:10:13,668 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:10:13,671 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 19:10:13,676 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 19:10:13,707 - INFO - Transação salva: 1322687474
+2025-03-19 19:10:22,064 - WARNING - Erro ao processar transação: Evento matching query does not exist.
+2025-03-19 19:12:31,564 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\main\criar_evento.py changed, reloading.
+2025-03-19 19:14:01,955 - DEBUG - Recebendo requisição POST
+2025-03-19 19:14:01,958 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 19:14:01,960 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 19:14:01,961 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 19:14:01,972 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 19:14:02,358 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 19:14:02,366 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 19:14:02,368 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:14:02,370 - DEBUG - ####################################
+2025-03-19 19:14:02,372 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:14:02,374 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 19:14:02,377 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 19:14:02,403 - INFO - Transação salva: 1322687474
+2025-03-19 19:14:14,442 - WARNING - Erro ao processar transação: [Errno 2] No such file or directory: 'C:/app/main/dona-calendario.json'
+2025-03-19 19:14:31,421 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\main\criar_evento.py changed, reloading.
+2025-03-19 19:15:00,344 - DEBUG - Recebendo requisição POST
+2025-03-19 19:15:00,351 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 19:15:00,354 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 19:15:00,357 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 19:15:00,381 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 19:15:00,724 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 19:15:00,733 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 19:15:00,735 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:15:00,738 - DEBUG - ####################################
+2025-03-19 19:15:00,739 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:15:00,749 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 19:15:00,754 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 19:15:00,780 - INFO - Transação salva: 1322687474
+2025-03-19 19:15:08,728 - WARNING - Erro ao processar transação: [Errno 2] No such file or directory: 'C:\\Users\\igorm\\OneDrive\\Documentos\\meus_projetos\\site-cecilie\\main\\dona-calendario.json'
+2025-03-19 19:16:09,241 - DEBUG - Recebendo requisição POST
+2025-03-19 19:16:09,243 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 19:16:09,245 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 19:16:09,246 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 19:16:09,288 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 19:16:09,716 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 19:16:09,748 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 19:16:09,756 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:16:09,763 - DEBUG - ####################################
+2025-03-19 19:16:09,772 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:16:09,779 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 19:16:09,792 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 19:16:09,850 - INFO - Transação salva: 1322687474
+2025-03-19 19:16:24,533 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-19 19:16:29,932 - WARNING - Erro ao processar transação: 'str' object has no attribute 'nome'
+2025-03-19 19:16:35,581 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\main\criar_evento.py changed, reloading.
+2025-03-19 19:17:10,660 - DEBUG - Recebendo requisição POST
+2025-03-19 19:17:10,670 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 19:17:10,672 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 19:17:10,674 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 19:17:10,723 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 19:17:11,158 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 19:17:11,176 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 19:17:11,188 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:17:11,206 - DEBUG - ####################################
+2025-03-19 19:17:11,221 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:17:11,227 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 19:17:11,239 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 19:17:11,341 - INFO - Transação salva: 1322687474
+2025-03-19 19:17:22,943 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-19 19:17:28,011 - WARNING - Erro ao processar transação: too many values to unpack (expected 3)
+2025-03-19 19:18:46,446 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\main\criar_evento.py changed, reloading.
+2025-03-19 19:19:27,822 - DEBUG - Recebendo requisição POST
+2025-03-19 19:19:27,829 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 19:19:27,831 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 19:19:27,833 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 19:19:27,869 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 19:19:28,269 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 19:19:28,286 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 19:19:28,288 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:19:28,292 - DEBUG - ####################################
+2025-03-19 19:19:28,298 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 19:19:28,307 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 19:19:28,320 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 19:19:28,494 - INFO - Transação salva: 1322687474
+2025-03-19 19:19:41,876 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-19 22:28:34,204 - DEBUG - Recebendo requisição POST
+2025-03-19 22:28:34,206 - WARNING - Erro ao processar transação: too many values to unpack (expected 3)
+2025-03-19 22:28:34,209 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 22:28:34,218 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 22:28:34,222 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 22:28:34,230 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 22:28:34,621 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-19 22:28:34,642 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 22:28:34,651 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 22:28:34,652 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 22:28:34,653 - DEBUG - ####################################
+2025-03-19 22:28:34,654 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 22:28:34,655 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 22:28:34,657 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 22:28:34,668 - INFO - Transação salva: 1322687474
+2025-03-19 22:28:34,690 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-19 22:28:34,922 - WARNING - Erro ao processar transação: too many values to unpack (expected 3)
+2025-03-19 22:28:47,771 - DEBUG - Recebendo requisição POST
+2025-03-19 22:28:47,774 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 22:28:47,774 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 22:28:47,775 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 22:28:47,779 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 22:28:48,544 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 22:29:02,110 - ERROR - Internal Server Error: /pag/
+Traceback (most recent call last):
+  File "c:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py", line 51, in simple_test
+    carrinho = Carrinho.objects.get(usuario=user, id=int(pag['carrinho_id']))
+                                            ^^^^
+UnboundLocalError: cannot access local variable 'user' where it is not associated with a value
+2025-03-19 22:29:34,294 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-19 22:29:42,516 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-19 22:30:08,040 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-19 22:30:45,194 - DEBUG - Recebendo requisição POST
+2025-03-19 22:30:45,196 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1322687474}, 'type': 'payment'}
+2025-03-19 22:30:45,196 - DEBUG - Pagamento ID: 1322687474, Tipo: payment
+2025-03-19 22:30:45,197 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 22:30:52,828 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 22:30:53,246 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1322687474 HTTP/1.1" 200 None
+2025-03-19 22:30:54,050 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 22:30:54,784 - DEBUG - {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 22:30:57,679 - DEBUG - ####################################
+2025-03-19 22:30:57,680 - DEBUG - Informações do pagamento: {'id': 1322687474, 'status': 'approved', 'valor': 130, 'usuario': '1', 'data': '2025-03-19T17:43:21.920-04:00', 'items': ['pto', 'Chopeira Bomba'], 'evento': 23, 'carrinho_id': 7}
+2025-03-19 22:30:57,681 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 22:30:57,682 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 22:31:18,261 - WARNING - Erro ao processar transação: Carrinho matching query does not exist.
+2025-03-19 22:33:33,517 - WARNING - Not Found: /home/1/img/fruite-item-5.jpg
+2025-03-19 22:33:33,733 - WARNING - Not Found: /home/1/img/fruite-item-2.jpg
+2025-03-19 22:33:33,771 - WARNING - Not Found: /home/1/img/fruite-item-1.jpg
+2025-03-19 22:33:33,845 - WARNING - Not Found: /home/1/img/fruite-item-6.jpg
+2025-03-19 22:33:33,966 - WARNING - Not Found: /home/1/img/fruite-item-4.jpg
+2025-03-19 22:33:34,085 - WARNING - Not Found: /home/1/img/fruite-item-3.jpg
+2025-03-19 22:33:34,193 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-19 22:33:44,162 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-19 22:33:44,530 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-19 22:33:44,582 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 22:33:45,348 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 896
+2025-03-19 22:33:45,351 - DEBUG - None
+2025-03-19 22:33:45,352 - DEBUG - Resposta da criação da preferência: {'status': 201, 'response': {'additional_info': '', 'auto_return': 'approved', 'back_urls': {'failure': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'pending': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'success': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/'}, 'binary_mode': False, 'client_id': '3488797328851277', 'collector_id': 162016798, 'coupon_code': None, 'coupon_labels': None, 'date_created': '2025-03-19T21:33:44.987-04:00', 'date_of_expiration': None, 'expiration_date_from': None, 'expiration_date_to': None, 'expires': False, 'external_reference': '1', 'id': '162016798-78008f55-3619-4cd0-b2e2-f8a55a247596', 'init_point': 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-78008f55-3619-4cd0-b2e2-f8a55a247596', 'internal_metadata': None, 'items': [{'id': '5', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'pto', 'quantity': 1, 'unit_price': 620}, {'id': '4', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'UM mais vendido', 'quantity': 1, 'unit_price': 650}, {'id': '6', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'Chopeira Elétrica', 'quantity': 1, 'unit_price': 680}, {'id': '7', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'Chopeira Bomba', 'quantity': 1, 'unit_price': 510}], 'marketplace': 'NONE', 'marketplace_fee': 0, 'metadata': {'carrinho_id': 3, 'evento_id': 21}, 'notification_url': 'https://plataforma-donadochopp.cloudboosterlab.org/pag/', 'operation_type': 'regular_payment', 'payer': {'phone': {'area_code': '', 'number': ''}, 'address': {'zip_code': '', 'street_name': '', 'street_number': None}, 'email': '', 'identification': {'number': '', 'type': ''}, 'name': '', 'surname': '', 'date_created': None, 'last_purchase': None}, 'payment_methods': {'default_card_id': None, 'default_payment_method_id': None, 'excluded_payment_methods': [{'id': ''}], 'excluded_payment_types': [{'id': ''}], 'installments': None, 'default_installments': None}, 'processing_modes': None, 'product_id': None, 'redirect_urls': {'failure': '', 'pending': '', 'success': ''}, 'sandbox_init_point': 'https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-78008f55-3619-4cd0-b2e2-f8a55a247596', 'site_id': 'MLB', 'shipments': {'default_shipping_method': None, 'receiver_address': {'zip_code': '', 'street_name': '', 'street_number': None, 'floor': '', 'apartment': '', 'city_name': None, 'state_name': None, 'country_name': None}}, 'total_amount': None, 'last_updated': None, 'financing_group': ''}}
+2025-03-19 22:33:45,353 - INFO - Preferência criada com sucesso.
+2025-03-19 22:34:31,783 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-19 22:34:42,050 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-19 22:34:54,810 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-19 22:36:17,597 - DEBUG - Recebendo requisição POST
+2025-03-19 22:36:17,598 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1333536287}, 'type': 'payment'}
+2025-03-19 22:36:17,599 - DEBUG - Pagamento ID: 1333536287, Tipo: payment
+2025-03-19 22:36:17,599 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 22:36:20,821 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 22:36:21,223 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1333536287 HTTP/1.1" 200 None
+2025-03-19 22:36:22,224 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 22:36:22,797 - DEBUG - {'id': 1333536287, 'status': 'approved', 'valor': 2460, 'usuario': '1', 'data': '2025-03-19T21:35:47.629-04:00', 'items': ['pto', 'UM mais vendido', 'Chopeira Elétrica', 'Chopeira Bomba'], 'evento': 21, 'carrinho_id': 3}
+2025-03-19 22:36:27,557 - DEBUG - ####################################
+2025-03-19 22:36:27,978 - DEBUG - Informações do pagamento: {'id': 1333536287, 'status': 'approved', 'valor': 2460, 'usuario': '1', 'data': '2025-03-19T21:35:47.629-04:00', 'items': ['pto', 'UM mais vendido', 'Chopeira Elétrica', 'Chopeira Bomba'], 'evento': 21, 'carrinho_id': 3}
+2025-03-19 22:36:28,673 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 22:36:34,217 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 22:43:47,438 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-19 22:43:47,486 - INFO - Transação salva: 1333536287
+2025-03-19 22:43:47,521 - DEBUG - Produtos associados à transação: ['pto', 'UM mais vendido', 'Chopeira Elétrica', 'Chopeira Bomba']
+2025-03-19 22:43:47,521 - DEBUG - id evento: 21
+2025-03-19 22:43:47,525 - DEBUG - consulta evento: teste - 2025-03-30
+2025-03-19 22:43:47,567 - INFO - Carrinho e evento atualizados para 'Pago': None, 21
+2025-03-19 22:45:55,210 - DEBUG - Recebendo requisição POST
+2025-03-19 22:45:55,213 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1333536287}, 'type': 'payment'}
+2025-03-19 22:45:55,214 - DEBUG - Pagamento ID: 1333536287, Tipo: payment
+2025-03-19 22:45:55,215 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 22:46:21,492 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 22:46:21,857 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1333536287 HTTP/1.1" 200 None
+2025-03-19 23:11:26,490 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\main\criar_evento.py changed, reloading.
+2025-03-19 23:11:26,647 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 23:11:26,648 - DEBUG - {'id': 1333536287, 'status': 'approved', 'valor': 2460, 'usuario': '1', 'data': '2025-03-19T21:35:47.629-04:00', 'items': ['pto', 'UM mais vendido', 'Chopeira Elétrica', 'Chopeira Bomba'], 'evento': 21, 'carrinho_id': 3}
+2025-03-19 23:11:26,649 - DEBUG - ####################################
+2025-03-19 23:11:26,649 - DEBUG - Informações do pagamento: {'id': 1333536287, 'status': 'approved', 'valor': 2460, 'usuario': '1', 'data': '2025-03-19T21:35:47.629-04:00', 'items': ['pto', 'UM mais vendido', 'Chopeira Elétrica', 'Chopeira Bomba'], 'evento': 21, 'carrinho_id': 3}
+2025-03-19 23:11:26,650 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 23:11:26,651 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 23:11:26,654 - WARNING - Erro ao processar transação: UNIQUE constraint failed: pagamento_transacao.transacao_id
+2025-03-19 23:11:55,805 - DEBUG - Recebendo requisição POST
+2025-03-19 23:11:55,807 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1333536287}, 'type': 'payment'}
+2025-03-19 23:11:55,808 - DEBUG - Pagamento ID: 1333536287, Tipo: payment
+2025-03-19 23:11:55,809 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 23:11:55,813 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:11:56,155 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1333536287 HTTP/1.1" 200 None
+2025-03-19 23:11:56,157 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 23:11:56,158 - DEBUG - {'id': 1333536287, 'status': 'approved', 'valor': 2460, 'usuario': '1', 'data': '2025-03-19T21:35:47.629-04:00', 'items': ['pto', 'UM mais vendido', 'Chopeira Elétrica', 'Chopeira Bomba'], 'evento': 21, 'carrinho_id': 3}
+2025-03-19 23:11:56,159 - DEBUG - ####################################
+2025-03-19 23:11:56,159 - DEBUG - Informações do pagamento: {'id': 1333536287, 'status': 'approved', 'valor': 2460, 'usuario': '1', 'data': '2025-03-19T21:35:47.629-04:00', 'items': ['pto', 'UM mais vendido', 'Chopeira Elétrica', 'Chopeira Bomba'], 'evento': 21, 'carrinho_id': 3}
+2025-03-19 23:11:56,160 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 23:11:56,161 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 23:12:38,643 - WARNING - Erro ao processar transação: Carrinho matching query does not exist.
+2025-03-19 23:12:38,679 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-19 23:13:24,735 - DEBUG - Recebendo requisição POST
+2025-03-19 23:13:24,736 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1333536287}, 'type': 'payment'}
+2025-03-19 23:13:24,737 - DEBUG - Pagamento ID: 1333536287, Tipo: payment
+2025-03-19 23:13:24,738 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 23:13:24,740 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:13:25,072 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1333536287 HTTP/1.1" 200 None
+2025-03-19 23:13:25,076 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 23:13:25,077 - DEBUG - {'id': 1333536287, 'status': 'approved', 'valor': 2460, 'usuario': '1', 'data': '2025-03-19T21:35:47.629-04:00', 'items': ['pto', 'UM mais vendido', 'Chopeira Elétrica', 'Chopeira Bomba'], 'evento': 21, 'carrinho_id': 3}
+2025-03-19 23:13:25,078 - DEBUG - ####################################
+2025-03-19 23:13:25,078 - DEBUG - Informações do pagamento: {'id': 1333536287, 'status': 'approved', 'valor': 2460, 'usuario': '1', 'data': '2025-03-19T21:35:47.629-04:00', 'items': ['pto', 'UM mais vendido', 'Chopeira Elétrica', 'Chopeira Bomba'], 'evento': 21, 'carrinho_id': 3}
+2025-03-19 23:13:25,079 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 23:13:25,080 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 23:13:48,986 - WARNING - Erro ao processar transação: Carrinho matching query does not exist.
+2025-03-19 23:14:22,467 - DEBUG - Recebendo requisição POST
+2025-03-19 23:14:22,469 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1333536287}, 'type': 'payment'}
+2025-03-19 23:14:22,469 - DEBUG - Pagamento ID: 1333536287, Tipo: payment
+2025-03-19 23:14:22,470 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 23:14:22,474 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:14:22,802 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1333536287 HTTP/1.1" 200 None
+2025-03-19 23:14:22,805 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 23:14:22,806 - DEBUG - {'id': 1333536287, 'status': 'approved', 'valor': 2460, 'usuario': '1', 'data': '2025-03-19T21:35:47.629-04:00', 'items': ['pto', 'UM mais vendido', 'Chopeira Elétrica', 'Chopeira Bomba'], 'evento': 21, 'carrinho_id': 3}
+2025-03-19 23:14:22,806 - DEBUG - ####################################
+2025-03-19 23:14:22,807 - DEBUG - Informações do pagamento: {'id': 1333536287, 'status': 'approved', 'valor': 2460, 'usuario': '1', 'data': '2025-03-19T21:35:47.629-04:00', 'items': ['pto', 'UM mais vendido', 'Chopeira Elétrica', 'Chopeira Bomba'], 'evento': 21, 'carrinho_id': 3}
+2025-03-19 23:14:22,808 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 23:14:22,809 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 23:14:27,412 - WARNING - Erro ao processar transação: Carrinho matching query does not exist.
+2025-03-19 23:14:48,532 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-19 23:15:40,868 - DEBUG - Recebendo requisição POST
+2025-03-19 23:15:40,874 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1333536287}, 'type': 'payment'}
+2025-03-19 23:15:40,875 - DEBUG - Pagamento ID: 1333536287, Tipo: payment
+2025-03-19 23:15:40,876 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 23:15:40,880 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:15:41,218 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1333536287 HTTP/1.1" 200 None
+2025-03-19 23:15:41,221 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 23:15:41,222 - DEBUG - {'id': 1333536287, 'status': 'approved', 'valor': 2460, 'usuario': '1', 'data': '2025-03-19T21:35:47.629-04:00', 'items': ['pto', 'UM mais vendido', 'Chopeira Elétrica', 'Chopeira Bomba'], 'evento': 21, 'carrinho_id': 3}
+2025-03-19 23:15:41,223 - DEBUG - ####################################
+2025-03-19 23:15:41,224 - DEBUG - Informações do pagamento: {'id': 1333536287, 'status': 'approved', 'valor': 2460, 'usuario': '1', 'data': '2025-03-19T21:35:47.629-04:00', 'items': ['pto', 'UM mais vendido', 'Chopeira Elétrica', 'Chopeira Bomba'], 'evento': 21, 'carrinho_id': 3}
+2025-03-19 23:15:41,225 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 23:15:41,227 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 23:16:08,665 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-19 23:16:08,767 - WARNING - Erro ao processar transação: Carrinho matching query does not exist.
+2025-03-19 23:16:26,404 - DEBUG - Recebendo requisição POST
+2025-03-19 23:16:26,405 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1333536287}, 'type': 'payment'}
+2025-03-19 23:16:26,406 - DEBUG - Pagamento ID: 1333536287, Tipo: payment
+2025-03-19 23:16:26,407 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 23:16:26,410 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:16:26,748 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1333536287 HTTP/1.1" 200 None
+2025-03-19 23:16:26,751 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 23:16:26,752 - DEBUG - {'id': 1333536287, 'status': 'approved', 'valor': 2460, 'usuario': '1', 'data': '2025-03-19T21:35:47.629-04:00', 'items': ['pto', 'UM mais vendido', 'Chopeira Elétrica', 'Chopeira Bomba'], 'evento': 21, 'carrinho_id': 3}
+2025-03-19 23:16:26,753 - DEBUG - ####################################
+2025-03-19 23:16:26,754 - DEBUG - Informações do pagamento: {'id': 1333536287, 'status': 'approved', 'valor': 2460, 'usuario': '1', 'data': '2025-03-19T21:35:47.629-04:00', 'items': ['pto', 'UM mais vendido', 'Chopeira Elétrica', 'Chopeira Bomba'], 'evento': 21, 'carrinho_id': 3}
+2025-03-19 23:16:26,755 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 23:16:26,756 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 23:16:38,209 - WARNING - Erro ao processar transação: Carrinho matching query does not exist.
+2025-03-19 23:16:54,139 - DEBUG - Recebendo requisição POST
+2025-03-19 23:16:54,141 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1333536287}, 'type': 'payment'}
+2025-03-19 23:16:54,141 - DEBUG - Pagamento ID: 1333536287, Tipo: payment
+2025-03-19 23:16:54,142 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 23:16:54,147 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:16:54,559 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1333536287 HTTP/1.1" 200 None
+2025-03-19 23:16:54,563 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 23:16:54,563 - DEBUG - {'id': 1333536287, 'status': 'approved', 'valor': 2460, 'usuario': '1', 'data': '2025-03-19T21:35:47.629-04:00', 'items': ['pto', 'UM mais vendido', 'Chopeira Elétrica', 'Chopeira Bomba'], 'evento': 21, 'carrinho_id': 3}
+2025-03-19 23:16:54,564 - DEBUG - ####################################
+2025-03-19 23:16:54,564 - DEBUG - Informações do pagamento: {'id': 1333536287, 'status': 'approved', 'valor': 2460, 'usuario': '1', 'data': '2025-03-19T21:35:47.629-04:00', 'items': ['pto', 'UM mais vendido', 'Chopeira Elétrica', 'Chopeira Bomba'], 'evento': 21, 'carrinho_id': 3}
+2025-03-19 23:16:54,565 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 23:16:54,566 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 23:18:07,351 - WARNING - Erro ao processar transação: Carrinho matching query does not exist.
+2025-03-19 23:18:12,465 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "c:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "c:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-19 23:18:16,087 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "c:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "c:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-19 23:18:16,379 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-19 23:18:18,242 - INFO - Carrinho: 6, Criado agora? True
+2025-03-19 23:18:19,358 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-19 23:18:19,698 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-19 23:18:19,729 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:18:20,128 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-19 23:18:20,130 - DEBUG - None
+2025-03-19 23:18:20,131 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-19 23:18:20,131 - INFO - Preferência criada com sucesso.
+2025-03-19 23:18:20,131 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-19 23:18:31,939 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-19 23:18:32,235 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-19 23:18:40,620 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-19 23:18:40,922 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-19 23:18:40,958 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:18:41,314 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-19 23:18:41,316 - DEBUG - None
+2025-03-19 23:18:41,316 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-19 23:18:41,317 - INFO - Preferência criada com sucesso.
+2025-03-19 23:18:41,317 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-19 23:18:44,299 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-19 23:18:44,594 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-19 23:18:44,616 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:18:44,941 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-19 23:18:44,942 - DEBUG - None
+2025-03-19 23:18:44,943 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-19 23:18:44,943 - INFO - Preferência criada com sucesso.
+2025-03-19 23:18:44,944 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-19 23:18:47,521 - WARNING - Not Found: /carrinho/None
+2025-03-19 23:19:01,182 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-19 23:19:01,484 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-19 23:19:01,511 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:19:01,852 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-19 23:19:01,853 - DEBUG - None
+2025-03-19 23:19:01,854 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-19 23:19:01,854 - INFO - Preferência criada com sucesso.
+2025-03-19 23:19:01,855 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-19 23:19:17,006 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-19 23:19:17,308 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-19 23:19:17,334 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:19:17,662 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-19 23:19:17,663 - DEBUG - None
+2025-03-19 23:19:17,664 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-19 23:19:17,664 - INFO - Preferência criada com sucesso.
+2025-03-19 23:19:17,665 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-19 23:19:30,574 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-19 23:19:30,865 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-19 23:19:30,883 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:19:31,263 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-19 23:19:31,265 - DEBUG - None
+2025-03-19 23:19:31,265 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-19 23:19:31,266 - INFO - Preferência criada com sucesso.
+2025-03-19 23:19:31,266 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-19 23:19:33,090 - WARNING - Not Found: /carrinho/None
+2025-03-19 23:19:38,861 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-19 23:19:40,283 - INFO - Carrinho: 6, Criado agora? False
+2025-03-19 23:19:43,478 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-19 23:19:43,776 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-19 23:19:43,796 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:19:44,124 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-19 23:19:44,126 - DEBUG - None
+2025-03-19 23:19:44,126 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-19 23:19:44,127 - INFO - Preferência criada com sucesso.
+2025-03-19 23:19:44,127 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-19 23:19:46,720 - WARNING - Not Found: /carrinho/None
+2025-03-19 23:19:53,071 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-19 23:19:53,375 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-19 23:19:53,395 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:19:53,734 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-19 23:19:53,736 - DEBUG - None
+2025-03-19 23:19:53,737 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-19 23:19:53,737 - INFO - Preferência criada com sucesso.
+2025-03-19 23:19:53,738 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-19 23:19:55,766 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-19 23:19:56,067 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-19 23:19:56,087 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:19:56,432 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-19 23:19:56,433 - DEBUG - None
+2025-03-19 23:19:56,434 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-19 23:19:56,434 - INFO - Preferência criada com sucesso.
+2025-03-19 23:19:56,436 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-19 23:20:11,795 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-19 23:20:12,101 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-19 23:20:12,150 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-19 23:20:13,449 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-19 23:20:13,470 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:20:13,817 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-19 23:20:13,819 - DEBUG - None
+2025-03-19 23:20:13,819 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-19 23:20:13,820 - INFO - Preferência criada com sucesso.
+2025-03-19 23:20:13,820 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-19 23:21:45,670 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-19 23:21:45,966 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-19 23:21:45,981 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:21:46,361 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-19 23:21:46,362 - DEBUG - None
+2025-03-19 23:21:46,362 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-19 23:21:46,363 - INFO - Preferência criada com sucesso.
+2025-03-19 23:21:46,363 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-19 23:21:54,179 - WARNING - Not Found: /home/1/img/fruite-item-5.jpg
+2025-03-19 23:21:54,186 - WARNING - Not Found: /home/1/img/fruite-item-2.jpg
+2025-03-19 23:21:54,196 - WARNING - Not Found: /home/1/img/fruite-item-1.jpg
+2025-03-19 23:21:54,203 - WARNING - Not Found: /home/1/img/fruite-item-6.jpg
+2025-03-19 23:21:54,212 - WARNING - Not Found: /home/1/img/fruite-item-4.jpg
+2025-03-19 23:21:54,220 - WARNING - Not Found: /home/1/img/fruite-item-3.jpg
+2025-03-19 23:21:54,225 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-19 23:21:59,145 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-19 23:22:00,187 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-19 23:22:01,491 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-19 23:22:01,506 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:22:01,854 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-19 23:22:01,856 - DEBUG - None
+2025-03-19 23:22:01,856 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-19 23:22:01,857 - INFO - Preferência criada com sucesso.
+2025-03-19 23:22:01,857 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-19 23:22:26,616 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-19 23:22:30,057 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-19 23:22:30,353 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-19 23:22:30,370 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:22:30,716 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-19 23:22:30,717 - DEBUG - None
+2025-03-19 23:22:30,718 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-19 23:22:30,718 - INFO - Preferência criada com sucesso.
+2025-03-19 23:22:30,718 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-19 23:22:38,354 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-19 23:22:47,927 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-19 23:22:48,220 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-19 23:22:48,235 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:22:48,759 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 836
+2025-03-19 23:22:48,760 - DEBUG - None
+2025-03-19 23:22:48,761 - DEBUG - Resposta da criação da preferência: {'status': 201, 'response': {'additional_info': '', 'auto_return': 'approved', 'back_urls': {'failure': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'pending': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'success': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/'}, 'binary_mode': False, 'client_id': '3488797328851277', 'collector_id': 162016798, 'coupon_code': None, 'coupon_labels': None, 'date_created': '2025-03-19T22:22:48.622-04:00', 'date_of_expiration': None, 'expiration_date_from': None, 'expiration_date_to': None, 'expires': False, 'external_reference': '1', 'id': '162016798-47dec8fe-f007-41df-9284-5d5a4c436fe8', 'init_point': 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-47dec8fe-f007-41df-9284-5d5a4c436fe8', 'internal_metadata': None, 'items': [{'id': '7', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'Chopeira Bomba', 'quantity': 1, 'unit_price': 510}], 'marketplace': 'NONE', 'marketplace_fee': 0, 'metadata': {'carrinho_id': 6, 'evento_id': 23}, 'notification_url': 'https://plataforma-donadochopp.cloudboosterlab.org/pag/', 'operation_type': 'regular_payment', 'payer': {'phone': {'area_code': '', 'number': ''}, 'address': {'zip_code': '', 'street_name': '', 'street_number': None}, 'email': '', 'identification': {'number': '', 'type': ''}, 'name': '', 'surname': '', 'date_created': None, 'last_purchase': None}, 'payment_methods': {'default_card_id': None, 'default_payment_method_id': None, 'excluded_payment_methods': [{'id': ''}], 'excluded_payment_types': [{'id': ''}], 'installments': None, 'default_installments': None}, 'processing_modes': None, 'product_id': None, 'redirect_urls': {'failure': '', 'pending': '', 'success': ''}, 'sandbox_init_point': 'https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-47dec8fe-f007-41df-9284-5d5a4c436fe8', 'site_id': 'MLB', 'shipments': {'default_shipping_method': None, 'receiver_address': {'zip_code': '', 'street_name': '', 'street_number': None, 'floor': '', 'apartment': '', 'city_name': None, 'state_name': None, 'country_name': None}}, 'total_amount': None, 'last_updated': None, 'financing_group': ''}}
+2025-03-19 23:22:48,761 - INFO - Preferência criada com sucesso.
+2025-03-19 23:22:49,639 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-19 23:22:49,929 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-19 23:22:49,943 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:22:50,362 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 836
+2025-03-19 23:22:50,363 - DEBUG - None
+2025-03-19 23:22:50,364 - DEBUG - Resposta da criação da preferência: {'status': 201, 'response': {'additional_info': '', 'auto_return': 'approved', 'back_urls': {'failure': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'pending': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'success': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/'}, 'binary_mode': False, 'client_id': '3488797328851277', 'collector_id': 162016798, 'coupon_code': None, 'coupon_labels': None, 'date_created': '2025-03-19T22:22:50.211-04:00', 'date_of_expiration': None, 'expiration_date_from': None, 'expiration_date_to': None, 'expires': False, 'external_reference': '1', 'id': '162016798-459a7eb0-ece7-46b5-91e5-a9d894a612d4', 'init_point': 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-459a7eb0-ece7-46b5-91e5-a9d894a612d4', 'internal_metadata': None, 'items': [{'id': '7', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'Chopeira Bomba', 'quantity': 1, 'unit_price': 510}], 'marketplace': 'NONE', 'marketplace_fee': 0, 'metadata': {'carrinho_id': 6, 'evento_id': 23}, 'notification_url': 'https://plataforma-donadochopp.cloudboosterlab.org/pag/', 'operation_type': 'regular_payment', 'payer': {'phone': {'area_code': '', 'number': ''}, 'address': {'zip_code': '', 'street_name': '', 'street_number': None}, 'email': '', 'identification': {'number': '', 'type': ''}, 'name': '', 'surname': '', 'date_created': None, 'last_purchase': None}, 'payment_methods': {'default_card_id': None, 'default_payment_method_id': None, 'excluded_payment_methods': [{'id': ''}], 'excluded_payment_types': [{'id': ''}], 'installments': None, 'default_installments': None}, 'processing_modes': None, 'product_id': None, 'redirect_urls': {'failure': '', 'pending': '', 'success': ''}, 'sandbox_init_point': 'https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-459a7eb0-ece7-46b5-91e5-a9d894a612d4', 'site_id': 'MLB', 'shipments': {'default_shipping_method': None, 'receiver_address': {'zip_code': '', 'street_name': '', 'street_number': None, 'floor': '', 'apartment': '', 'city_name': None, 'state_name': None, 'country_name': None}}, 'total_amount': None, 'last_updated': None, 'financing_group': ''}}
+2025-03-19 23:22:50,364 - INFO - Preferência criada com sucesso.
+2025-03-19 23:22:50,931 - WARNING - Not Found: /favicon.ico
+2025-03-19 23:24:13,837 - DEBUG - Recebendo requisição POST
+2025-03-19 23:24:13,839 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1333536721}, 'type': 'payment'}
+2025-03-19 23:24:13,839 - DEBUG - Pagamento ID: 1333536721, Tipo: payment
+2025-03-19 23:24:13,840 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 23:24:13,841 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:24:14,218 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1333536721 HTTP/1.1" 200 None
+2025-03-19 23:24:14,222 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 23:24:14,223 - DEBUG - {'id': 1333536721, 'status': 'approved', 'valor': 510, 'usuario': '1', 'data': '2025-03-19T22:23:49.740-04:00', 'items': ['Chopeira Bomba'], 'evento': 23, 'carrinho_id': 6}
+2025-03-19 23:24:14,224 - DEBUG - ####################################
+2025-03-19 23:24:14,225 - DEBUG - Informações do pagamento: {'id': 1333536721, 'status': 'approved', 'valor': 510, 'usuario': '1', 'data': '2025-03-19T22:23:49.740-04:00', 'items': ['Chopeira Bomba'], 'evento': 23, 'carrinho_id': 6}
+2025-03-19 23:24:14,226 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 23:24:14,227 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 23:24:14,240 - INFO - Transação salva: 1333536721
+2025-03-19 23:24:14,247 - DEBUG - Produtos associados à transação: ['Chopeira Bomba']
+2025-03-19 23:24:14,248 - DEBUG - id evento: 23
+2025-03-19 23:24:14,250 - WARNING - Erro ao processar transação: [Errno 2] No such file or directory: 'C:/app/main/dona-calendario.json'
+2025-03-19 23:24:32,315 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-19 23:24:39,900 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-19 23:24:42,805 - DEBUG - Recebendo requisição POST
+2025-03-19 23:24:42,806 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1333536721}, 'type': 'payment'}
+2025-03-19 23:24:42,806 - DEBUG - Pagamento ID: 1333536721, Tipo: payment
+2025-03-19 23:24:42,807 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 23:24:42,809 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:24:43,157 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1333536721 HTTP/1.1" 200 None
+2025-03-19 23:24:43,160 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 23:24:43,161 - DEBUG - {'id': 1333536721, 'status': 'approved', 'valor': 510, 'usuario': '1', 'data': '2025-03-19T22:23:49.740-04:00', 'items': ['Chopeira Bomba'], 'evento': 23, 'carrinho_id': 6}
+2025-03-19 23:24:43,161 - DEBUG - ####################################
+2025-03-19 23:24:43,161 - DEBUG - Informações do pagamento: {'id': 1333536721, 'status': 'approved', 'valor': 510, 'usuario': '1', 'data': '2025-03-19T22:23:49.740-04:00', 'items': ['Chopeira Bomba'], 'evento': 23, 'carrinho_id': 6}
+2025-03-19 23:24:43,162 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 23:24:43,162 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 23:24:43,167 - WARNING - Erro ao processar transação: UNIQUE constraint failed: pagamento_transacao.transacao_id
+2025-03-19 23:26:26,849 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\busca_pagameto.py changed, reloading.
+2025-03-19 23:29:36,686 - DEBUG - Recebendo requisição POST
+2025-03-19 23:29:36,688 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1333536721}, 'type': 'payment'}
+2025-03-19 23:29:36,688 - DEBUG - Pagamento ID: 1333536721, Tipo: payment
+2025-03-19 23:29:36,689 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 23:29:42,543 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:29:42,936 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1333536721 HTTP/1.1" 200 None
+2025-03-19 23:37:46,734 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\main\criar_evento.py changed, reloading.
+2025-03-19 23:37:46,882 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 23:37:46,882 - DEBUG - {'id': 1333536721, 'status': 'approved', 'valor': 510, 'usuario': '1', 'data': '2025-03-19T22:23:49.740-04:00', 'items': ['Chopeira Bomba'], 'evento': 23, 'carrinho_id': 6}
+2025-03-19 23:37:46,883 - DEBUG - ####################################
+2025-03-19 23:37:46,884 - DEBUG - Informações do pagamento: {'id': 1333536721, 'status': 'approved', 'valor': 510, 'usuario': '1', 'data': '2025-03-19T22:23:49.740-04:00', 'items': ['Chopeira Bomba'], 'evento': 23, 'carrinho_id': 6}
+2025-03-19 23:37:46,885 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 23:37:46,886 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 23:37:46,894 - WARNING - Erro ao processar transação: UNIQUE constraint failed: pagamento_transacao.transacao_id
+2025-03-19 23:39:16,754 - DEBUG - Recebendo requisição POST
+2025-03-19 23:39:16,756 - DEBUG - Dados recebidos no webhook: {'data': {'id': 1333536721}, 'type': 'payment'}
+2025-03-19 23:39:16,757 - DEBUG - Pagamento ID: 1333536721, Tipo: payment
+2025-03-19 23:39:16,758 - INFO - Dados do webhook salvos em recibo.csv
+2025-03-19 23:39:22,782 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-19 23:39:23,200 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/1333536721 HTTP/1.1" 200 None
+2025-03-19 23:39:24,429 - DEBUG - ################## IFOR PAG ##################
+2025-03-19 23:39:24,781 - DEBUG - {'id': 1333536721, 'status': 'approved', 'valor': 510, 'usuario': '1', 'data': '2025-03-19T22:23:49.740-04:00', 'items': ['Chopeira Bomba'], 'evento': 23, 'carrinho_id': 6}
+2025-03-19 23:39:25,425 - DEBUG - ####################################
+2025-03-19 23:39:25,766 - DEBUG - Informações do pagamento: {'id': 1333536721, 'status': 'approved', 'valor': 510, 'usuario': '1', 'data': '2025-03-19T22:23:49.740-04:00', 'items': ['Chopeira Bomba'], 'evento': 23, 'carrinho_id': 6}
+2025-03-19 23:39:27,002 - DEBUG - Informações do tipo do Pagamento: payment, tam 7
+2025-03-19 23:39:30,603 - DEBUG - Pagamento aprovado, processando transação...
+2025-03-19 23:41:11,985 - WARNING - Erro ao processar transação: UNIQUE constraint failed: pagamento_transacao.transacao_id

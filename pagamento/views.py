@@ -3,7 +3,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse, HttpResponse
 import json
 from .models import Transacao, Usuario, Produto
-from carrinho.models import Carrinho
+from carrinho.models import Carrinho, ItemCarrinho
 from authentication.models import Evento
 import mercadopago
 import pandas as pd
@@ -79,7 +79,7 @@ def simple_test(request):
                     #carrinho = Carrinho.objects.get(usuario=user, id=int(pag['evento']))
                     #print(f"----cart: {carrinho}")
                     id_evento = pag['evento']
-                    criar_evento(evento_id=id_evento, produtos=produtos)
+                    
                     evento = Evento.objects.get(usuario=user, id=id_evento)
                     print(f'---------{evento}------------EVENTO')
                     logging.debug(f"consulta evento: {evento}")
@@ -90,8 +90,12 @@ def simple_test(request):
                     #carrinho.status = 'Pago'
                     evento.status = 'Pago'
                     evento.save()
-                    carrinho = Carrinho.objects.get(usuario=user, id=int(pag['carrinho_id']))
+                    carrinho = Carrinho.objects.get(id=int(pag['carrinho_id']))
                     #carrinho.save()
+                    
+                    itens = ItemCarrinho.objects.filter(carrinho=carrinho)
+                    criar_evento(evento_id=id_evento, produtos=itens)
+                    
                     carrinho.delete()
                     logging.info(f"Carrinho e evento atualizados para 'Pago': {carrinho.id}, {evento.id}")
 
@@ -99,8 +103,8 @@ def simple_test(request):
                         subject=f"Nova Compra Realizada",
                         body=f"Evento: {evento.tipo_evento}\nData: {evento.data_evento}\nBairro: {evento.bairro}\nRua: {evento.endereco}\nValor da Compra: {evento.valor}\nCliente: {user.nome}\nContato: {evento.celular}\nProdutos: {produtos}",
                         sender_email="noticacoes@gmail.com",
-                        sender_password=os.getenv('SENHA'),
-                        recipient_emails=["choppitinerante@gmail.com", "igormarinhosilva@gmail.com"]
+                        sender_password="lqxvsvybjfumjflo",
+                        recipient_emails=["igoormarinhosilva@gmail.com", "igormarinhosilva@gmail.com",f"{user.email}"]
                     )
                     logging.info(f"E-mail enviado para notificações")
                     return JsonResponse({'status': 'success'})
