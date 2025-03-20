@@ -4,6 +4,7 @@ import os
 import os
 from googleapiclient.discovery import build
 from google.oauth2.service_account import Credentials
+from datetime import timedelta
 
 # Get the current working directory
 current_directory = os.getcwd()
@@ -32,6 +33,8 @@ def criar_evento(evento_id, produtos):
     produtos_formatados = "\n".join(
         [f"- {item.produto.nome}: {item.quantidade} unidade(s) - R$ {item.valor}" for item in produtos]
     )
+    start_time = evento.hora_evento
+    end_time = start_time + timedelta(hours=4)  # End time (4 hours after start)
 
 
     # Create the event
@@ -48,11 +51,11 @@ def criar_evento(evento_id, produtos):
             f"Valor Total: R$ {evento.valor}"
         ),
         "start": {
-            "dateTime": f"{evento.data_evento}T{evento.hora_evento.strftime('%H:%M:%S')}",  # Format datetime
+            "dateTime": f"{evento.data_evento}T{start_time.strftime('%H:%M:%S')}",
             "timeZone": "America/Sao_Paulo",
         },
         "end": {
-            "dateTime": f"{evento.data_evento}T{(evento.hora_evento.replace(hour=evento.hora_evento.hour + 4)).strftime('%H:%M:%S')}",  # End time (4 hours after start)
+            "dateTime": f"{evento.data_evento}T{end_time.strftime('%H:%M:%S')}",
             "timeZone": "America/Sao_Paulo",
         },
     }
