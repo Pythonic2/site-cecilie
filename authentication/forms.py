@@ -8,10 +8,12 @@ from .models import Usuario
 
 class SignUpForm(UserCreationForm):
     username = forms.CharField(
+        label="CPF",
         widget=forms.TextInput(
             attrs={
-                "placeholder": "Username",
-                "class": "form-control border-2 border-secondary w-75 w-md-100 py-3 px-4 rounded-pill mb-3"
+                "placeholder": "CPF",
+                "class": "form-control border-2 border-secondary w-75 w-md-100 py-3 px-4 rounded-pill mb-3",
+                "label":"CPF"
             }
         )
     )

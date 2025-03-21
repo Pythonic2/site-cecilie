@@ -110,11 +110,22 @@ def pagina_carrinho(request):
         'titulo': 'carrinho',
         'quantidade': sum(item.quantidade for item in itens),
     }
-    
+
+    cidade = Cidade.objects.get(nome=request.session['cidade_selecionada'])
+    frete_valor = cidade.frete if cidade.frete > 0 else 0
+    if frete_valor > 0:
+        context['frete'] = frete_valor
+        
+        valor_total = valor_total + frete_valor
+        context['total'] = valor_total
+    else:
+        frete = 0
+        context['frete'] = frete
+    frete = context['frete']
     try:
         carrinho_id = carrinho.id
         evento_id = evento.id if evento else None
-        pag, carrinho_id = gerar_pagamento(user.id, produtos_no_carrinho, evento_id, carrinho_id)
+        pag, carrinho_id = gerar_pagamento(user.id, produtos_no_carrinho, evento_id, carrinho_id,frete)
         context['link'] = pag
     except Exception as e:
         print(f"Erro ao gerar pagamento: {e}")

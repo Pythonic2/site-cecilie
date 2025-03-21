@@ -37814,3 +37814,402 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'remover_do_carrinho' with ke
 2025-03-20 18:58:01,524 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
 2025-03-20 18:58:11,847 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
 2025-03-20 18:58:27,674 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-20 19:01:48,240 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:01:55,660 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:02:07,788 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:02:32,532 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:02:42,765 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-20 19:02:50,489 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-20 19:03:18,639 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-20 19:03:26,376 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-20 19:03:34,264 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-20 19:04:11,290 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-20 19:06:23,666 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:06:40,269 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:06:46,925 - ERROR - Internal Server Error: /carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py", line 107, in pagina_carrinho
+    context['frete'] = cidade.frete
+    ^^^^^^^
+UnboundLocalError: cannot access local variable 'context' where it is not associated with a value
+2025-03-20 19:06:47,877 - ERROR - Internal Server Error: /carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py", line 107, in pagina_carrinho
+    context['frete'] = cidade.frete
+    ^^^^^^^
+UnboundLocalError: cannot access local variable 'context' where it is not associated with a value
+2025-03-20 19:06:50,307 - ERROR - Internal Server Error: /carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py", line 107, in pagina_carrinho
+    context['frete'] = cidade.frete
+    ^^^^^^^
+UnboundLocalError: cannot access local variable 'context' where it is not associated with a value
+2025-03-20 19:07:04,938 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:07:12,359 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:07:17,536 - ERROR - Erro ao criar a preferência: Object of type Decimal is not JSON serializable
+2025-03-20 19:07:36,566 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:07:45,459 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:07:57,573 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:08:03,786 - ERROR - Erro ao criar a preferência: Object of type Decimal is not JSON serializable
+2025-03-20 19:08:05,889 - ERROR - Erro ao criar a preferência: Object of type Decimal is not JSON serializable
+2025-03-20 19:08:22,892 - ERROR - Erro ao criar a preferência: Object of type Decimal is not JSON serializable
+2025-03-20 19:08:26,058 - ERROR - Erro ao criar a preferência: Object of type Decimal is not JSON serializable
+2025-03-20 19:12:07,442 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:12:07,826 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:12:07,913 - WARNING - Not Found: /carrinho/
+2025-03-20 19:12:19,969 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:12:20,295 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:12:20,369 - WARNING - Not Found: /carrinho/
+2025-03-20 19:12:30,922 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-20 19:12:32,304 - WARNING - Not Found: /carrinho/
+2025-03-20 19:12:37,945 - INFO - Carrinho: 1, Criado agora? False
+2025-03-20 19:12:39,179 - WARNING - Not Found: /carrinho/
+2025-03-20 19:13:09,979 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 19:13:10,114 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-20 19:13:12,667 - INFO - Carrinho: 2, Criado agora? True
+2025-03-20 19:13:14,252 - WARNING - Not Found: /carrinho/
+2025-03-20 19:13:47,777 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:13:54,513 - WARNING - Not Found: /carrinho/
+2025-03-20 19:13:58,037 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:14:15,277 - WARNING - Not Found: /carrinho/
+2025-03-20 19:14:15,925 - WARNING - Not Found: /carrinho/
+2025-03-20 19:14:16,458 - WARNING - Not Found: /carrinho/
+2025-03-20 19:14:17,023 - WARNING - Not Found: /carrinho/
+2025-03-20 19:14:17,217 - WARNING - Not Found: /carrinho/
+2025-03-20 19:14:17,404 - WARNING - Not Found: /carrinho/
+2025-03-20 19:14:17,605 - WARNING - Not Found: /carrinho/
+2025-03-20 19:14:31,405 - WARNING - Not Found: /carrinho/
+2025-03-20 19:15:32,616 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:15:32,924 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:15:32,964 - ERROR - Erro ao criar a preferência: Object of type Decimal is not JSON serializable
+2025-03-20 19:15:56,808 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:16:02,104 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:16:02,417 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:16:02,467 - ERROR - Erro ao criar a preferência: Object of type Decimal is not JSON serializable
+2025-03-20 19:16:03,668 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:16:04,026 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:16:04,056 - ERROR - Erro ao criar a preferência: Object of type Decimal is not JSON serializable
+2025-03-20 19:16:21,336 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:16:21,668 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:16:21,714 - ERROR - Erro ao criar a preferência: Object of type Decimal is not JSON serializable
+2025-03-20 19:16:22,537 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:16:22,841 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:16:22,872 - ERROR - Erro ao criar a preferência: Object of type Decimal is not JSON serializable
+2025-03-20 19:16:23,683 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:16:23,988 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:16:24,029 - ERROR - Erro ao criar a preferência: Object of type Decimal is not JSON serializable
+2025-03-20 19:16:45,331 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:16:45,647 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:16:45,685 - ERROR - Erro ao criar a preferência: Object of type Decimal is not JSON serializable
+2025-03-20 19:17:39,096 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:18:11,322 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:18:22,092 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:18:37,014 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:18:50,571 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:18:50,889 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:25:26,035 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:25:26,328 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:25:38,916 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:25:39,223 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:25:41,555 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:25:41,856 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:25:42,085 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:25:42,288 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:25:42,383 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:25:42,501 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:25:42,583 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:25:42,684 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:25:42,795 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:25:42,978 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:25:58,531 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:25:58,831 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:26:00,370 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:26:00,666 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:26:01,160 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:26:01,317 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:26:01,457 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:26:01,619 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:26:08,369 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:26:08,673 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:26:09,126 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:26:09,291 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:26:09,421 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:26:09,483 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:26:09,587 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:26:09,630 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:26:09,779 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:26:09,927 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:26:20,844 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 19:26:24,930 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:26:25,093 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:26:25,225 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:26:25,387 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:27:00,484 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:27:00,796 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:27:02,850 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:27:03,150 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 19:27:18,052 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 19:27:18,355 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 20:59:00,480 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-20 20:59:03,709 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 20:59:04,082 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 20:59:10,502 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 20:59:10,817 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 20:59:13,633 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 20:59:13,952 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 21:00:29,625 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 21:00:29,951 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 21:00:31,521 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 21:00:31,853 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 21:00:42,896 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 21:00:43,226 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 21:00:46,165 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 21:00:46,484 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 21:00:48,771 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 21:00:49,091 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 21:00:50,716 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 21:00:51,061 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 21:00:53,501 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-20 21:00:55,435 - INFO - Carrinho: 2, Criado agora? False
+2025-03-20 21:00:56,993 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 21:00:57,320 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 21:01:41,753 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 21:02:53,993 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 21:02:54,331 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 21:03:23,890 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 21:03:43,355 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 21:03:43,692 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 21:04:07,199 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-20 21:04:25,621 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 21:04:25,951 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 21:05:08,654 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 21:05:08,997 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 21:05:50,600 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 21:05:50,627 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 21:05:50,945 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 21:06:00,353 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 21:06:01,685 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 21:07:07,721 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 21:07:08,047 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 21:08:01,192 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\carrinho\views.py changed, reloading.
+2025-03-20 21:08:01,693 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 21:08:14,315 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 21:08:14,654 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 21:09:06,336 - ERROR - Erro ao criar a preferência: Object of type Decimal is not JSON serializable
+2025-03-20 21:10:06,356 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-20 21:10:27,402 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 21:10:27,724 - DEBUG - https://viacep.com.br:443 "GET /ws/58077128/json/ HTTP/1.1" 200 None
+2025-03-20 21:10:27,745 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-20 21:10:28,317 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 861
+2025-03-20 21:10:28,319 - DEBUG - None
+2025-03-20 21:10:28,320 - DEBUG - Resposta da criação da preferência: {'status': 201, 'response': {'additional_info': '', 'auto_return': 'approved', 'back_urls': {'failure': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'pending': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'success': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/'}, 'binary_mode': False, 'client_id': '3488797328851277', 'collector_id': 162016798, 'coupon_code': None, 'coupon_labels': None, 'date_created': '2025-03-20T20:10:28.066-04:00', 'date_of_expiration': None, 'expiration_date_from': None, 'expiration_date_to': None, 'expires': False, 'external_reference': '1', 'id': '162016798-4d56dabd-66ba-4962-b13b-d692863610b5', 'init_point': 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-4d56dabd-66ba-4962-b13b-d692863610b5', 'internal_metadata': None, 'items': [{'id': '3', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'Chopeira Bomba', 'quantity': 1, 'unit_price': 300}, {'id': '1', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'teste', 'quantity': 1, 'unit_price': 300}, {'id': '1', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'Frete', 'quantity': 1, 'unit_price': 190}], 'marketplace': 'NONE', 'marketplace_fee': 0, 'metadata': {'carrinho_id': 2, 'evento_id': 2}, 'notification_url': 'https://plataforma-donadochopp.cloudboosterlab.org/pag/', 'operation_type': 'regular_payment', 'payer': {'phone': {'area_code': '', 'number': ''}, 'address': {'zip_code': '', 'street_name': '', 'street_number': None}, 'email': '', 'identification': {'number': '', 'type': ''}, 'name': '', 'surname': '', 'date_created': None, 'last_purchase': None}, 'payment_methods': {'default_card_id': None, 'default_payment_method_id': None, 'excluded_payment_methods': [{'id': ''}], 'excluded_payment_types': [{'id': ''}], 'installments': None, 'default_installments': None}, 'processing_modes': None, 'product_id': None, 'redirect_urls': {'failure': '', 'pending': '', 'success': ''}, 'sandbox_init_point': 'https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-4d56dabd-66ba-4962-b13b-d692863610b5', 'site_id': 'MLB', 'shipments': {'default_shipping_method': None, 'receiver_address': {'zip_code': '', 'street_name': '', 'street_number': None, 'floor': '', 'apartment': '', 'city_name': None, 'state_name': None, 'country_name': None}}, 'total_amount': None, 'last_updated': None, 'financing_group': ''}}
+2025-03-20 21:10:28,321 - INFO - Preferência criada com sucesso.
+2025-03-20 21:48:43,763 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\models.py changed, reloading.
+2025-03-20 21:48:53,459 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\models.py changed, reloading.
+2025-03-20 21:49:01,294 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\models.py changed, reloading.
+2025-03-20 21:49:35,740 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\models.py changed, reloading.
+2025-03-20 21:49:57,473 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\forms.py changed, reloading.
+2025-03-20 21:50:50,838 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\forms.py changed, reloading.
+2025-03-20 21:50:58,943 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\forms.py changed, reloading.
+2025-03-20 21:51:06,405 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\forms.py changed, reloading.
+2025-03-20 21:51:45,508 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\models.py changed, reloading.
+2025-03-20 21:52:54,107 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\admin.py changed, reloading.
+2025-03-20 21:53:05,187 - WARNING - Not Found: /home/1/img/fruite-item-5.jpg
+2025-03-20 21:53:05,194 - WARNING - Not Found: /home/1/img/fruite-item-4.jpg
+2025-03-20 21:53:05,200 - WARNING - Not Found: /home/1/img/fruite-item-6.jpg
+2025-03-20 21:53:05,206 - WARNING - Not Found: /home/1/img/fruite-item-2.jpg
+2025-03-20 21:53:05,214 - WARNING - Not Found: /home/1/img/fruite-item-1.jpg
+2025-03-20 21:53:05,220 - WARNING - Not Found: /home/1/img/fruite-item-3.jpg
+2025-03-20 21:53:05,235 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 21:53:06,839 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-20 21:53:08,974 - ERROR - Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\views\decorators\debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\contrib\auth\views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_invalid(form)
+           ~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\views.py", line 78, in form_invalid
+    user_exists = User.objects.filter(username=username).exists()
+                  ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\db\models\query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\db\models\query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\db\models\query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\db\models\sql\query.py", line 1609, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\db\models\sql\query.py", line 1641, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\db\models\sql\query.py", line 1303, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\db\models\sql\query.py", line 1768, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: carrinhos, cpf, data_nascimento, date_joined, email, evento, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, nome, parceiro, password, transacoes, user_permissions
+2025-03-20 21:53:22,589 - WARNING - Not Found: /register/img/payment.png
+2025-03-20 21:53:54,694 - WARNING - Not Found: /register/img/payment.png
+2025-03-20 21:54:06,157 - WARNING - Not Found: /register/img/payment.png
+2025-03-20 21:54:25,042 - ERROR - Internal Server Error: /register/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\views.py", line 50, in post
+    if get_user_model().objects.filter(username=username).exists():
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\db\models\query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\db\models\query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\db\models\query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\db\models\sql\query.py", line 1609, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\db\models\sql\query.py", line 1641, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\db\models\sql\query.py", line 1303, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\db\models\sql\query.py", line 1768, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: carrinhos, cpf, data_nascimento, date_joined, email, evento, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, nome, parceiro, password, transacoes, user_permissions
+2025-03-20 21:56:35,268 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\forms.py changed, reloading.
+2025-03-20 21:57:16,860 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\models.py changed, reloading.
+2025-03-20 21:57:24,355 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\models.py changed, reloading.
+2025-03-20 21:57:29,803 - WARNING - Not Found: /register/img/payment.png
+2025-03-20 21:58:04,666 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\forms.py changed, reloading.
+2025-03-20 21:58:08,210 - WARNING - Not Found: /register/img/payment.png
+2025-03-20 21:58:27,587 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\forms.py changed, reloading.
+2025-03-20 21:58:39,999 - WARNING - Not Found: /register/img/payment.png
+2025-03-20 21:59:55,419 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\forms.py changed, reloading.
+2025-03-20 22:00:02,386 - WARNING - Not Found: /register/img/payment.png
+2025-03-20 22:00:08,644 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\authentication\forms.py changed, reloading.
+2025-03-20 22:00:14,252 - WARNING - Not Found: /register/img/payment.png
+2025-03-20 22:00:18,727 - WARNING - Not Found: /register/img/payment.png
+2025-03-20 22:00:46,676 - WARNING - Not Found: /home/1/img/fruite-item-5.jpg
+2025-03-20 22:00:46,686 - WARNING - Not Found: /home/1/img/fruite-item-2.jpg
+2025-03-20 22:00:46,699 - WARNING - Not Found: /home/1/img/fruite-item-1.jpg
+2025-03-20 22:00:46,708 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 22:00:46,715 - WARNING - Not Found: /home/1/img/fruite-item-6.jpg
+2025-03-20 22:00:46,723 - WARNING - Not Found: /home/1/img/fruite-item-4.jpg
+2025-03-20 22:00:46,730 - WARNING - Not Found: /home/1/img/fruite-item-3.jpg
+2025-03-20 22:00:48,604 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 22:00:57,264 - WARNING - Not Found: /home/1/img/fruite-item-5.jpg
+2025-03-20 22:00:57,271 - WARNING - Not Found: /home/1/img/fruite-item-2.jpg
+2025-03-20 22:00:57,280 - WARNING - Not Found: /home/1/img/fruite-item-1.jpg
+2025-03-20 22:00:57,287 - WARNING - Not Found: /home/1/img/fruite-item-6.jpg
+2025-03-20 22:00:57,293 - WARNING - Not Found: /home/1/img/fruite-item-4.jpg
+2025-03-20 22:00:57,304 - WARNING - Not Found: /home/1/img/fruite-item-3.jpg
+2025-03-20 22:00:57,312 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 22:00:59,809 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-20 22:01:01,278 - WARNING - Not Found: /login/img/payment.png

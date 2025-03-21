@@ -133,7 +133,7 @@ import mercadopago
 import os
 import logging
 
-def gerar_pagamento(cliente_id: int, produtos: list, evento: int, carrinho_id: int,cidade:str):
+def gerar_pagamento(cliente_id: int, produtos: list, evento: int, carrinho_id: int,frete:float):
     
     # Inicializar o SDK do Mercado Pago
     sdk = mercadopago.SDK("TEST-3488797328851277-091614-dbbff0af2658e101ee7f9413497c16fd-162016798")
@@ -151,6 +151,8 @@ def gerar_pagamento(cliente_id: int, produtos: list, evento: int, carrinho_id: i
         items.append(item)
     print(f"items -------------{items}")
     # Configurar os dados da preferência
+    frete_item = {'id':1, 'title': 'Frete', 'quantity': 1, 'currency_id': 'BRL', 'unit_price': float(frete)}
+    items.append(frete_item)
     preference_data = {
         "items": items,
         "back_urls": {

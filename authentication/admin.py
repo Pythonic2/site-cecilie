@@ -3,24 +3,22 @@ from django.contrib.auth.admin import UserAdmin
 from .models import Usuario, Evento,Chopeira
 
 class CustomUserAdmin(UserAdmin):
-    # Campos a serem exibidos no formulário de criação de usuário
+    ordering = ['cpf']  # Alterado de 'username' para 'cpf'
+    list_display = ('cpf', 'nome', 'email', 'data_nascimento', 'is_active', 'is_staff')
+    search_fields = ('cpf', 'nome', 'email')  # Permite busca por CPF, nome ou email
+
+    fieldsets = (
+        (None, {'fields': ('cpf', 'password')}),
+        ('Informações Pessoais', {'fields': ('nome', 'email', 'data_nascimento')}),
+        ('Permissões', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
+        ('Datas Importantes', {'fields': ('last_login', 'date_joined')}),
+    )
+
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('username','nome','data_nascimento','cpf','password1', 'password2', 'email'),
+            'fields': ('cpf', 'nome', 'email', 'data_nascimento', 'password1', 'password2'),
         }),
-    )
-
-    # Campos a serem exibidos na lista de usuários
-    list_display = ('username','nome', 'email', 'is_staff', 'is_superuser')
-    search_fields = ('username', 'email', 'nome')
-    ordering = ('username',)
-
-    fieldsets = (
-        (None, {'fields': ('username', 'password')}),
-        ('Personal info', {'fields': ('email','nome')}),
-        ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'user_permissions', 'groups')}),
-        ('Important dates', {'fields': ('last_login', 'date_joined')}),
     )
 
 admin.site.register(Usuario, CustomUserAdmin)

@@ -4,6 +4,7 @@ from django.contrib.auth.models import AbstractUser
 from datetime import timedelta
 from django.utils import timezone
 from datetime import datetime
+from django.core.validators import MinLengthValidator
 
 
 
@@ -11,14 +12,19 @@ class Usuario(AbstractUser):
     nome = models.CharField(max_length=80)
     email = models.EmailField(unique=True)
     data_nascimento = models.DateField(auto_now_add=False, null=True, blank=True)
-    cpf = models.CharField(max_length=11, unique=True)
+    cpf = models.CharField(
+        max_length=11, 
+        unique=True, 
+        validators=[MinLengthValidator(11)],
+        help_text="Informe um CPF válido sem pontos ou traços."
+    )
 
-
+   
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.username
+        return self.cpf
 
     
 

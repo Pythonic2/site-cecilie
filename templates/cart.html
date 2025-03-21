@@ -67,6 +67,7 @@
                                 <div class="card-header bg-success text-white">Resumo do Pedido</div>
                                 <div class="card-body">
                                     <h4>Total a Pagar:</h4>
+                                    <p class="lead">Frete: R$ {{ frete }}</p>
                                     <p class="lead">R$ {{ total }}</p>
                                     <!-- Botão de Finalizar Compra -->
                                     
@@ -142,6 +143,7 @@
                                 <div class="card-header bg-success text-white">Resumo do Pedido</div>
                                 <div class="card-body">
                                     <h4>Total a Pagar:</h4>
+                                    <p class="lead">Frete: R$ {{ frete }}</p>
                                     <p class="lead">R$ {{ total }}</p>
                                     <!-- Botão de Finalizar Compra -->
                                     <button type="button" class="btn btn-success btn-lg btn-block" onclick="window.location.href='{% url "cad-evento" %}'">
