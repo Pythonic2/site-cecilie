@@ -24,6 +24,13 @@ logging.basicConfig(
 @login_required
 def pagina_carrinho(request):
     """ Renderiza a página do carrinho e carrega as informações descritas no dict context """
+    
+
+    if not request.session.get('cidade_selecionada'):
+        request.session['cidade_selecionada'] = 'Fortaleza'  # Define o valor padrão
+        print(request.session['cidade_selecionada'])
+    
+    
     print(request.session['cidade_selecionada'])
     usuario = request.user.username
 

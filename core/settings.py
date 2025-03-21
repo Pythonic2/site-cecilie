@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ['*']
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
-LOGIN_REDIRECT_URL = 'index'
+LOGIN_REDIRECT_URL = 'produtos'
 LOGIN_URL = 'login'
 AUTH_USER_MODEL = 'authentication.Usuario'
 CSRF_COOKIE_AGE = 31449600  # 1 ano em segundos
@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'carrinho',
     'pagamento',
     'testemunho',
-    'parceiros',
 ]
 
 MIDDLEWARE = [

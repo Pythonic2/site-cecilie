@@ -5,26 +5,33 @@ from datetime import timedelta
 from django.utils import timezone
 from datetime import datetime
 from django.core.validators import MinLengthValidator
+from django.core.validators import RegexValidator
 
 
 
 class Usuario(AbstractUser):
+    username = models.CharField(
+        max_length=11,
+        unique=True,
+        validators=[
+            RegexValidator(
+                regex=r'^\d{11}$',
+                message="O CPF deve conter exatamente 11 dígitos numéricos.",
+                code='invalid_username'
+            )
+        ],
+        help_text="Obrigatório. Exatamente 11 dígitos numéricos."
+    )
     nome = models.CharField(max_length=80)
     email = models.EmailField(unique=True)
     data_nascimento = models.DateField(auto_now_add=False, null=True, blank=True)
-    cpf = models.CharField(
-        max_length=11, 
-        unique=True, 
-        validators=[MinLengthValidator(11)],
-        help_text="Informe um CPF válido sem pontos ou traços."
-    )
-
+    
    
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.cpf
+        return self.nome
 
     
 

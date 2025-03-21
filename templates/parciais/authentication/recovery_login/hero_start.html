@@ -1,0 +1,85 @@
+<div class="container-fluid py-5 mb-5 hero-header" id="mobile">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center justify-content-center">
+            <!-- Coluna para a logo (no topo) -->
+            <div class="col-12 text-center mb-4">
+                <img src="/static/img/logo.jpeg" alt="Logo" class="img-fluid w-50 w-sm-75">
+            </div>
+
+            <!-- Coluna para o formulário de login (centralizado) -->
+            <div class="col-12 col-md-8 col-lg-6 text-center mx-auto">
+                <h4 class="mb-3 text-secondary">Esqueceu a senha?</h4>
+                <h1 class="mb-5 display-3 text-primary">Cadastrar Nova Senha</h1>
+                <div class="position-relative mx-auto">
+                    <div >
+                        <div class="alert alert-success" role="alert" style="display:{{display_sucesso}}">
+                            {{ success }}
+                        </div>
+                        <div class="alert alert-danger" role="alert" style="display:{{display_erro}}">
+                            {{ error }}
+                        </div>
+                    </div>
+                    <!-- Formulário de login -->
+                    <form action="{% url 'recovery-password' %}" method="POST" class="mx-auto" id="msg">
+                        {% csrf_token %}
+                        <label for="cpf">CPF</label>
+                        <input type="text" name="cpf" id="" class="form-control border-2 border-secondary w-100 w-md-100 py-3 px-4 rounded-pill mb-3">
+                        <label for="password">CPF</label>
+                        <input type="password" name="password" id="password" class="form-control border-2 border-secondary w-100 w-md-100 py-3 px-4 rounded-pill mb-3">
+                        <button id="entrar" type="submit" class="btn btn-primary border-2 border-secondary py-3 px-4 w-75 w-sm-100 rounded-pill text-white">
+                            Entrar
+                        </button>
+                    </form>
+                </div>
+                <div>
+                    Fazer login <a href="{% url 'login'%}">Clique aqui</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-5 mb-5 hero-header" id="pc">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-md-12 col-lg-7">
+                <h4 class="mb-3 text-secondary">Esqueceu a senha?</h4>
+                <h1 class="mb-5 display-3 text-primary">Cadastrar Nova Senha</h1>
+                <div class="position-relative mx-auto">
+                    <!-- Formulário de login -->
+                    <div>
+                        <div class="alert alert-success" role="alert" style="display:{{display_sucesso}}">
+                            {{ success }}
+                        </div>
+                        <div class="alert alert-danger" role="alert" style="display:{{display_erro}}">
+                            {{ error }}
+                        </div>
+                    </div>
+                    <form action="{% url 'recovery-password'  %}" method="POST">
+                          
+                        {% csrf_token %}
+                        <label for="cpf">CPF</label>
+                        <input class="form-control border-2 border-secondary w-75 w-md-100 py-3 px-4 rounded-pill mb-3" type="text" name="cpf" id="">
+                        <label for="password">Senha</label>
+                        <input class="form-control border-2 border-secondary w-75 w-md-100 py-3 px-4 rounded-pill mb-3" type="password" name="password" id="password">
+                        <button id="entrar" type="submit" class="btn btn-primary border-2 border-secondary py-3 px-4 w-75 w-sm-100 rounded-pill text-white">
+                            Entrar
+                        </button>
+                        <!-- Botão de login -->
+                        
+                    </form>
+                </div>
+                <div>
+                   Fazer login<a href="{% url 'login'%}"> Click aqui</a>
+                </div>
+                
+            </div>
+            <div class="col-md-12 col-lg-5">
+                <!-- Remover o carrossel e adicionar a logo -->
+                <div class="text-center">
+                    <img src="/static/img/logo.jpeg" alt="Logo" class="img-fluid w-75">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

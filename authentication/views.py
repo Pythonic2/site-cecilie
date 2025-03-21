@@ -57,7 +57,7 @@ class RegisterUser(CreateView):
             user = authenticate(username=username, password=raw_password)
             if user is not None:
                 login(request, user)  # Faz o login automático
-                return redirect("index")
+                return redirect("produtos")
             else:
                 return redirect("register")
         else:
@@ -198,3 +198,18 @@ class PedidosView(TemplateView):
         context = {'pagamentos':eventos}
         return render(request, self.template_name, context)
 
+
+def recovery_password(request):
+    if request.method == 'POST':
+        cpf = request.POST.get('cpf')
+        try:
+            # Corrige o erro de digitação e remove o uso incorreto de exists()
+            user = Usuario.objects.get(username=cpf)
+            if user:
+                password = request.POST.get('password')
+                user.set_password(password)
+                user.save()
+                return render(request, 'recovery_password.html', {'display_erro':'none','display_sucesso':'block','success': 'Senha alterada com sucesso'})
+        except Usuario.DoesNotExist:
+            return render(request, 'recovery_password.html', {'display_erro':'block','error': 'Usuario não existe','display_sucesso':'none'})
+    return render(request, 'recovery_password.html',{'display_sucesso':'none','display_erro':'none'})

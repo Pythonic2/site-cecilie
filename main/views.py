@@ -25,7 +25,9 @@ class IndexView(TemplateView):
 
     method_decorator(cache_page(60 * 60 * 24))
     def get(self,request):
-        
+        if not request.session.get('cidade_selecionada'):
+            request.session['cidade_selecionada'] = 'Fortaleza'  # Define o valor padrão
+            print(request.session['cidade_selecionada'])
         cidades = Cidade.objects.all()
         imagens = ImagemSlide.objects.all()
         context = {'cidades':cidades,'imagens':imagens}
@@ -36,6 +38,7 @@ class HomeView(TemplateView):
 
     method_decorator(cache_page(60 * 60 * 24))
     def post(self, request, cidade_id):
+        
         # cidade_id = request.POST.get('cidade')
         cidades = Cidade.objects.all()
         produtos = Produto.objects.filter(destaque=True).order_by('-id')

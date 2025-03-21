@@ -44,16 +44,7 @@ class SignUpForm(UserCreationForm):
         required=True,
         label="Data de Nascimento"
     )
-    cpf = forms.CharField(
-        max_length=11,
-        widget=forms.TextInput(
-            attrs={
-                "placeholder": "CPF",
-                "class": "form-control border-2 border-secondary w-75 w-md-100 py-3 px-4 rounded-pill mb-3"
-            }
-        ),
-        label="CPF"
-    )
+    
     password1 = forms.CharField(
         label="Senha",
         widget=forms.PasswordInput(
@@ -76,7 +67,7 @@ class SignUpForm(UserCreationForm):
 
     class Meta:
         model = Usuario
-        fields = ('nome', 'username', 'email', 'data_nascimento', 'cpf', 'password1', 'password2')
+        fields = ('nome', 'username', 'email', 'data_nascimento', 'password1', 'password2')
 
 
 class LoginForm(AuthenticationForm):

@@ -38,6 +38,9 @@ class CardapioView(TemplateView):
 
     def get(self, request, **kwargs):
         context = super().get_context_data(**kwargs)
+        if not request.session.get('cidade_selecionada'):
+            request.session['cidade_selecionada'] = 'Fortaleza'  # Define o valor padrão
+        
 
         context['categorias'] = Categoria.objects.all()
         context['titulo'] = 'Produtos'
@@ -65,6 +68,7 @@ class CardapioView(TemplateView):
         evento = Evento.objects.last()
         taxa_cidade = obter_taxa_por_cep_ou_cidade(cidade_nome=request.session['cidade_selecionada'])  # Busca a taxa no banco
         request.session["taxa_cidade"] = taxa_cidade  # Armazena na sessão
+        context['cidade'] = request.session['cidade_selecionada']
 
         #else:
         taxa_cidade = request.session.get("taxa_cidade", 0)  # Se não houver CEP, usa 0
@@ -79,7 +83,6 @@ class CardapioView(TemplateView):
             produto.valor_com_taxa = produtos_com_taxa[produto.id]  # ✅ Usa valor já convertido
 
         request.session["produtos_com_taxa"] = {k: float(v) for k, v in produtos_com_taxa.items()}  # ✅ Converte tudo para float antes de salvar
-
 
         return render(request, self.template_name, context)
 
