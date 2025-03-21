@@ -133,10 +133,12 @@ import mercadopago
 import os
 import logging
 
-def gerar_pagamento(cliente_id: int, produtos: list, evento: int, carrinho_id: int,frete:float):
-    
+def gerar_pagamento(cliente_id: int, produtos: list, evento: int, carrinho_id: int, frete: float):
     # Inicializar o SDK do Mercado Pago
     sdk = mercadopago.SDK("TEST-3488797328851277-091614-dbbff0af2658e101ee7f9413497c16fd-162016798")
+
+    # Inicializar a variável total_valor
+    total_valor = 0
 
     # Construir a lista de itens dinamicamente
     items = []
@@ -149,10 +151,14 @@ def gerar_pagamento(cliente_id: int, produtos: list, evento: int, carrinho_id: i
             "unit_price": float(valor)
         }
         items.append(item)
+        total_valor += quantidade * float(valor)  # Soma o valor total dos produtos
+
+    # Adicionar o valor do frete ao total
+    total_valor += float(frete)
+
     print(f"items -------------{items}")
+    
     # Configurar os dados da preferência
-    frete_item = {'id':1, 'title': 'Frete', 'quantity': 1, 'currency_id': 'BRL', 'unit_price': float(frete)}
-    items.append(frete_item)
     preference_data = {
         "items": items,
         "back_urls": {
@@ -166,7 +172,8 @@ def gerar_pagamento(cliente_id: int, produtos: list, evento: int, carrinho_id: i
         "metadata": {
             "evento_id": evento,
             "carrinho_id": carrinho_id
-        }
+        },
+        "total_amount": total_valor  # Inclui o valor total (produtos + frete)
     }
 
     try:

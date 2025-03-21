@@ -1,95 +1,84 @@
-{%extends 'base.html'%}
-{% block 'content'%}
-        {%include  'parciais/nav_bar.html' with quantidade=quantidade%}
+{% extends 'base.html' %}
 
-        {%include  'parciais/pesquisa.html'%}
+{% block 'content' %}
+    {% include 'parciais/nav_bar.html' with quantidade=quantidade %}
+    {% include 'parciais/pesquisa.html' %}
+    {% include 'parciais/hero_start.html' %}
+    <style>
+        @media (max-width: 768px) {
+            #calc {
+                width: 100% !important; /* Garante que a largura seja 100% no mobile */
+                max-width: 100% !important; /* Remove qualquer limite de largura */
+                margin: 0 auto; /* Centraliza a div no mobile */
+            }
+    
+            #calc .d-flex {
+                flex-direction: column; /* Empilha os inputs no mobile */
+                gap: 1rem; /* Adiciona espaçamento entre os inputs */
+            }
+        }
+    </style>
+    <!-- Beer Calculator Section Start -->
+    <div id="calculadora" class="container-fluid p-0" style="background: url('/static/img/banner6.jpg') no-repeat center center/cover; height: 100vh; display: flex; align-items: center; justify-content: flex-start; padding-left: 0%;">
+        <div class="container p-5 rounded" id="calc" style="max-width: 60%; background-color: #19110b; margin-left: 0%;">
+            <h1 class="text-warning text-center">CALCULE PARA NÃO FALTAR</h1>
+            <p class="text-light text-center">Já pensou se falta bebida na sua festa? Nãooo!! Então, aproveita a nossa calculadora e já pede certinho...</p>
+           
+            <div class="d-flex gap-3">
+                <div class="mb-3 flex-fill">
+                    <label for="adults" class="form-label text-light">QUANTOS ADULTOS?</label>
+                    <input type="number" id="adults" class="form-control" placeholder="Ex: 20">
+                </div>
+                <div class="mb-3 flex-fill">
+                    <label for="duration" class="form-label text-light">DURAÇÃO (HORAS)</label>
+                    <input type="number" id="duration" class="form-control" placeholder="Ex: 5">
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-warning" onclick="calculateBeer()">Calcular</button>
+            </div>
+        </div>
+    </div>
 
-        <!-- Hero Start -->
-        {%include  'parciais/hero_start.html'%}
-
-      
-              
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+    <!-- Modal de Resultado -->
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Parceiros Indicados</h1>
+                    <h5 class="modal-title" id="resultModalLabel">Resultado</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <div class="container-fluid vesitable py-4">
-                        <div class="row" id="test">
-                            {% include 'parciais/produtos_categoria_unica.html' %}
-                        </div>
-                    </div>
+                <div class="modal-body text-center" id="modalResult">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                 </div>
             </div>
         </div>
     </div>
-             
-        <!-- Hero End -->
-
-        
-
-        <!-- Featurs Section Start -->
-        {%include  'parciais/vantagens.html'%}
-        <!-- Featurs Section End -->
-
-
-        <!-- Fruits Shop Start-->
-        {%include  'parciais/principais_produtos.html'%}
-         
-        <!-- Fruits Shop End-->
-
-        
-
-        <!-- Featurs Start -->
-        {%include  'parciais/produtos_desconto.html'%}
-        <!-- Featurs End -->
-
-
-        <!-- Vesitable Shop Start-->
-        
     
-        <!-- Vesitable Shop End -->
-
-
-        <!-- Banner Section Start-->
-        <!-- {%include  'parciais/banner_meio.html'%} -->
-        <!-- Banner Section End -->
-
-
-        <!-- Bestsaler Product Start -->
-        {%include  'parciais/mais_vendidos.html'%}
-        <!-- Bestsaler Product End -->
-
-
-        <!-- Fact Start -->
-        {%include  'parciais/vantagens2.html'%}
-        <!-- Fact Start -->
-
-
-        <!-- Tastimonial Start -->
-        {%include  'parciais/testemunhos.html'%}
-        <!-- Tastimonial End -->
-
-
-        <!-- Footer Start -->
-        {%include  'parciais/footer.html'%}
-        <!-- Footer End -->
-
-        <!-- Copyright Start -->
-        {%include  'parciais/copyright.html'%}
-        <!-- Copyright End -->
-
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
-
-        
-{%endblock%}
+    <script>
+        function calculateBeer() {
+            let adults = document.getElementById('adults').value;
+            let duration = document.getElementById('duration').value;
+            let beerPerPerson = duration >= 6 ? 2 : 1.5;
+            let totalBeer = adults * beerPerPerson;
+            
+            document.getElementById('modalResult').innerText = `Você precisará de aproximadamente ${totalBeer} litros de chopp.`;
+            var resultModal = new bootstrap.Modal(document.getElementById('resultModal'));
+            resultModal.show();
+        }
+    </script>
+    <!-- Beer Calculator Section End -->
+    
+    {% include 'parciais/produtos_desconto.html' %}
+    {% include 'parciais/mais_vendidos.html' %}
+    {% include 'parciais/vantagens2.html' %}
+    {% include 'parciais/testemunhos.html' %}
+    {% include 'parciais/footer.html' %}
+    {% include 'parciais/copyright.html' %}
+    
+    <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+{% endblock %}

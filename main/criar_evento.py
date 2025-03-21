@@ -43,7 +43,7 @@ def criar_evento(evento_id, produtos):
         "description": (
             f"Evento de: {usuario.nome}\n"
             f"Data de Nascimento: {usuario.data_nascimento}\n"
-            f"CPF: {usuario.cpf}\n"
+            f"CPF: {usuario.username}\n"
             f"Endereço do Evento: {evento.endereco}, {evento.bairro}\n"
             f"Tipo de Evento: {evento.tipo_evento}\n"
             f"Produtos:\n{produtos_formatados}\n"

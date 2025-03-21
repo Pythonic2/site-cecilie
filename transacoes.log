@@ -38213,3 +38213,590 @@ AttributeError: 'int' object has no attribute 'get'
 2025-03-20 22:00:57,312 - WARNING - Not Found: /home/1/img/payment.png
 2025-03-20 22:00:59,809 - WARNING - Not Found: /produtos/img/payment.png
 2025-03-20 22:01:01,278 - WARNING - Not Found: /login/img/payment.png
+2025-03-20 22:56:04,710 - WARNING - Not Found: /home/1/img/fruite-item-5.jpg
+2025-03-20 22:56:04,721 - WARNING - Not Found: /home/1/img/fruite-item-2.jpg
+2025-03-20 22:56:04,730 - WARNING - Not Found: /home/1/img/fruite-item-1.jpg
+2025-03-20 22:56:04,739 - WARNING - Not Found: /home/1/img/fruite-item-6.jpg
+2025-03-20 22:56:04,752 - WARNING - Not Found: /home/1/img/fruite-item-3.jpg
+2025-03-20 22:56:04,762 - WARNING - Not Found: /home/1/img/fruite-item-4.jpg
+2025-03-20 22:56:04,770 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 22:56:04,945 - WARNING - Not Found: /home/1/img/fruite-item-5.jpg
+2025-03-20 22:56:04,954 - WARNING - Not Found: /home/1/img/fruite-item-1.jpg
+2025-03-20 22:56:04,966 - WARNING - Not Found: /home/1/img/fruite-item-2.jpg
+2025-03-20 23:03:26,208 - WARNING - Not Found: /home/
+2025-03-20 23:03:49,275 - WARNING - Not Found: /home/
+2025-03-20 23:03:49,870 - WARNING - Not Found: /home/
+2025-03-20 23:03:50,225 - WARNING - Not Found: /home/
+2025-03-20 23:03:50,408 - WARNING - Not Found: /home/
+2025-03-20 23:03:50,780 - WARNING - Not Found: /home/
+2025-03-20 23:03:55,593 - WARNING - Not Found: /home/
+2025-03-20 23:04:24,334 - WARNING - Not Found: /home/1/img/fruite-item-5.jpg
+2025-03-20 23:04:24,343 - WARNING - Not Found: /home/1/img/fruite-item-2.jpg
+2025-03-20 23:04:24,352 - WARNING - Not Found: /home/1/img/fruite-item-1.jpg
+2025-03-20 23:04:24,361 - WARNING - Not Found: /home/1/img/fruite-item-6.jpg
+2025-03-20 23:04:24,366 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:04:24,375 - WARNING - Not Found: /home/1/img/fruite-item-4.jpg
+2025-03-20 23:04:24,382 - WARNING - Not Found: /home/1/img/fruite-item-3.jpg
+2025-03-20 23:05:40,060 - ERROR - Internal Server Error: /home/1/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\main\views.py", line 74, in post
+    return render(request, self.template_name,context)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\template\base.py", line 563, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 33: 'static', expected 'endblock'. Did you forget to register or load this tag?
+2025-03-20 23:06:39,046 - WARNING - Not Found: /favicon.ico
+2025-03-20 23:08:25,141 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:11:44,130 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:13:46,032 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:14:03,978 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:14:05,877 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:14:18,181 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:16:40,209 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:19:16,005 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:19:38,381 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:19:39,769 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:20:58,179 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:23:46,573 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:26:27,049 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:26:35,924 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:27:02,497 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:28:11,680 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:28:21,949 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:28:24,794 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:29:21,417 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:29:39,813 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:30:19,937 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:30:46,907 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:31:15,327 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:32:26,775 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:32:27,742 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:32:40,681 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:32:41,233 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:32:41,719 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:32:41,910 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:32:42,077 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:32:42,265 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:32:42,438 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:32:42,533 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:32:42,723 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:32:42,938 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:32:43,152 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:32:43,353 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:33:40,207 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:39:43,343 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:02,483 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:03,177 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:03,470 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:03,716 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:04,424 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:04,618 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:18,032 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:18,628 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:18,817 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:18,958 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:19,116 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:19,280 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:19,486 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:28,180 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:29,078 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:29,329 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:29,553 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:29,711 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:30,376 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:30,708 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:30,846 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:31,076 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:37,867 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:38,272 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:38,445 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:38,597 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:38,765 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:38,942 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:39,168 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:39,334 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:54,729 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:55,096 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:55,269 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:55,506 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:56,188 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:40:56,437 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:41:15,639 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:43:10,971 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:43:24,534 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:43:25,093 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:43:25,271 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:43:25,423 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:43:25,577 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:43:25,724 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:11,658 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:12,306 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:12,514 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:35,049 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:35,707 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:35,993 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:36,104 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:36,244 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:40,854 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:41,209 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:41,425 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:41,668 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:55,157 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:55,846 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:55,921 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:56,026 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:56,446 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:57,094 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:57,374 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:44:57,945 - WARNING - Not Found: /favicon.ico
+2025-03-20 23:46:03,768 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:46:04,154 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:46:04,405 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:46:04,614 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:46:04,852 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:46:05,404 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:46:06,041 - WARNING - Not Found: /favicon.ico
+2025-03-20 23:46:21,989 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:46:22,609 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:46:22,711 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:46:23,135 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:46:23,664 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:46:24,305 - WARNING - Not Found: /favicon.ico
+2025-03-20 23:47:41,251 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:47:59,088 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:47:59,703 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:48:00,096 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:48:00,537 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:48:00,655 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:48:00,765 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:48:37,356 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:49:14,578 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:49:16,235 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:49:18,622 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:49:18,724 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-20 23:49:21,556 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:49:29,360 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:49:55,997 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-20 23:49:57,382 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:49:58,057 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-20 23:49:59,289 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:50:07,243 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-20 23:50:07,760 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-20 23:50:07,907 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-20 23:50:08,008 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-20 23:50:08,947 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:50:09,845 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:50:10,411 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:50:38,265 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:50:39,036 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:50:40,543 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:51:29,900 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-20 23:51:31,215 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:51:32,141 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:51:34,666 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:51:36,479 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:51:36,609 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-20 23:51:40,551 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:51:42,888 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:51:49,488 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:51:50,656 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:51:52,821 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:53:26,172 - WARNING - Not Found: /home/1/img/payment.png
+2025-03-20 23:53:39,240 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:53:39,326 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-20 23:54:44,399 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:54:57,750 - ERROR - Internal Server Error: /quantidade-carrinho/
+Traceback (most recent call last):
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+2025-03-20 23:54:57,822 - WARNING - Not Found: /produtos/img/payment.png
+2025-03-20 23:54:59,855 - INFO - Carrinho: 3, Criado agora? True
+2025-03-20 23:55:28,954 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 23:55:29,358 - DEBUG - https://viacep.com.br:443 "GET /ws/60035160/json/ HTTP/1.1" 200 None
+2025-03-20 23:55:29,413 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 23:55:29,741 - DEBUG - https://viacep.com.br:443 "GET /ws/60035160/json/ HTTP/1.1" 200 None
+2025-03-20 23:58:57,665 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-20 23:59:04,543 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-20 23:59:04,952 - DEBUG - https://viacep.com.br:443 "GET /ws/60035160/json/ HTTP/1.1" 200 None
+2025-03-20 23:59:04,975 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-20 23:59:05,697 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 849
+2025-03-20 23:59:05,699 - DEBUG - None
+2025-03-20 23:59:05,700 - DEBUG - Resposta da criação da preferência: {'status': 201, 'response': {'additional_info': '', 'auto_return': 'approved', 'back_urls': {'failure': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'pending': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'success': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/'}, 'binary_mode': False, 'client_id': '3488797328851277', 'collector_id': 162016798, 'coupon_code': None, 'coupon_labels': None, 'date_created': '2025-03-20T22:59:05.659-04:00', 'date_of_expiration': None, 'expiration_date_from': None, 'expiration_date_to': None, 'expires': False, 'external_reference': '3', 'id': '162016798-ec134313-9181-4aa8-92ed-e12ce03f93a4', 'init_point': 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-ec134313-9181-4aa8-92ed-e12ce03f93a4', 'internal_metadata': None, 'items': [{'id': '1', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'teste', 'quantity': 1, 'unit_price': 150}, {'id': '3', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'Chopeira Bomba', 'quantity': 1, 'unit_price': 150}], 'marketplace': 'NONE', 'marketplace_fee': 0, 'metadata': {'carrinho_id': 3, 'evento_id': 3}, 'notification_url': 'https://plataforma-donadochopp.cloudboosterlab.org/pag/', 'operation_type': 'regular_payment', 'payer': {'phone': {'area_code': '', 'number': ''}, 'address': {'zip_code': '', 'street_name': '', 'street_number': None}, 'email': '', 'identification': {'number': '', 'type': ''}, 'name': '', 'surname': '', 'date_created': None, 'last_purchase': None}, 'payment_methods': {'default_card_id': None, 'default_payment_method_id': None, 'excluded_payment_methods': [{'id': ''}], 'excluded_payment_types': [{'id': ''}], 'installments': None, 'default_installments': None}, 'processing_modes': None, 'product_id': None, 'redirect_urls': {'failure': '', 'pending': '', 'success': ''}, 'sandbox_init_point': 'https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-ec134313-9181-4aa8-92ed-e12ce03f93a4', 'site_id': 'MLB', 'shipments': {'default_shipping_method': None, 'receiver_address': {'zip_code': '', 'street_name': '', 'street_number': None, 'floor': '', 'apartment': '', 'city_name': None, 'state_name': None, 'country_name': None}}, 'total_amount': None, 'last_updated': None, 'financing_group': ''}}
+2025-03-20 23:59:05,700 - INFO - Preferência criada com sucesso.
+2025-03-20 23:59:27,285 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-20 23:59:34,850 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-20 23:59:42,490 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-20 23:59:48,947 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-20 23:59:54,023 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-21 00:00:02,464 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-21 00:00:02,805 - DEBUG - https://viacep.com.br:443 "GET /ws/60035160/json/ HTTP/1.1" 200 None
+2025-03-21 00:00:02,829 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-21 00:00:03,234 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-21 00:00:03,235 - DEBUG - None
+2025-03-21 00:00:03,236 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-21 00:00:03,236 - INFO - Preferência criada com sucesso.
+2025-03-21 00:00:03,237 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-21 00:00:05,857 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-21 00:00:06,180 - DEBUG - https://viacep.com.br:443 "GET /ws/60035160/json/ HTTP/1.1" 200 None
+2025-03-21 00:00:06,204 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-21 00:00:06,560 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-21 00:00:06,561 - DEBUG - None
+2025-03-21 00:00:06,562 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-21 00:00:06,562 - INFO - Preferência criada com sucesso.
+2025-03-21 00:00:06,562 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-21 00:00:08,490 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-21 00:00:08,808 - DEBUG - https://viacep.com.br:443 "GET /ws/60035160/json/ HTTP/1.1" 200 None
+2025-03-21 00:00:08,832 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-21 00:00:09,182 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-21 00:00:09,183 - DEBUG - None
+2025-03-21 00:00:09,183 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-21 00:00:09,184 - INFO - Preferência criada com sucesso.
+2025-03-21 00:00:09,184 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-21 00:00:10,059 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-21 00:00:10,384 - DEBUG - https://viacep.com.br:443 "GET /ws/60035160/json/ HTTP/1.1" 200 None
+2025-03-21 00:00:10,411 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-21 00:00:10,817 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-21 00:00:10,818 - DEBUG - None
+2025-03-21 00:00:10,818 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-21 00:00:10,819 - INFO - Preferência criada com sucesso.
+2025-03-21 00:00:10,819 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-21 00:00:11,962 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-21 00:00:12,369 - DEBUG - https://viacep.com.br:443 "GET /ws/60035160/json/ HTTP/1.1" 200 None
+2025-03-21 00:00:12,395 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-21 00:00:12,801 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-21 00:00:12,802 - DEBUG - None
+2025-03-21 00:00:12,803 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-21 00:00:12,803 - INFO - Preferência criada com sucesso.
+2025-03-21 00:00:12,803 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-21 00:00:14,395 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-21 00:00:14,789 - DEBUG - https://viacep.com.br:443 "GET /ws/60035160/json/ HTTP/1.1" 200 None
+2025-03-21 00:00:14,820 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-21 00:00:15,187 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-21 00:00:15,188 - DEBUG - None
+2025-03-21 00:00:15,188 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-21 00:00:15,189 - INFO - Preferência criada com sucesso.
+2025-03-21 00:00:15,189 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-21 00:00:15,965 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-21 00:00:16,287 - DEBUG - https://viacep.com.br:443 "GET /ws/60035160/json/ HTTP/1.1" 200 None
+2025-03-21 00:00:16,320 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-21 00:00:16,651 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-21 00:00:16,652 - DEBUG - None
+2025-03-21 00:00:16,652 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-21 00:00:16,653 - INFO - Preferência criada com sucesso.
+2025-03-21 00:00:16,653 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-21 00:00:19,060 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-21 00:00:19,274 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-21 00:00:19,380 - DEBUG - https://viacep.com.br:443 "GET /ws/60035160/json/ HTTP/1.1" 200 None
+2025-03-21 00:00:19,405 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-21 00:00:19,591 - DEBUG - https://viacep.com.br:443 "GET /ws/60035160/json/ HTTP/1.1" 200 None
+2025-03-21 00:00:19,620 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-21 00:00:19,739 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-21 00:00:19,740 - DEBUG - None
+2025-03-21 00:00:19,741 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-21 00:00:19,741 - INFO - Preferência criada com sucesso.
+2025-03-21 00:00:19,741 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-21 00:00:19,961 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-21 00:00:19,962 - DEBUG - None
+2025-03-21 00:00:19,962 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-21 00:00:19,963 - INFO - Preferência criada com sucesso.
+2025-03-21 00:00:19,963 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-21 00:00:22,484 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-21 00:00:22,804 - DEBUG - https://viacep.com.br:443 "GET /ws/60035160/json/ HTTP/1.1" 200 None
+2025-03-21 00:00:22,827 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-21 00:00:23,217 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 400 117
+2025-03-21 00:00:23,219 - DEBUG - None
+2025-03-21 00:00:23,219 - DEBUG - Resposta da criação da preferência: {'status': 400, 'response': {'message': 'notificaction_url attribute must be a valid url', 'error': 'invalid_notification_url', 'status': 400, 'cause': None}}
+2025-03-21 00:00:23,219 - INFO - Preferência criada com sucesso.
+2025-03-21 00:00:23,220 - ERROR - Erro ao criar a preferência: 'init_point'
+2025-03-21 00:00:40,376 - INFO - C:\Users\igorm\OneDrive\Documentos\meus_projetos\site-cecilie\pagamento\views.py changed, reloading.
+2025-03-21 00:00:51,555 - DEBUG - Starting new HTTPS connection (1): viacep.com.br:443
+2025-03-21 00:00:51,960 - DEBUG - https://viacep.com.br:443 "GET /ws/60035160/json/ HTTP/1.1" 200 None
+2025-03-21 00:00:52,024 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-21 00:00:52,557 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/1.1" 201 848
+2025-03-21 00:00:52,559 - DEBUG - None
+2025-03-21 00:00:52,560 - DEBUG - Resposta da criação da preferência: {'status': 201, 'response': {'additional_info': '', 'auto_return': 'approved', 'back_urls': {'failure': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'pending': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/', 'success': 'https://plataforma-donadochopp.cloudboosterlab.org/minhas-compras/'}, 'binary_mode': False, 'client_id': '3488797328851277', 'collector_id': 162016798, 'coupon_code': None, 'coupon_labels': None, 'date_created': '2025-03-20T23:00:52.532-04:00', 'date_of_expiration': None, 'expiration_date_from': None, 'expiration_date_to': None, 'expires': False, 'external_reference': '3', 'id': '162016798-921aedc0-ea10-4c66-a067-5f0eaf6a9e28', 'init_point': 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-921aedc0-ea10-4c66-a067-5f0eaf6a9e28', 'internal_metadata': None, 'items': [{'id': '1', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'teste', 'quantity': 1, 'unit_price': 150}, {'id': '3', 'category_id': '', 'currency_id': 'BRL', 'description': '', 'title': 'Chopeira Bomba', 'quantity': 1, 'unit_price': 150}], 'marketplace': 'NONE', 'marketplace_fee': 0, 'metadata': {'carrinho_id': 3, 'evento_id': 3}, 'notification_url': 'https://plataforma-donadochopp.cloudboosterlab.org/pag/', 'operation_type': 'regular_payment', 'payer': {'phone': {'area_code': '', 'number': ''}, 'address': {'zip_code': '', 'street_name': '', 'street_number': None}, 'email': '', 'identification': {'number': '', 'type': ''}, 'name': '', 'surname': '', 'date_created': None, 'last_purchase': None}, 'payment_methods': {'default_card_id': None, 'default_payment_method_id': None, 'excluded_payment_methods': [{'id': ''}], 'excluded_payment_types': [{'id': ''}], 'installments': None, 'default_installments': None}, 'processing_modes': None, 'product_id': None, 'redirect_urls': {'failure': '', 'pending': '', 'success': ''}, 'sandbox_init_point': 'https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=162016798-921aedc0-ea10-4c66-a067-5f0eaf6a9e28', 'site_id': 'MLB', 'shipments': {'default_shipping_method': None, 'receiver_address': {'zip_code': '', 'street_name': '', 'street_number': None, 'floor': '', 'apartment': '', 'city_name': None, 'state_name': None, 'country_name': None}}, 'total_amount': None, 'last_updated': None, 'financing_group': ''}}
+2025-03-21 00:00:52,562 - INFO - Preferência criada com sucesso.
+2025-03-21 00:00:54,874 - WARNING - Not Found: /favicon.ico
